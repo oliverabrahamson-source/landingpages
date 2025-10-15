@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange ROI Infographic: Hart Doors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Defining the new primary and secondary colors for a bolder look */
+        :root {
+            --color-primary-bold: #2563eb; /* Tailwind blue-600 */
+            --color-secondary-success: #10b981; /* Tailwind emerald-500 */
+        }
+        .text-primary-bold { color: var(--color-primary-bold); }
+        .bg-primary-bold { background-color: var(--color-primary-bold); }
+        .text-secondary-success { color: var(--color-secondary-success); }
+        .bg-secondary-success { background-color: var(--color-secondary-success); }
+        
+        /* Custom Shadow for a more defined card look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -4px rgba(37, 99, 235, 0.05);
+        }
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- HEADER & CORE VALUE PROPOSITION -->
+        <header class="text-center mb-12 p-8 bg-primary-bold text-white rounded-xl shadow-2xl shadow-blue-400">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                BigChange for Hart Doors
+            </h1>
+            <p class="text-xl sm:text-2xl font-light opacity-90">
+                Stop Managing Paperwork, <span class="font-bold text-yellow-300">Start Managing Profit.</span>
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg font-light opacity-80">
+                A single digital platform replacing disparate systems to deliver **accurate job costing, compliance, and real-time management reporting** for your industrial door operations.
+            </p>
+        </header>
+
+        <!-- PROBLEM VS SOLUTION -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-extrabold text-center text-primary-bold mb-8 border-b-2 border-primary-bold pb-2">Your Challenge, Our Solution</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Challenge 1 -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-8 border-red-500/80">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i data-lucide="file-text" class="icon-size text-red-600"></i>
+                        <p class="font-extrabold text-xl">Manual Costing & Data Loss</p>
+                    </div>
+                    <p class="text-gray-500 mb-4 italic">"Data entry is very difficult to precisely record hours, costs, and time."</p>
+                    <div class="p-3 bg-secondary-success/10 rounded-lg">
+                        <p class="font-bold text-secondary-success">Digital Workflow Enforcement</p>
+                        <p class="text-sm text-gray-700">The app *forces* mandatory forms to be completed, guaranteeing **100% data capture, even offline**.</p>
+                    </div>
+                </div>
+                <!-- Challenge 2 -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-8 border-red-500/80">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i data-lucide="clock" class="icon-size text-red-600"></i>
+                        <p class="font-extrabold text-xl">Time-Consuming Reporting</p>
+                    </div>
+                    <p class="text-gray-500 mb-4 italic">"Collating all of this information is a lot of time and it's too long."</p>
+                    <div class="p-3 bg-secondary-success/10 rounded-lg">
+                        <p class="font-bold text-secondary-success">Real-Time Financial Reporting</p>
+                        <p class="text-sm text-gray-700">Job financials are instantly available for the back office to view **live job margin dashboards**, eliminating end-of-week delays.</p>
+                    </div>
+                </div>
+                <!-- Challenge 3 -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-t-8 border-red-500/80">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i data-lucide="trending-down" class="icon-size text-red-600"></i>
+                        <p class="font-extrabold text-xl">Lack of Performance KPIs</p>
+                    </div>
+                    <p class="text-gray-500 mb-4 italic">"Need to measure output per man/team per week and comparative costs."</p>
+                    <div class="p-3 bg-secondary-success/10 rounded-lg">
+                        <p class="font-bold text-secondary-success">Actionable Business Intelligence</p>
+                        <p class="text-sm text-gray-700">Provides instant data on engineer utilization and profitability to drive **data-driven resource decisions**.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROI & VALUE PILLARS -->
+        <div class="mb-12 p-8 bg-white rounded-xl shadow-xl border-t-4 border-primary-bold">
+            <h2 class="text-3xl font-extrabold text-center text-secondary-success mb-8">Quantifiable Value and ROI</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pillar 1: Profitability -->
+                <div class="p-5 rounded-xl bg-blue-50/70 card-shadow">
+                    <i data-lucide="dollar-sign" class="icon-size text-secondary-success mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-primary-bold">Enhanced Job Profitability</h3>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-1 text-sm">
+                        <li>**Accurate Costing:** Precise actual job costs (labour, materials, allowances).</li>
+                        <li>**Immediate Invoicing:** Raise quotes and invoices **instantly** on job completion, dramatically improving cash flow.</li>
+                    </ul>
+                </div>
+                <!-- Pillar 2: Efficiency -->
+                <div class="p-5 rounded-xl bg-blue-50/70 card-shadow">
+                    <i data-lucide="zap" class="icon-size text-secondary-success mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-primary-bold">Measurable Efficiency Gains</h3>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-1 text-sm">
+                        <li>**Optimized Scheduling:** Reduces unnecessary travel time.</li>
+                        <li>**Proven Savings:** Average **10% reduction in monthly fuel costs** through route optimization.</li>
+                    </ul>
+                </div>
+                <!-- Pillar 3: Compliance -->
+                <div class="p-5 rounded-xl bg-blue-50/70 card-shadow">
+                    <i data-lucide="check-circle" class="icon-size text-secondary-success mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-primary-bold">Full Digital Compliance</h3>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-1 text-sm">
+                        <li>**Risk Mitigation:** Workflows enforce regulatory compliance (e.g., LOLER).</li>
+                        <li>**Auditable Records:** Geo-stamped data, photos, and signatures provide an **irrefutable audit trail**.</li>
+                    </ul>
+                </div>
+                <!-- Pillar 4: Future Proofing -->
+                <div class="p-5 rounded-xl bg-blue-50/70 card-shadow">
+                    <i data-lucide="layers" class="icon-size text-secondary-success mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-primary-bold">Future-Proofing the Business</h3>
+                    <ul class="list-disc ml-5 text-gray-600 space-y-1 text-sm">
+                        <li>**Scalability:** New engineers can be **up and running in minutes** for effortless expansion.</li>
+                        <li>**Flexible Integration:** Designed to **sit alongside existing ERP/Access tools** or act as your comprehensive system.</li>
+                        <li>**Unified Growth:** Track sales pipeline, generate quotes, and convert them to jobs seamlessly.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CUSTOMER REFERENCES -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-extrabold text-center text-primary-bold mb-6 border-b-2 border-secondary-success pb-2">Industrial Door Success Stories</h2>
+            <p class="text-center text-gray-600 mb-8">BigChange is a market leader, running the platform for over 100 door and shutter businesses.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Reference 1 -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-b-4 border-secondary-success/80">
+                    <h4 class="font-extrabold text-2xl text-secondary-success mb-3">Complete Shutter Services</h4>
+                    <ul class="list-disc ml-5 text-gray-700 space-y-2 text-base">
+                        <li>**Doubled their overall business.**</li>
+                        <li>**Boosted productivity by 20%.**</li>
+                        <li>Increased service quality by 70%.</li>
+                    </ul>
+                </div>
+                <!-- Reference 2 -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-b-4 border-secondary-success/80">
+                    <h4 class="font-extrabold text-2xl text-secondary-success mb-3">Blount Shutters</h4>
+                    <ul class="list-disc ml-5 text-gray-700 space-y-2 text-base">
+                        <li>Achieved a **30% increase in first-time fix rates.**</li>
+                        <li>Now fixing 9-out-of-10 faults on the first visit.</li>
+                        <li>Improved customer service for clients like Tesco and Lidl.</li>
+                    </ul>
+                </div>
+                <!-- Reference 3 -->
+                <div class="bg-white p-6 rounded-xl card-shadow border-b-4 border-secondary-success/80">
+                    <h4 class="font-extrabold text-2xl text-secondary-success mb-3">Industrial Door Services (IDS)</h4>
+                    <ul class="list-disc ml-5 text-gray-700 space-y-2 text-base">
+                        <li>**Transformed financials** by eliminating missing paperwork.</li>
+                        <li>Can now **quote and invoice immediately** for faster payments.</li>
+                        <li>Gained complete, 24/7 visibility over all jobs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRICING STRUCTURE -->
+        <div class="p-8 bg-primary-bold rounded-xl shadow-2xl shadow-blue-400 text-white text-center">
+            <h2 class="text-3xl font-extrabold mb-6">BigChange Pricing for Hart Doors</h2>
+            <p class="text-lg font-light mb-8 opacity-90">Simple, flexible pricing per user per month. The price is **irrelevant of the user's role** (office or engineer).</p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <!-- Option 1: Software Only -->
+                <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl md:w-1/3 transition transform hover:scale-[1.05] duration-300 card-shadow">
+                    <h3 class="text-2xl font-extrabold text-primary-bold mb-3">Software Only</h3>
+                    <p class="text-5xl font-extrabold mb-4 text-secondary-success">£80</p>
+                    <p class="text-sm text-gray-500 mb-4 font-bold tracking-wider">PER USER / PER MONTH</p>
+                    <ul class="text-left space-y-3 text-base">
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-secondary-success mr-2"></i>Full JobWatch Software Suite</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-secondary-success mr-2"></i>CRM, Scheduling, Tracking, Invoicing</li>
+                        <li class="flex items-center text-red-600 font-semibold"><i data-lucide="x" class="w-5 h-5 text-red-600 mr-2"></i>Requires your own mobile/tablet hardware</li>
+                    </ul>
+                </div>
+
+                <!-- Option 2: Complete Package -->
+                <div class="bg-secondary-success text-white p-8 rounded-xl shadow-xl md:w-1/3 transition transform hover:scale-[1.05] duration-300 card-shadow relative border-4 border-yellow-300">
+                    <span class="absolute top-[-15px] right-[-15px] bg-yellow-300 text-primary-bold px-3 py-1 text-xs font-extrabold uppercase rounded-full shadow-md">Best Value</span>
+                    <h3 class="text-2xl font-extrabold mb-3">Complete Package</h3>
+                    <p class="text-5xl font-extrabold mb-4 text-white">£100</p>
+                    <p class="text-sm font-bold opacity-90 mb-4 tracking-wider">PER USER / PER MONTH</p>
+                    <ul class="text-left space-y-3 text-base">
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-yellow-300 mr-2"></i>Full JobWatch Software Suite</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-yellow-300 mr-2"></i>Includes **Mobile Hardware** (Phone or Tablet)</li>
+                        <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-yellow-300 mr-2"></i>Includes **Data Plan** (all-in-one monthly cost)</li>
+                        <li class="text-xs mt-3 italic opacity-80">Hardware includes Zebra devices or Samsung Galaxy Tabs.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-sm mt-8 opacity-70">Note: Pricing is based on the information discussed in the system demo (page 29).</p>
+        </div>
+
+        <!-- Initialize Lucide icons -->
+        <script>
+            lucide.createIcons();
+        </script>
+    </div>
+</body>
+</html>
