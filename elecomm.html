@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange for Elecomm - Stop the Fragmentation</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom colors based on the BigChange brand style */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue from the deck - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue for highlights - Primary Accent */
+            --color-secondary-bg: #102B51; /* Lighter Navy for contrast areas - Card/Section Background */
+            --color-danger: #D9534F; /* Red for the "Modular Trap" warnings */
+            --color-success: #10B981; /* Green for "All-in-One" benefits */
+        }
+
+        /* Apply Brand Colors */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        .text-danger { color: var(--color-danger); }
+        .text-success { color: var(--color-success); }
+        .hover\:bg-success-dark:hover { background-color: #0c8a68; }
+
+
+        /* Set the Inter font globally and apply the dark theme background/text */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy);
+            color: #E5E7EB; /* Light gray for readability on dark background */
+        }
+        
+        /* Custom Shadow for a more defined card look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+
+        /* Custom animation for the "Modular Trap" section */
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(217, 83, 79, 0); }
+        }
+        .modular-trap-card {
+            animation: pulse-red 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+    </style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- HEADER & CORE VALUE PROPOSITION -->
+        <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+            <!-- Logo Container -->
+            <div class="flex items-center justify-center space-x-6 mb-8">
+                <!-- BigChange Logo -->
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/674f1964f15f0c19d523de81_Group%202.svg" 
+                     alt="BigChange Logo" 
+                     class="h-12 sm:h-16 object-contain"
+                     onerror="this.onerror=null;this.src='https://placehold.co/150x50/ffffff/061A3D?text=BigChange'">
+                
+                <!-- Separator -->
+                <div class="h-12 w-px bg-white/30"></div>
+
+                <!-- Elecomm Logo -->
+                <img src="https://iili.io/KkeT3qF.png" 
+                     alt="Elecomm Logo" 
+                     class="h-12 sm:h-16 object-contain"
+                     onerror="this.onerror=null;this.src='https://placehold.co/150x50/ffffff/061A3D?text=Elecomm'">
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                Elecomm: The Power of <span class="text-accent">One Platform</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light opacity-90">
+                Stop managing complexity. Start managing growth across Data, M&E, and Projects.
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                You're currently spending valuable time patching together spreadsheets, emails, and separate systems. BigChange offers the single, scalable solution to standardise your entire operation.
+            </p>
+        </header>
+
+        <!-- The Modular Trap vs. All-in-One Solution -->
+        <div class="mb-12 grid lg:grid-cols-2 gap-8">
+            <!-- Modular Trap Card (Pain Points & Cost) -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-danger modular-trap-card">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="split" class="icon-size text-danger"></i>
+                    <h2 class="text-3xl font-extrabold text-danger">The Modular Trap</h2>
+                </div>
+                <p class="text-lg font-bold text-white mb-4">Why a fragmented approach costs more than you think.</p>
+                
+                <div class="space-y-4">
+                    <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="alert-triangle" class="w-5 h-5 text-danger mr-2"></i>
+                            Hidden Cost of Integration
+                        </h4>
+                        <p class="text-sm text-gray-400">Multiple system licences, API costs, integration consulting, and maintenance of brittle connections. (it costs more because the product is more valuable)</p>
+                    </div>
+                    <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="clipboard-x" class="w-5 h-5 text-danger mr-2"></i>
+                            Disrupted Workflow & Data Loss
+                        </h4>
+                        <p class="text-sm text-gray-400">Manual data transfer from Excel/Client Portals to scheduling results in lost information and constant double-entry, delaying billing. (Excel is "too much information," "that's the main sort of point we're trying to solve")</p>
+                    </div>
+                    <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="user-x" class="w-5 h-5 text-danger mr-2"></i>
+                            Lack of Standardisation & Risk
+                        </h4>
+                        <p class="text-sm text-gray-400">Knowledge is locked in individuals' heads, not the system, making training new staff complex and risking quality across reactive and project works. ("a lot of it's in our heads and not on paper")</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BigChange All-in-One Card (Value and Scalability) -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-accent">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="layers-3" class="icon-size text-accent"></i>
+                    <h2 class="text-3xl font-extrabold text-accent">BigChange: Future-Proof Value</h2>
+                </div>
+                <p class="text-lg font-bold text-white mb-4">You don't buy modules; you invest in scalable consolidation.</p>
+                
+                <div class="space-y-4">
+                    <div class="p-4 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="zap" class="w-5 h-5 text-success mr-2"></i>
+                            Simplified Billing & ROI
+                        </h4>
+                        <p class="text-sm text-gray-400">One per-user licence eliminates all the licensing, patching, and integration costs of multiple systems. (Single per-user price)</p>
+                    </div>
+                    <div class="p-4 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="route" class="w-5 h-5 text-success mr-2"></i>
+                            True Real-Time Automation
+                        </h4>
+                        <p class="text-sm text-gray-400">Live scheduling, vehicle tracking, job completion forms, and invoicing are instantly connected, replacing manual email and spreadsheet tracking. (Tracker is "just separate", need to replace "manual intervention")</p>
+                    </div>
+                    <div class="p-4 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="sliders" class="w-5 h-5 text-success mr-2"></i>
+                            Customisable & Scalable
+                        </h4>
+                        <p class="text-sm text-gray-400">The platform is highly configurable to manage complexity—from quick reactive jobs to multi-day M&E projects, with skill-based scheduling and mandatory workflows. (Need solution for Data, M&E, and Projects)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KEY DIFFERENTIATORS SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-white mb-8">Consolidation: Your Route to Standardisation</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Differentiator 1: Scheduling -->
+                <div class="p-5 rounded-xl bg-navy card-shadow">
+                    <i data-lucide="calendar-check" class="icon-size text-accent mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-white">Smart Scheduling</h3>
+                    <p class="text-sm text-gray-400">Instantly match engineers to jobs based on real-time location and required skills (e.g., Level 3 Network Training, Fibre Splicing). Eliminate searching through spreadsheets.</p>
+                </div>
+                <!-- Differentiator 2: Compliance & Reporting -->
+                <div class="p-5 rounded-xl bg-navy card-shadow">
+                    <i data-lucide="shield-check" class="icon-size text-accent mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-white">Guaranteed Compliance</h3>
+                    <p class="text-sm text-gray-400">Implement branching digital forms (like your current iAudit) that force compliance steps and capture mandatory data before an engineer can complete a job. ("Is there a possibility for these to have branching?")</p>
+                </div>
+                <!-- Differentiator 3: Financial Control -->
+                <div class="p-5 rounded-xl bg-navy card-shadow">
+                    <i data-lucide="dollar-sign" class="icon-size text-accent mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-white">Simplified Billing</h3>
+                    <p class="text-sm text-gray-400">Automate fixed contract rates and generate consolidated invoices across 33 jobs per month (as discussed in the meeting) directly from completed job data. (Consolidated invoice for 33 jobs)</p>
+                </div>
+                <!-- Differentiator 4: Project Management -->
+                <div class="p-5 rounded-xl bg-navy card-shadow">
+                    <i data-lucide="layers" class="icon-size text-accent mb-3"></i>
+                    <h3 class="font-extrabold text-xl mb-2 text-white">Project Scalability</h3>
+                    <p class="text-sm text-gray-400">Easily link multi-day project visits (Group Jobs) together with templated workflows, providing continuous tracking for M&E and large rollout works. (Discussed Group Job concept)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCALABILITY CASE STUDIES SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-accent mb-8">From Scheduling Need to Business Growth</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                These companies, like Elecomm, came to BigChange looking to solve a single, immediate problem (usually scheduling). They quickly leveraged the full platform to achieve transformative growth.
+            </p>
+            
+            <div class="space-y-8 mb-8">
+                <!-- FEATURE CASE STUDY: ATLAS WORLD -->
+                <a href="https://www.bigchange.com/success-stories/bigchange-job-management-system-supports-net-zero-objectives-at-atlas-world" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/65aec09a2c797cb4f01b2219_65a0fddfb2f0d33c79ca4370_BigChange_Atlas_World_64_1200pixel.avif" 
+                         alt="Atlas World engineer working on HVAC equipment" 
+                         class="w-full h-64 object-contain transition-transform duration-300 group-hover:scale-105" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/1200x350/00A3FF/ffffff?text=Atlas+World+Feature+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <!-- Centered Headline -->
+                            <h4 class="font-extrabold text-3xl text-success group-hover:text-accent transition duration-300 w-full text-center">50+ Engineers Scheduled More Efficiently and Paper Free</h4>
+                            <i data-lucide="arrow-right" class="w-6 h-6 text-accent hidden"></i>
+                        </div>
+                        <p class="text-lg font-semibold text-white mb-3 text-center">Atlas World: Consolidating 50+ Engineers onto One System</p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Supported Net Zero objectives by optimising scheduling and reducing travel.</li>
+                            <li>Achieved complete paperless operation across their large field force.</li>
+                            <li>Gained centralised reporting and control over a complex, multi-skilled workforce.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline w-full text-center">Read the Full Story →</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Supporting Case Study 1: Stirling Electrical -->
+                <a href="https://www.bigchange.com/success-stories/stirling-electrical-transforms-with-bigchange-job-management" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/66fffee843f4beab3397ce20_65f96a6e0e9d868a3f4a06c1_65d72f01a96e9c7529280c34_BigChange_Stirling_03526_LowRes_1200pix%252520(1).webp" 
+                         alt="Stirling Electrical van in a professional setting" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Stirling+Electrical+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-success"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">Stirling Electrical</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Initially sought a simple scheduling solution but found complete standardisation and efficiency:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Eliminated time-consuming paper job cards.</li>
+                            <li>Gained real-time job and financial visibility.</li>
+                            <li>Saw immediate improvements in cash flow and invoicing time.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story →</span>
+                    </div>
+                </a>
+
+                <!-- Supporting Case Study 2: ASH Integrated Services -->
+                <a href="https://www.bigchange.com/success-stories/ash-integrated-services-from-man-in-van-to-ps7-million-business-using-bigchange" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/65f96a6f7d97f2bce2fbc3cb_65ddc4d5fbf7b02b6c9d5b51_1200pix_BigChange_ASH_dsc00275.avif" 
+                         alt="ASH Integrated Services engineer using a tablet" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=ASH+Integrated+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="rocket" class="w-6 h-6 text-success"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">ASH Integrated Services: From efficient scheduling to cross-business efficiency gains</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Scaled from a single van operation to a £7 million business using BigChange as their core operating system:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Replaced disparate systems with a single workflow.</li>
+                            <li>Supported major business expansion and acquisition.</li>
+                            <li>Achieved massive time savings across admin and engineering teams.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- END SCALABILITY CASE STUDIES SECTION -->
+
+        <!-- EMBEDDED MEETING RECORDING -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent text-center">
+            <h2 class="text-3xl font-extrabold text-white mb-6">Revisit Our Discussion: Meeting Recording</h2>
+            <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Here is the full recording of our discussion for the team to review at their convenience. You can listen through the transcript and key moments.
+            </p>
+            
+            <a href="https://app.fireflies.ai/view/BigChange-x-Elecomm-Ltd::01K4W3400RSKYB8WANC4GVZRQW" 
+               target="_blank" 
+               class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full text-white bg-success hover:bg-success-dark transition duration-300 shadow-lg">
+                <i data-lucide="play-circle" class="w-6 h-6 mr-3 fill-white"></i>
+                Watch Our Meeting Back (Interactive Replay)
+            </a>
+        </div>
+        <!-- END EMBEDDED MEETING RECORDING -->
+
+
+        <!-- NEXT STEPS CTA -->
+        <div class="text-center p-8 bg-accent/20 rounded-xl">
+            <h3 class="text-3xl font-extrabold text-accent mb-4">Ready to move from Pain to Profit?</h3>
+            <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                Let's schedule the on-site deep-dive scoping session to build your bespoke Phase 1 solution.
+            </p>
+            <a href="mailto:oliver.abrahamson@bigchange.com?subject=Next%20Steps%20Elecomm%20-%20On%2Dsite%20Scoping%20Request" 
+               class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-accent hover:bg-white hover:text-navy transition duration-300 shadow-lg">
+                <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                Request On-Site Scoping
+            </a>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
