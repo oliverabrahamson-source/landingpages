@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange for TPM Cleaning - Digital Operations & ROI</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define custom colors based on the BigChange brand style */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue for highlights - Primary Accent */
+            --color-secondary-bg: #102B51; /* Lighter Navy for contrast areas - Card/Section Background */
+            --color-danger: #D9534F; /* Soft Red for warnings */
+            --color-success: #10B981; /* Green for "All-in-One" benefits (Keeping variable for pricing/buttons) */
+        }
+
+        /* Apply Brand Colors via utility classes */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        .text-danger { color: var(--color-danger); }
+        .text-success { color: var(--color-success); }
+        .hover\:bg-success-dark:hover { background-color: #0c8a68; } /* Slightly darker green for hover */
+        .bg-accent\/20 { background-color: rgba(0, 163, 255, 0.2); }
+
+        /* Set the Inter font globally and apply the dark theme background/text */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy);
+            color: #E5E7EB; /* Light gray for readability on dark background */
+        }
+
+        /* Custom Card Shadow for a more defined look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Custom animation for the "Pain Points" section card */
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(217, 83, 79, 0); }
+        }
+        
+        /* Apply pulse animation only to the danger card for emphasis */
+        .pain-point-card {
+            animation: pulse-red 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+
+        /* Invert the TPM logo image to make it white/light on the dark background */
+        .invert-logo {
+            filter: invert(100%) brightness(150%);
+        }
+
+        /* Icon sizing class */
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+    </style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- HEADER & CORE VALUE PROPOSITION -->
+        <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+            <!-- LOGOS CONTAINER -->
+            <div class="flex justify-center items-center space-x-6 mb-6">
+                
+                <!-- TPM Logo (Remains White/Inverted) -->
+                <img src="https://www.tpmcleaning.co.uk/wp-content/uploads/2022/10/TPM-logo-FINAL-300x136.png"
+                     alt="TPM Cleaning & Facilities Logo"
+                     class="h-16 sm:h-20 object-contain invert-logo"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/061A3D?text=TPM+Cleaning'">
+                
+                <!-- Separator -->
+                <div class="h-12 w-px bg-gray-600 hidden sm:block"></div>
+
+                <!-- BigChange Logo (Now Blue/Original Color) -->
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg"
+                     alt="BigChange Logo"
+                     class="h-10 sm:h-12 object-contain"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/061A3D?text=BigChange'">
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                TPM: End the Paperwork Nightmare, <span class="text-accent">Own Your Schedule and Profit</span>
+            </h1>
+
+            <p class="text-xl sm:text-2xl font-light opacity-90">
+                Turn hours spent on spreadsheets into instant, auditable job management for your 7 mobile cleaning vans.
+            </p>
+
+            <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                We eliminate the manual workload—from printing three weeks of schedules in advance to coordinating ad hoc cleaning calls—so you can **run the business**, not the paperwork.
+            </p>
+        </header>
+
+        <!-- PAIN POINTS VS SOLUTION: CORE ANALYSIS -->
+        <div class="mb-12 grid lg:grid-cols-2 gap-8">
+            
+            <!-- COLUMN 1: TPM's Current Pains (The Spreadsheet Trap) -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-danger pain-point-card">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="file-x" class="icon-size text-danger"></i>
+                    <h2 class="text-3xl font-extrabold text-danger">The Weekly Time Drain: Manual Operations</h2>
+                </div>
+                
+                <p class="text-lg font-bold text-white mb-4">Your current system forces triple-handling, high labour cost, and scheduling errors.</p>
+                
+                <div class="space-y-4">
+                    <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="printer" class="w-5 h-5 text-danger mr-2"></i> Labour-Intensive Scheduling
+                        </h4>
+                        <p class="text-sm text-gray-400">Spending **"5 hours printing paperwork"** and manually updating four weeks of Excel spreadsheets just to cover holidays is unnecessary administrative waste.</p>
+                    </div>
+
+                    <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="map-pin-off" class="w-5 h-5 text-danger mr-2"></i> Wasteful Routing & Fuel Costs
+                        </h4>
+                        <p class="text-sm text-gray-400">The current system lacks **route optimisation**, leading to drivers changing routes for personal reasons and increasing your **fuel consumption** (a **"massive bane"** for the business).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: BigChange Value and ROI -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-accent">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="bar-chart-3" class="icon-size text-accent"></i>
+                    <h2 class="text-3xl font-extrabold text-accent">Key Return on Investment (ROI)</h2>
+                </div>
+                
+                <p class="text-lg font-bold text-white mb-4">Consolidation turns wasted time and fuel into measurable profit.</p>
+                
+                <div class="space-y-4">
+                    <div class="p-4 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="clock" class="w-5 h-5 text-success mr-2"></i> Owner Time Recaptured
+                        </h4>
+                        <p class="text-sm text-gray-400">Automated recurring contract scheduling frees up **hours of MD/Office time** per week, allowing management to focus on growth, not admin.</p>
+                    </div>
+                    
+                    <div class="p-4 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="package-check" class="w-5 h-5 text-success mr-2"></i> One-Platform Management
+                        </h4>
+                        <p class="text-sm text-gray-400">Consolidate CRM, Job Scheduling, **Two-Man Team** allocation, Ad Hoc Quoting, and Audit Checklists (like Go Audits) into a single, seamless system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE CLEANING CASE STUDIES SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-accent mb-8">Success in Multi-Site Mobile Cleaning</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                Other cleaning specialists, dealing with multi-site contracts and mobile teams, trust BigChange to drive efficiency and auditability.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Supporting Case Study 1: The Price Group -->
+                <a href="https://www.bigchange.com/success-stories/bigchange-provides-a-platform-for-growth-at-commercial-window-cleaning-specialist-the-price-group" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67da73608ade36d2dce34674_The%20Price%20Group.webp" 
+                         alt="The Price Group commercial window cleaning in London" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Price+Group+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="zap" class="w-6 h-6 text-success"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">The Price Group: Platform for Growth</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Achieved scalability and clear audit trails for commercial window cleaning contracts:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Centralised job management to handle rapid business growth.</li>
+                            <li>Digital job sign-off provides irrefutable proof of service completion.</li>
+                            <li>Ensures consistent service delivery across all contract sites.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Supporting Case Study 2: TWC Cleaning -->
+                <a href="https://thetwcgroup.com/" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <div class="w-full h-40 flex items-center justify-center bg-white/10 p-4">
+                        <img src="https://thetwcgroup.com/wp-content/uploads/2022/06/cropped-THE-TWC-GROUP-750PX-wide.png" 
+                             alt="The TWC Group Logo" 
+                             class="h-32 object-contain invert"
+                             onerror="this.onerror=null;this.src='https://placehold.co/300x128/ffffff/061A3D?text=TWC+Cleaning'"> 
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="spray-can" class="w-6 h-6 text-success"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">The TWC Group: Communal Area Specialists</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            A fast-growing service provider focusing on social housing and communal cleaning contracts:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Manages rapid growth from a small team to 20+ teams efficiently.</li>
+                            <li>Specialises in recurring social housing contracts, including bins and gutters.</li>
+                            <li>Replaced fragmented systems with a unified digital platform for scalability.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">View TWC Cleaning Site &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- PRICING OPTIONS -->
+        <div class="mt-12">
+            <h3 class="text-4xl font-extrabold text-white text-center mb-6">Your Bespoke Proposal (10 Licenses)</h3>
+            
+            <p class="text-lg text-gray-200 text-center mb-8 max-w-3xl mx-auto">
+                Based on our discussion, here are two simple options to get TPM Cleaning onto the BigChange platform immediately.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- OPTION 1: DIGITAL OPERATIONS (SOFTWARE ONLY) -->
+                <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-success flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-success mb-2">Option 1: Digital Operations</h4>
+                        <p class="text-sm text-gray-400 mb-6">Full software access using your existing hardware.</p>
+
+                        <ul class="text-left space-y-3 text-base">
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">10 User Licenses (@ £79.95 RRP)</span>
+                                <span class="font-bold text-accent">£799.50</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Xero Integration Module (Optional)</span>
+                                <span class="font-bold text-accent">£100.00</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Support & Onboarding (Dedicated Manager)</span>
+                                <span class="font-bold text-accent">£150.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-8 pt-4 border-t-2 border-gray-600">
+                        <p class="text-xl font-extrabold text-white flex justify-between items-center">
+                            <span>TOTAL MONTHLY COST (ex VAT):</span>
+                            <span class="text-success text-3xl">£1,049.50</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- OPTION 2: FULL MANAGED SERVICE (HARDWARE INCLUDED) -->
+                <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-accent flex flex-col justify-between relative">
+                    <span class="absolute top-[-10px] right-4 bg-accent text-navy px-3 py-1 text-xs font-extrabold rounded-full shadow-md">BEST VALUE</span>
+                    
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-accent mb-2">Option 2: Full Managed Service</h4>
+                        <p class="text-sm text-gray-400 mb-6">Includes robust hardware, dashcams, and support.</p>
+
+                        <ul class="text-left space-y-3 text-base">
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">10 User Licenses (Software & Tracking)</span>
+                                <span class="font-bold text-accent">£1,049.50</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">7 x Samsung Tab Active 5 + Dashcams Uplift</span>
+                                <span class="font-bold text-accent">£210.00</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Includes Data, Device Management, Cradles</span>
+                                <span class="font-bold text-accent">INCLUDED</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t-2 border-gray-600">
+                        <p class="text-xl font-extrabold text-white flex justify-between items-center">
+                            <span>TOTAL MONTHLY COST (ex VAT):</span>
+                            <span class="text-accent text-3xl">£1,259.50</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEXT STEPS CTA -->
+            <div class="text-center p-8 bg-accent/20 rounded-xl mt-12">
+                <h3 class="text-3xl font-extrabold text-accent mb-4">Watch Our Meeting Back</h3>
+                <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                    Review the full discussion, key pain points, and product features we covered.
+                </p>
+
+                <div class="w-full max-w-sm mx-auto">
+                    <a href="https://app.fireflies.ai/view/BigChange-x-TPM-Cleaning-Facilities-Ltd::01K82WTE1KY07WR70PZXR3Q1J6" 
+                       target="_blank"
+                       class="inline-flex items-center justify-center w-full px-8 py-4 border border-transparent text-lg font-bold rounded-full text-navy bg-success hover:bg-success-dark transition duration-300 shadow-xl">
+                        <i data-lucide="clapperboard" class="w-6 h-6 mr-3"></i>
+                        Click Here to Watch
+                    </a>
+                </div>
+                
+                <p class="mt-8 text-lg text-white mb-6 max-w-xl mx-auto">
+                    Ready to proceed with one of these options? Let's connect to discuss the next steps and get your onboarding started.
+                </p>
+                <a href="mailto:oliver.abrahamson@bigchange.com?subject=TPM%20Cleaning%20-%20Confirm%20Proposal%20(10%20Licenses)" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-accent hover:bg-white hover:text-navy transition duration-300 shadow-lg">
+                    <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                    Confirm Proposal & Next Steps
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
