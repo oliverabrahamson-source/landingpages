@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange for React 2 It - Optimizing Service, Projects & PPMs</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define custom colors based on the BigChange brand style */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue for highlights - Primary Accent */
+            --color-secondary-bg: #102B51; /* Lighter Navy for contrast areas - Card/Section Background */
+            --color-danger: #D9534F; /* Soft Red for warnings */
+            --color-success: #10B981; /* Green for key pricing/visuals */
+        }
+
+        /* Apply Brand Colors via utility classes */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        .text-danger { color: var(--color-danger); }
+        .text-success { color: var(--color-success); }
+        .hover\:bg-success-dark:hover { background-color: #0c8a68; } /* Slightly darker green for hover */
+        .bg-accent\/20 { background-color: rgba(0, 163, 255, 0.2); }
+
+        /* Set the Inter font globally and apply the dark theme background/text */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy);
+            color: #E5E7EB; /* Light gray for readability on dark background */
+        }
+
+        /* Custom Card Shadow for a more defined look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Custom animation for the "Pain Points" section card */
+        @keyframes pulse-red {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(217, 83, 79, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(217, 83, 79, 0); }
+        }
+        
+        /* Apply pulse animation only to the danger card for emphasis */
+        .pain-point-card {
+            animation: pulse-red 2s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+
+        /* CORRECTED STYLE: Simple inversion should work since the original logo has black content on a white box. 
+           We just use the invert filter and apply a clip-path to aggressively remove background artifacts, in case the filter isn't perfect.
+        */
+        .react-logo-white {
+            filter: invert(100%);
+            /* Use clip-path as a secondary measure if the background is not perfectly uniform black/white */
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); 
+        }
+
+        /* Icon sizing class */
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+    </style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- HEADER & CORE VALUE PROPOSITION -->
+        <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+            <!-- LOGOS CONTAINER -->
+            <div class="flex justify-center items-center space-x-6 mb-6">
+                
+                <!-- React 2 It Logo (Inverted to White) -->
+                <img src="https://i.ibb.co/8DRkj9d9/react-removebg-preview.png"
+                     alt="React 2 It Logo"
+                     class="h-16 sm:h-20 object-contain react-logo-white"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/061A3D?text=REACT+2+IT'">
+                
+                <!-- Separator -->
+                <div class="h-12 w-px bg-gray-600 hidden sm:block"></div>
+
+                <!-- BigChange Logo (Original Color) -->
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg"
+                     alt="BigChange Logo"
+                     class="h-10 sm:h-12 object-contain"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/061A3D?text=BigChange'">
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                React 2 It: Upgrade to a <span class="text-accent">Full Service Management Platform</span>
+            </h1>
+
+            <p class="text-xl sm:text-2xl font-light opacity-90">
+                Move beyond basic logging and invoicing to smart scheduling, automated reporting, and proactive growth tools.
+            </p>
+
+            <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                You're ready for a platform that maximizes efficiency across your reactive repairs, full projects, and new PPM contracts. Stop the manual administration and **start scaling the business**.
+            </p>
+        </header>
+
+        <!-- PAIN POINTS VS SOLUTION: CORE ANALYSIS -->
+        <div class="mb-12 grid lg:grid-cols-2 gap-8">
+            
+            <!-- COLUMN 1: PAIN POINTS -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-danger pain-point-card">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="alert-octagon" class="icon-size text-danger"></i>
+                    <h2 class="text-3xl font-extrabold text-danger">The Hidden Costs of Manual Systems</h2>
+                </div>
+                
+                <p class="text-lg font-bold text-white mb-4">Seven core inefficiencies costing hours in admin and profit across your operations:</p>
+                
+                <div class="space-y-4">
+                    <!-- Pain Point 1: Fuel & Routing -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="map-pin-off" class="w-5 h-5 text-danger mr-2"></i> **P1:** Wasted Fuel, Routing & Congestion Fees
+                        </h4>
+                        <p class="text-sm text-gray-400">Inefficient scheduling leads to wasted fuel and the manual tracking/recording of London **Congestion Zone** charges.</p>
+                    </div>
+
+                    <!-- Pain Point 2: Dashcam SD Cards - ICON ADDED -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="video" class="w-5 h-5 text-danger mr-2"></i> **P2:** Manual Dashcam/Footage Management
+                        </h4>
+                        <p class="text-sm text-gray-400">The hassle of collecting, storing, and accessing footage via **SD cards**, preventing on-demand accident analysis.</p>
+                    </div>
+                    
+                    <!-- Pain Point 3: Timesheets & Skills -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="clipboard-x" class="w-5 h-5 text-danger mr-2"></i> **P3:** Fragmented Field Compliance & HR
+                        </h4>
+                        <p class="text-sm text-gray-400">Reliance on **manual, paper timesheets**, separate holiday/sickness logs, and the guesswork involved in assigning jobs based on **engineer skills**.</p>
+                    </div>
+
+                    <!-- Pain Point 4: PPM Alerts -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="bell-off" class="w-5 h-5 text-danger mr-2"></i> **P4:** Missing PPM Alerts & Reminders
+                        </h4>
+                        <p class="text-sm text-gray-400">No automated process to set internal alerts or customer reminders for **PPM contracts** and recurring work.</p>
+                    </div>
+
+                    <!-- Pain Point 5: Quote Follow-Up -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="mail-warning" class="w-5 h-5 text-danger mr-2"></i> **P5:** Dropped Quotes & Manual Follow-Up
+                        </h4>
+                        <p class="text-sm text-gray-400">Tracking quotes in external spreadsheets means lost visibility, and missing automated follow-ups to secure new business.</p>
+                    </div>
+
+                    <!-- Pain Point 6: Finance Reconciliation - ICON ADDED -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="dollar-sign" class="w-5 h-5 text-danger mr-2"></i> **P6:** Double-Handling Xero Reconciliation
+                        </h4>
+                        <p class="text-sm text-gray-400">Hours spent manually reconciling Xero payments with 'paid' or 'unpaid' invoices, preventing accurate cash flow reporting.</p>
+                    </div>
+
+                    <!-- Pain Point 7: Job Costings -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="file-minus" class="w-5 h-5 text-danger mr-2"></i> **P7:** Manual PO/Invoice/Retention Tracking
+                        </h4>
+                        <p class="text-sm text-gray-400">Laborious tracking of client **Retentions** and complex, manual reconciliation of **Purchase Orders (POs)** against final job invoices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: SOLUTION / ROI -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-accent">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="bar-chart-3" class="icon-size text-accent"></i>
+                    <h2 class="text-3xl font-extrabold text-accent">Seven Pillars of BigChange ROI</h2>
+                </div>
+                
+                <p class="text-lg font-bold text-white mb-4">Unify operations, automate administration, and drive immediate cost savings with our all-in-one platform:</p>
+                
+                <div class="space-y-4">
+                    <!-- Solution 1: Fuel & Routing -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="fuel" class="w-5 h-5 text-accent mr-2"></i> **S1:** AI Scheduling & Route Optimization
+                        </h4>
+                        <p class="text-sm text-gray-400">**Saves 10-15% on fuel** via intelligent scheduling that optimizes routes and automatically applies **Congestion Zone** charges to jobs/invoices.</p>
+                    </div>
+
+                    <!-- Solution 2: Dashcams -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="cloud-lightning" class="w-5 h-5 text-accent mr-2"></i> **S2:** Live Cloud Dashcam Integration
+                        </h4>
+                        <p class="text-sm text-gray-400">Access **live, cloud-based footage** instantly (no SD cards needed), automatically logging high-severity driver incidents (speeding, harsh braking).</p>
+                    </div>
+                    
+                    <!-- Solution 3: Field Compliance -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="user-check" class="w-5 h-5 text-accent mr-2"></i> **S3:** Integrated Time/HR & Skills Matrix
+                        </h4>
+                        <p class="text-sm text-gray-400">Mandate **digital time sheets** upon job start/finish, centralize **holiday/sickness**, and ensure compliance via the **skills matrix**.</p>
+                    </div>
+
+                    <!-- Solution 4: PPM Alerts -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="bell" class="w-5 h-5 text-accent mr-2"></i> **S4:** Automated PPM and Fleet Reminders
+                        </h4>
+                        <p class="text-sm text-gray-400">Set automatic email reminders and alerts for **PPM renewals** and all integrated **Fleet Management** deadlines (MOT, Service, Tax).</p>
+                    </div>
+
+                    <!-- Solution 5: Quote Follow-Up -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="mail-check" class="w-5 h-5 text-accent mr-2"></i> **S5:** Digital Quotes & Automated CRM
+                        </h4>
+                        <p class="text-sm text-gray-400">Create digital quotes instantly and use the integrated CRM to track acceptance, send **auto-follow-up emails**, and manage the sales pipeline.</p>
+                    </div>
+
+                    <!-- Solution 6: Finance Reconciliation -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="banknote" class="w-5 h-5 text-accent mr-2"></i> **S6:** Seamless 2-Way Xero Integration
+                        </h4>
+                        <p class="text-sm text-gray-400">The 2-Way Xero Sync saves hours of office admin by **automatically reconciling invoices** and payment statuses between systems.</p>
+                    </div>
+
+                    <!-- Solution 7: Job Costings -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="file-check" class="w-5 h-5 text-accent mr-2"></i> **S7:** Automated PO/Retention Control
+                        </h4>
+                        <p class="text-sm text-gray-400">Track and manage client **Retentions** instantly and simplify job costing by automating the reconciliation of **Purchase Orders** against invoices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE CLEANING CASE STUDIES SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-accent mb-8">Success in Service & Maintenance</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                Other maintenance companies trust BigChange to achieve efficiency, integrate finance, and simplify transitions from legacy systems.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Supporting Case Study 1: National Maintenance (JobLogic Migration) -->
+                <a href="https://www.bigchange.com/success-stories/national-maintenance-fixes-job-management-with-bigchange" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/66fffeed283505eecf5ddc07_66696b32f897b5cdab7455a8_659d6b74a6693c11cd20384a_BigChange_national_maint_0791a.jpeg" 
+                         alt="National Maintenance van on site" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=National+Maintenance+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="zap" class="w-6 h-6 text-accent"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">National Maintenance: Fixes Job Management</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Swapped out their system to achieve:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Successful migration from a legacy FSM solution.</li>
+                            <li>Massive reduction in paperwork and manual processing hours.</li>
+                            <li>A seamless platform for reactive and planned maintenance.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Supporting Case Study 2: CDC Draincare (Productivity & Growth) -->
+                <a href="https://www.bigchange.com/success-stories/cdc-draincare-doubles-productivity-and-expands-nationally-with-bigchange" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/66fffeebf528acdec9b2f1bb_66696b31d2498e952e7135a8_65aec09c71dfb2437a8c0310_659fde5a0311dace805d40cb_BigChange_CDC_01767_1200pix%25252520(002).jpg%25252520x22222.jpeg" 
+                             alt="CDC Draincare van on site" 
+                             class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=CDC+Draincare+Image'"> 
+                    
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="trending-up" class="w-6 h-6 text-accent"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">CDC Draincare: Doubled Productivity & Expansion</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Achieved substantial growth and efficiency improvements:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>**Doubled productivity** while expanding operations nationally.</li>
+                            <li>Eliminated paper job sheets, speeding up billing cycles.</li>
+                            <li>Gained real-time visibility over field operations and job status.</li>
+                            <li>Reduces operational time by 50% by using automated processes.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- PRICING OPTIONS -->
+        <div class="mt-12">
+            <h3 class="text-4xl font-extrabold text-white text-center mb-6">Your Bespoke Investment Proposal</h3>
+            
+            <p class="text-lg text-gray-200 text-center mb-8 max-w-3xl mx-auto">
+                Based on your current operations (15 office users, 10 mobile users, 8 vehicles), here is the total investment to migrate to BigChange.
+            </p>
+
+            <div class="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
+                
+                <!-- OPTION 1: CONSOLIDATED MONTHLY COST -->
+                <div class="bg-secondary-bg p-6 rounded-xl shadow-2xl border-t-4 border-accent flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-accent mb-6 text-center">Consolidated Monthly RRP List Price</h4>
+
+                        <ul class="text-left space-y-3 text-base">
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">15 x Office User Licenses (@ £79.95 RRP)</span>
+                                <span class="font-bold text-accent">£1,199.25</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">10 x Mobile User Licenses (@ £79.95 RRP)</span>
+                                <span class="font-bold text-accent">£799.50</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">8 x Dashcams with Uplift (@ £20.00 RRP)</span>
+                                <span class="font-bold text-accent">£160.00</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">2-Way Xero Integration Module (Optional)</span>
+                                <span class="font-bold text-accent">£100.00</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Dedicated Onboarding & Account Support</span>
+                                <span class="font-bold text-accent">£150.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-8 pt-4 border-t-2 border-gray-600">
+                        <p class="text-xl font-extrabold text-white flex justify-between items-center">
+                            <span>TOTAL MONTHLY RRP INVESTMENT (ex VAT):</span>
+                            <span class="text-accent text-3xl">£2,408.75</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <!-- NEW ROI CLOSING ARGUMENT SECTION -->
+        <div class="text-center p-8 bg-accent/20 rounded-xl mt-12">
+            <h3 class="text-3xl font-extrabold text-accent mb-4">The True Cost of Fragmentation: Target 5x ROI</h3>
+            <p class="text-lg text-white mb-6 max-w-2xl mx-auto">
+                While the monthly platform investment may be higher than your current license fee, the **true cost of your legacy system** lies in the hidden administrative burden, wasted fuel, and missed opportunities from fragmented systems (telematics, payroll, invoicing, spreadsheets).
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+                <div class="text-5xl font-extrabold text-accent">
+                    <span class="text-white">Cost of</span><br>FRAGMENTATION
+                </div>
+                <div class="text-5xl font-extrabold text-white">&rarr;</div>
+                <div class="text-5xl font-extrabold text-accent">
+                    <span class="text-white">Target</span><br>5x ROI
+                </div>
+            </div>
+
+            <p class="text-xl font-bold text-white mb-8 max-w-xl mx-auto">
+                We typically see customers achieve a **5x Return on Investment** simply by recapturing wasted office hours and field team inefficiency through automation.
+            </p>
+
+            <a href="mailto:oliver.abrahamson@bigchange.com?subject=React%202%20It%20-%20Review%20Implementation%20Timeline" 
+               target="_blank"
+               class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-bold rounded-full text-navy bg-accent hover:bg-white transition duration-300 shadow-xl">
+                <i data-lucide="send" class="w-6 h-6 mr-3"></i>
+                Confirm Proposal & Start Transition
+            </a>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
