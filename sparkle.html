@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange: Value vs. Risk - Why Bespoke Costs More</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define custom colors based on the BigChange brand style */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue for highlights - Primary Accent */
+            --color-secondary-bg: #102B51; /* Lighter Navy for contrast areas - Card/Section Background */
+            --color-danger: #D9534F; /* Soft Red for warnings */
+        }
+
+        /* Apply Brand Colors via utility classes */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        .text-danger { color: var(--color-danger); }
+        .bg-accent\/20 { background-color: rgba(0, 163, 255, 0.2); }
+
+        /* Set the Inter font globally and apply the dark theme background/text */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy);
+            color: #E5E7EB; /* Light gray for readability on dark background */
+        }
+
+        /* Custom Card Shadow for a more defined look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Icon sizing */
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+    </style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- HEADER: RE-FRAMING THE COST CONVERSATION -->
+        <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                The Value of BigChange: Why Bespoke <span class="text-accent">Costs Sparkles More</span>
+            </h1>
+            
+            <!-- New line of text for track record -->
+            <p class="text-lg sm:text-xl font-bold text-accent opacity-95 mb-4">
+                BigChange's Proven Track Record in the Cleaning and New Build Sector
+            </p>
+
+            <p class="text-xl sm:text-2xl font-light opacity-90">
+                A subscription to BigChange is a fixed, predictable expense. Bespoke development is an ongoing, escalating liability.
+            </p>
+
+            <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                Your current administrative burden (time-consuming manual processes) is the hidden cost BigChange eliminates on Day 1, a cost that escalates with bespoke development.
+            </p>
+        </header>
+
+        <!-- WATCH MEETING BACK BUTTON -->
+        <div class="text-center mb-12">
+            <a href="https://app.fireflies.ai/view/BigChange-X-Sparkles-Cleaning-Company::01K8G82D7P8T0QH1WHCH7AXN04" 
+               target="_blank"
+               class="inline-flex items-center px-8 py-3 border border-transparent text-base font-bold rounded-full text-navy bg-accent hover:bg-white transition duration-300 shadow-xl">
+                <i data-lucide="clapperboard" class="w-5 h-5 mr-3"></i>
+                Watch Our Meeting Back (Full Discussion Recording)
+            </a>
+        </div>
+        
+        <!-- RISK VS. VALUE SECTION (New Core Content) -->
+        <div class="mb-12 grid lg:grid-cols-2 gap-8">
+
+            <!-- COLUMN 1: RISKS OF BESPOKE DEVELOPMENT -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-danger">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="shield-off" class="icon-size text-danger"></i>
+                    <h2 class="text-3xl font-extrabold text-danger">The Open Checkbook Risk: Bespoke Liabilities</h2>
+                </div>
+                
+                <p class="text-lg font-bold text-white mb-4">The perceived cost saving vanishes when factoring in the time, resource, and liability costs you absorb:</p>
+                
+                <div class="space-y-4">
+                    
+                    <!-- Risk 1: Scope Creep & Time -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="dollar-sign-off" class="w-5 h-5 text-danger mr-2"></i> R1: Uncontrolled Time & Scope Creep
+                        </h4>
+                        <p class="text-sm text-gray-400">The current 10-week implementation estimate for bespoke systems rarely holds true. Scope creep, unexpected complexity, and testing extend timeframes to 6-12 months, delaying ROI.</p>
+                    </div>
+
+                    <!-- Risk 2: Open Checkbook -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="credit-card" class="w-5 h-5 text-danger mr-2"></i> R2: Development is an Open Checkbook
+                        </h4>
+                        <p class="text-sm text-gray-400">The quoted £11,773 covers only the initial defined scope. Any necessary future changes, integrations (like Xero), or additional functionality are new development costs you must cover.</p>
+                    </div>
+                    
+                    <!-- Risk 3: Ownership & Maintenance Burden -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="user-cog" class="w-5 h-5 text-danger mr-2"></i> R3: You Become the IT/Development Manager
+                        </h4>
+                        <p class="text-sm text-gray-400">You assume 100% liability for managing, upgrading, and securing the application, its servers, data, and future operating system compatibility. This is a perpetual cost and internal distraction.</p>
+                    </div>
+
+                    <!-- Risk 4: Future Upgrades -->
+                    <div class="p-3 bg-navy rounded-lg border border-danger/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="zap-off" class="w-5 h-5 text-danger mr-2"></i> R4: Innovation Gap & Feature Stagnation
+                        </h4>
+                        <p class="text-sm text-gray-400">Your bespoke platform will immediately stop innovating on launch day. BigChange continually invests millions in features like AI Scheduling, Dashcam integration, and two-way Xero sync, features you'd have to pay to build and maintain yourself.</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- COLUMN 2: BIGCHANGE'S IMMEDIATE VALUE -->
+            <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-accent">
+                <div class="flex items-center space-x-3 mb-4">
+                    <i data-lucide="trending-up" class="icon-size text-accent"></i>
+                    <h2 class="text-3xl font-extrabold text-accent">BigChange: Fixed Cost, Guaranteed ROI</h2>
+                </div>
+                
+                <p class="text-lg font-bold text-white mb-4">Our subscription model transfers 100% of the risk and maintenance burden to us, delivering immediate operational savings:</p>
+                
+                <div class="space-y-4">
+
+                    <!-- Value 1: Fixed Cost -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="lock" class="w-5 h-5 text-accent mr-2"></i> V1: Fixed, Predictable Monthly Cost
+                        </h4>
+                        <p class="text-sm text-gray-400">Your fees are locked in, covering every feature, upgrade, support, and maintenance. There are zero unexpected fees for fixing bugs, integrating new OS updates, or adding major feature releases.</p>
+                    </div>
+
+                    <!-- Value 2: Time to Value -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="calendar-check" class="w-5 h-5 text-accent mr-2"></i> V2: Rapid Implementation (Jan Rollout)
+                        </h4>
+                        <p class="text-sm text-gray-400">We agreed to start setup now for a guaranteed January rollout, ensuring minimum disruption and a fast return on investment by launching during your quiet period.</p>
+                    </div>
+                    
+                    <!-- Value 3: Risk Transfer -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-accent mr-2"></i> V3: 100% Risk Transfer
+                        </h4>
+                        <p class="text-sm text-gray-400">We are solely responsible for security, compliance, bug fixes, and feature development. This frees up Matt, Amy, and Jo to focus exclusively on franchising and scaling the core business.</p>
+                    </div>
+
+                     <!-- Value 4: Operational Savings (The 5x ROI) -->
+                    <div class="p-3 bg-navy rounded-lg border border-accent/50">
+                        <h4 class="font-semibold text-white mb-1 flex items-center">
+                            <i data-lucide="bar-chart-2" class="w-5 h-5 text-accent mr-2"></i> V4: Immediate ROI on Wasted Admin Hours
+                        </h4>
+                        <p class="text-sm text-gray-400">The 2-4 days currently spent on invoicing alone far exceeds the annual BigChange fee. Our customers typically achieve a 5x ROI by recapturing field productivity and eliminating hours of manual office admin (PPMs, POs, Sign-Offs).</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- OPERATIONAL PAINS IN CONTEXT SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-accent mb-8">Success in Specialist & New Build Maintenance</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-4xl mx-auto">
+                These case studies demonstrate the power of a complete platform in both the New Build Aftercare sector (directly related to Sparkles’ work) and specialized Surface Repair services.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Supporting Case Study 1: A&S Contractors (New Build Aftercare) -->
+                <a href="https://www.bigchange.com/success-stories/a-s-contractors-boost-new-house-after-care-services-with-bigchange-mobile-technology" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d9616546a38f3898c1122e_A%26S-p-2000.jpeg" 
+                         alt="A&S Contractors van on new build site" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=A%26S+Contractors+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="home" class="w-6 h-6 text-accent"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">A&S Contractors: New Build Aftercare & Auditing</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Successfully integrated BigChange to eliminate delays and streamline their operations for major developers:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Centralised job management for post-handover clean-up and remedial services.</li>
+                            <li>Digital job cards eliminate disputes over paper sign-offs and approval forms.</li>
+                            <li>Gained real-time control over scheduling and field team location/status.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- Supporting Case Study 2: Prymo (Specialist Repair/Service) -->
+                <a href="https://www.bigchange.com/success-stories/bigchange-helps-surface-repair-specialist-prymo-double-business" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/65aec0a16219eaa0ecc3dc26_659fb6b0c9dd69f8738920d8_BigChange_Prymo_04352_LowRes_1200pix.avif" 
+                         alt="Prymo vehicle branding" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Prymo+Surface+Repair+Image'"> 
+                    
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="wand" class="w-6 h-6 text-accent"></i>
+                            <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">Prymo: Doubled Specialist Repair Business</h4>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-3">
+                            A highly successful case study for a specialist service provider who needed control over complex field operations:
+                        </p>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                            <li>Doubled their business in size after switching to the platform.</li>
+                            <li>Enhanced customer communication with automated ETA and job completion alerts.</li>
+                            <li>Gained visibility over material usage, dramatically improving stock control and job profitability.</li>
+                        </ul>
+                        <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- NEW PRICING SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-white mb-6">Your Bespoke Investment Proposal (10 Users)</h2>
+
+            <div class="max-w-xl mx-auto space-y-6">
+                <!-- List Price Card -->
+                <div class="p-4 bg-navy rounded-lg border border-gray-600">
+                    <h3 class="text-xl font-bold text-white mb-2 flex justify-between items-center">
+                        <span class="text-gray-400">Standard List Price:</span>
+                        <span class="text-2xl font-extrabold line-through text-danger">£950.00 / month</span>
+                    </h3>
+                    <ul class="list-disc ml-5 text-gray-400 text-sm space-y-1">
+                        <li>10 User Licenses (Admin & Driver @ £80 RRP) = £800.00 / month</li>
+                        <li>Onboarding & UK Support (Fixed Fee) = £150.00 / month</li>
+                        <li>Annual Cost: £11,400.00</li>
+                    </ul>
+                </div>
+
+                <!-- Offer Box -->
+                <div class="p-6 bg-accent/30 border border-accent rounded-lg text-center">
+                    <h3 class="text-2xl font-extrabold text-accent mb-3">MONTH-END INVESTMENT OFFER:</h3>
+                    <p class="text-sm text-gray-200 mb-4">
+                        To immediately unlock 5x ROI and remove the risks of bespoke development, we offer a substantial discount.
+                        This special offer is conditional on a commitment by the end of October.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <div class="text-xl font-bold text-gray-300">Total Fixed Monthly Cost:</div>
+                        <div class="text-5xl font-extrabold text-accent">£750.00</div>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-2">Saving you 21% on our list price, equating to just £9,000.00 per annum.</p>
+                </div>
+
+                <!-- NEW ACTION BUTTON HERE -->
+                <div class="w-full pt-4">
+                    <a href="mailto:oliver.abrahamson@bigchange.com?subject=Sparkles%20Cleaning%20-%20Action%20on%20Bespoke%20Risk%20Analysis" 
+                       target="_blank"
+                       class="inline-flex items-center justify-center w-full px-8 py-3 border border-transparent text-lg font-bold rounded-full text-navy bg-accent hover:bg-white transition duration-300 shadow-xl">
+                        <i data-lucide="users" class="w-6 h-6 mr-3"></i>
+                        Schedule Joint Call with Matt & Amy
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- END NEW PRICING SECTION -->
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
