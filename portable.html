@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange ROI: Optimising Portable Space Field Operations</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define custom colours based on the BigChange brand style (similar to Energy Blue) */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue for highlights - Primary Accent */
+            --color-secondary-bg: #102B51; /* Lighter Navy for contrast areas - Card/Section Background */
+            --color-success: #10B981; /* Green for key ROI */
+        }
+
+        /* Apply Brand Colours via utility classes */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        .text-success { color: var(--color-success); }
+        .bg-success\/20 { background-color: rgba(16, 185, 129, 0.2); }
+
+        /* Set the Inter font globally and apply the dark theme background/text */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy);
+            color: #E5E7EB; /* Light gray for readability on dark background */
+        }
+
+        /* Custom Card Shadow for a more defined look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Icon sizing */
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+        
+        /* Specific styling for SVG logos to ensure they appear light on dark background */
+        .svg-logo-filter {
+            filter: brightness(0) invert(1) grayscale(100%); 
+        }
+        
+    </style>
+</head>
+<body class="bg-navy text-gray-200 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- HEADER & LOGO SECTION -->
+        <header class="text-center mb-10 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+            
+            <div class="flex items-center justify-center space-x-6 mb-6">
+                <!-- Portable Space Logo -->
+                <img src="https://www.portablespace.co.uk/wp-content/themes/portablespace/img/common/portable-space-logo.svg" 
+                     alt="Portable Space Ltd Logo" 
+                     class="h-10 sm:h-12 object-contain svg-logo-filter" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/061A3D?text=PORTABLE+SPACE'">
+                
+                <span class="text-gray-500 text-3xl font-extrabold">X</span>
+                
+                <!-- BigChange Logo -->
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" 
+                     alt="BigChange Logo" 
+                    class="h-10 sm:h-12 object-contain" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x50/00A3FF/061A3D?text=BIGCHANGE'">
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tight">
+                Driving ROI: Optimising Transport & Maintenance for <span class="text-accent">Portable Space Ltd</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl font-light opacity-90 max-w-4xl mx-auto">
+                Consolidate your field operations onto a single, integrated platform to eliminate double-entry, maximise driver efficiency, and ensure auditability across sales, hire, and conversion.
+            </p>
+        </header>
+
+        <!-- WATCH MEETING BACK BUTTON -->
+        <div class="text-center mb-12">
+            <a href="https://app.fireflies.ai/view/Big-Change::01K8MWSK9HP3HSHN0YX55MN0R0" 
+               target="_blank"
+               class="inline-flex items-center px-8 py-3 border border-transparent text-base font-bold rounded-full text-navy bg-accent hover:bg-white transition duration-300 shadow-xl">
+                <i data-lucide="clapperboard" class="w-5 h-5 mr-3"></i>
+                Watch Our Meeting Back (Full Discussion Recording)
+            </a>
+        </div>
+        
+        <!-- KEY MEETING DISCUSSION POINTS (PAIN POINTS & SOLUTIONS) -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-white mb-6">Key Discussion Takeaways: Eliminating Operational Bottlenecks</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-4xl mx-auto">
+                BigChange provides the dedicated field service management layer missing in your current stack, integrating seamlessly to drive immediate ROI in these key areas:
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                
+                <!-- P1: HubSpot Integration / Double Entry -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="zap" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">HubSpot Automation</h3>
+                    <p class="text-sm text-gray-400">Eliminate the manual double-entry by Sales Admin after a close-won deal. HubSpot integration triggers the creation of the transport job instantly in BigChange.</p>
+                </div>
+                
+                <!-- P2: Driver Constraints / Scheduling Logic -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="truck" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">Vehicle Constraint Matching</h3>
+                    <p class="text-sm text-gray-400">Apply rules to ensure only appropriate vehicles (14 lorries) are scheduled for specific unit deliveries/collections, preventing costly delivery errors and vehicle misuse.</p>
+                </div>
+                
+                <!-- P3: Quality Check / Condition Reporting -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="clipboard-check" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">Unit Condition Audits</h3>
+                    <p class="text-sm text-gray-400">Mandatory mobile workflows force quality checks (pre-delivery, collection, post-hire) using photo evidence, eliminating query time and accurately logging damages against specific asset IDs.</p>
+                </div>
+                
+                <!-- P4: Group Job Workflows (Conversions) -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="trello" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">Conversion Group Jobs</h3>
+                    <p class="text-sm text-gray-400">Link dependent jobs (Fit-Out &rarr; Fabrication) into Group Jobs. Team 2 cannot start until Team 1 completes their sign-off, ensuring sequential accuracy and speeding up unit turnaround.</p>
+                </div>
+                
+                <!-- P5: Vehicle Maintenance / Fleet Management -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="settings" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">Integrated Fleet Management</h3>
+                    <p class="text-sm text-gray-400">Track MOT, road tax, service dates, and open defects (tow bars, bodywork) for all 14 lorries and vans. Alerts ensure compliance and reduce administrative time for procurement.</p>
+                </div>
+
+                <!-- P6: Automated Customer Comms -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="bell" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">Automated ETA & Alerts</h3>
+                    <p class="text-sm text-gray-400">Instantly notify customers of delivery and collection ETAs via SMS/email with a live tracking link, solving a key service pain point and boosting customer satisfaction.</p>
+                </div>
+                
+                <!-- P7: Asset History & Location Tracking -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="map-pin" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">Asset Movement Tracking</h3>
+                    <p class="text-sm text-gray-400">Track the full movement and job history of individual portable cabins and units across multiple sites and depots, providing auditable unit usage data.</p>
+                </div>
+                
+                <!-- P8: Operational Reporting & Margin -->
+                <div class="bg-navy p-4 rounded-lg shadow-md border-b-2 border-accent hover:border-white transition">
+                    <i data-lucide="dollar-sign" class="w-6 h-6 text-accent mb-2"></i>
+                    <h3 class="font-bold text-lg mb-1">Operational Finance</h3>
+                    <p class="text-sm text-gray-400">Gain instant visibility into job cost (cost vs. sell) and margin for every transport job, allowing Finance (Ashley) to measure profitability before final invoicing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLANT & HIRE CASE STUDIES SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+            <h2 class="text-3xl font-extrabold text-center text-accent mb-8">Proven ROI in Plant Hire & Specialist Logistics</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-4xl mx-auto">
+                We work with industry leaders facing identical field transport and maintenance challenges, delivering significant, quantifiable efficiency gains.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Case Study 1: AFI Group (Fixed Price, Predictable) -->
+                <a href="https://www.bigchange.com/success-stories/a-s-contractors-boost-new-house-after-care-services-with-bigchange-mobile-technology" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d9691516eaa408adb83d30_AFI.jpeg" 
+                         alt="AFI Group mobile working platform" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=AFI+Group+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="crane" class="w-6 h-6 text-accent"></i>
+                            <h4 class="font-extrabold text-lg text-white group-hover:text-accent transition duration-300">AFI Group: 100% Productivity for Access Platforms</h4>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm mt-3">
+                            <li>Centralised job, service, and delivery workflows across UK depots.</li>
+                            <li>Automated scheduling and real-time tracking for maximum driver efficiency.</li>
+                            <li>Improved compliance with digital vehicle and job safety checks.</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <!-- Case Study 2: Generator Power (Logistics & Maintenance) -->
+                <a href="https://www.bigchange.com/success-stories/bigchange-mobile-workforce-technology-transforms-rental-operations-for-generator-power" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d972d66abcbe27515caafd_Generator.png" 
+                         alt="Generator Power truck" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Generator+Power+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="battery-charging" class="w-6 h-6 text-accent"></i>
+                            <h4 class="font-extrabold text-lg text-white group-hover:text-accent transition duration-300">Generator Power: Transforming Rental Logistics</h4>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm mt-3">
+                            <li>Replaced fragmented systems with one solution for fleet, logistics, and service.</li>
+                            <li>Gained live visibility over driver status and location to handle dynamic call-outs.</li>
+                            <li>Improved first-time fix rates by connecting engineers with job history and manuals on the mobile app.</li>
+                        </ul>
+                    </div>
+                </a>
+                
+                <!-- Case Study 3: Sunbelt Rentals (Scale & Visibility) -->
+                <a href="https://www.bigchange.com/success-stories/sunbelt-rentals-transforms-business-with-bigchange-mobile-technology" 
+                   target="_blank" 
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d9c488b1caa3ec9f6f7c30_Sunbelt%201.webp" 
+                         alt="Sunbelt Rentals branded vehicle" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Sunbelt+Rentals+Image'">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <i data-lucide="map" class="w-6 h-6 text-accent"></i>
+                            <h4 class="font-extrabold text-lg text-white group-hover:text-accent transition duration-300">Sunbelt Rentals: National Scale & Customer Comms</h4>
+                        </div>
+                        <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm mt-3">
+                            <li>Mobilised 900+ engineers, delivering a core competitive advantage through technology.</li>
+                            <li>Pings live ETA tracking links to customers for every delivery and collection.</li>
+                            <li>Used data to justify renewal, citing BigChange as the 'saving grace for the business'.</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- COMMERCIALS & NEXT STEPS SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-success">
+            <h2 class="text-3xl font-extrabold text-center text-success mb-6">Next Steps & Commercial Summary</h2>
+
+            <div class="max-w-xl mx-auto space-y-6">
+                
+                <!-- Pricing Summary -->
+                <div class="p-4 bg-navy rounded-lg border border-gray-600 text-left">
+                    <h3 class="text-xl font-bold text-white mb-3">Investment Summary (Per User / Per Month)</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex justify-between">
+                            <span>Office Users (Per User)</span>
+                            <span class="font-bold text-white">£79.95</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Mobile Users (Per User, incl. Tracking)</span>
+                            <span class="font-bold text-white">£79.95</span>
+                        </li>
+                        <li class="flex justify-between border-t border-gray-700 mt-2 pt-2">
+                            <span>Onboarding & Ongoing UK Support (Fixed Fee)</span>
+                            <span class="font-bold text-white">£200.00 / month</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text-lg text-gray-300 text-center">
+                    The mobile user rate includes hardwired vehicle tracking, providing a unified solution that covers **100% of the platform, tracking, support, and maintenance.**
+                </p>
+
+                <!-- ACTION BUTTON -->
+                <div class="w-full pt-4">
+                    <a href="mailto:oliver.abrahamson@bigchange.com?subject=Portable%20Space%20Ltd%20-%20Next%20Step%20Meeting%20Request" 
+                       target="_blank"
+                       class="inline-flex items-center justify-center w-full px-8 py-3 border border-transparent text-lg font-bold rounded-full text-navy bg-success hover:bg-white transition duration-300 shadow-xl">
+                        <i data-lucide="phone-call" class="w-6 h-6 mr-3"></i>
+                        Confirm Follow-Up Meeting to Discuss Next Steps
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- END COMMERCIALS & NEXT STEPS SECTION -->
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
