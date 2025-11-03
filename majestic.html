@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majestic Grounds & BigChange: Full ROI Proposal</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define consistent brand colors & styles */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue - Primary Accent */
+            --color-text-light: #E5E7EB; /* Light Gray - General body text on dark BG */
+            --color-secondary-bg: #102B51; /* Lighter Navy for contrast areas */
+            --color-danger: #D9534F; 
+            --color-success: #10B981;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text-light); 
+            background-color: var(--color-navy); 
+        }
+
+        /* Custom colors utility classes from ROI page */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        .text-danger { color: var(--color-danger); }
+        .text-success { color: var(--color-success); }
+        .bg-success { background-color: var(--color-success); }
+        .hover\:bg-success-dark:hover { background-color: #0c8a68; }
+
+        /* Custom Shadow and Hover Effect for Cards */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+
+        /* Cover Page Styles: Forces a full-screen display */
+        #cover-page {
+            background-image: url('https://husbandtreegrounds.co.uk/wp-content/uploads/2024/08/H_Grounds_Maintenance-DSC_5848.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Using Tailwind equivalent for opacity (bg-navy/90) where possible */
+        .bg-navy\/90 { background-color: rgba(6, 26, 61, 0.9); }
+    </style>
+</head>
+<body class="min-h-screen">
+    
+    <!-- ============================================== -->
+    <!--          PAGE 1: COVER PAGE (100vh)          -->
+    <!-- ============================================== -->
+    <section id="cover-page" class="relative h-screen w-full flex items-center justify-center p-8 text-center">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-navy/90 z-10"></div>
+        
+        <div class="relative z-20 max-w-4xl w-full">
+            
+            <!-- Company Logos Row -->
+            <div class="flex justify-center items-center space-x-6 mb-12 border-b border-white/20 pb-6">
+                <!-- BigChange Logo -->
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" 
+                     alt="BigChange Logo" 
+                     class="h-10 sm:h-12 object-contain"
+                     onerror="this.onerror=null;this.src='https://placehold.co/180x50/00A3FF/FFFFFF?text=BigChange'">
+                
+                <!-- Majestic Grounds Logo -->
+                <img src="https://majesticgardenservices.co.uk/wp-content/themes/majestic/images/logo.svg" 
+                     alt="Majestic Grounds Maintenance Ltd Logo" 
+                     class="h-12 sm:h-16 object-contain"
+                     onerror="this.onerror=null;this.src='https://placehold.co/240x60/10B981/FFFFFF?text=Majestic+Grounds'">
+                
+                <!-- Servtron Logo -->
+                <img src="https://static.wixstatic.com/media/54ac8c_943c545029cb461c81736f45168f9874~mv2.png/v1/fill/w_564,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Servtron%20Logo%20NBG.png" 
+                     alt="Servtron Logo (Parent Company)" 
+                     class="h-10 sm:h-12 object-contain invert"
+                     onerror="this.onerror=null;this.src='https://placehold.co/180x50/061A3D/FFFFFF?text=Servtron'">
+            </div>
+
+            <!-- Proposal Title -->
+            <p class="text-xl sm:text-2xl font-light tracking-widest uppercase opacity-75 mb-4">
+                ROI & Digital Transformation Proposal
+            </p>
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-8">
+                Majestic Grounds: <br class="sm:hidden">
+                <span class="text-accent block mt-2 sm:inline">The Platform for M&A and Tender Growth</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-light max-w-2xl mx-auto opacity-90">
+                A Unified Field Management Solution to Scale Operations and Maximize Field Team Efficiency.
+            </p>
+
+            <!-- REMOVED: View Full Proposal Button -->
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!--          PAGE 2 ONWARD: MAIN PROPOSAL          -->
+    <!-- ============================================== -->
+    <div id="main-proposal" class="pt-8 pb-16 px-4 sm:px-8 bg-navy text-gray-200">
+        <div class="max-w-6xl mx-auto">
+            <!-- ROI HEADER -->
+            <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+                <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                    Majestic Grounds: The <span class="text-accent">Platform for M&A and Tender Growth</span>
+                </h1>
+                <p class="text-xl sm:text-2xl font-light opacity-90">
+                    A unified digital system to replace ad-hoc processes and support your growth to 20+ mobile grounds teams.
+                </p>
+                <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                    You currently rely on manual scheduling, WhatsApp reports, and limited CRM tools. BigChange delivers the auditability and scalability required for public sector tenders and Servtron's M&A strategy.
+                </p>
+            </header>
+
+            <!-- PROBLEM VS SOLUTION: CORE PAIN POINTS -->
+            <div class="mb-12 grid lg:grid-cols-2 gap-8">
+                <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-danger">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="shield-alert" class="icon-size text-danger"></i>
+                        <h2 class="text-3xl font-extrabold text-danger">The Risk of Manual Systems</h2>
+                    </div>
+                    <p class="text-lg font-bold text-white mb-4">Fragmented data and a lack of real-time control prevent you from scaling efficiently and winning new tenders.</p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="clipboard-x" class="w-5 h-5 text-danger mr-2"></i> Ad-Hoc Reporting & Invoicing
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Current use of WhatsApp pictures and email requires MD time to compile monthly client reports, delaying invoicing and preventing live reporting access for clients like Dwelland.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="git-merge" class="w-5 h-5 text-danger mr-2"></i> Inefficient Growth (M&A)
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                The current "in a man's head" scheduling model is not scalable for 12+ teams and future acquisitions, creating bottlenecks for the contract manager.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="building-2" class="w-5 h-5 text-danger mr-2"></i> Tendering Hurdles
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Lack of integrated CO2 emission data, digital asset registers (mowers/tools), and verifiable RAMS makes preparation for public sector tenders challenging.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BigChange Value and ROI -->
+                <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-success">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="trending-up" class="icon-size text-success"></i>
+                        <h2 class="text-3xl font-extrabold text-success">BigChange ROI: Measurable Growth & Control</h2>
+                    </div>
+                    <p class="text-lg font-bold text-white mb-4">Consolidation creates visibility, saves fuel, and unlocks scalable M&A growth.</p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-navy rounded-lg border border-success/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="fuel" class="w-5 h-5 text-success mr-2"></i> Guaranteed Route Optimisation (10% Fuel Saving)
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Dynamic route optimisation minimizes crisscrossing (45:02), providing a conservative 10% monthly fuel saving on your current spend of a "good couple grand."
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-success/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="user-check" class="w-5 h-5 text-success mr-2"></i> Tender-Winning Proof of Service
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                The Client Portal provides irrefutable job history, digital sign-off, and immediate access for site managers, fulfilling key tender and contract requirements.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-success/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="activity" class="w-5 h-5 text-success mr-2"></i> Live Productivity & Resource Visibility
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                See how much time is "spent working versus driving" (01:16:19), manage team-based scheduling, and allocate assets (equipment) directly to vans/jobs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOBILE CLEANING CASE STUDIES SECTION -->
+            <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+                <h2 class="text-3xl font-extrabold text-center text-accent mb-8">Success in Grounds Maintenance & Scaling</h2>
+                <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Grounds and facility maintenance companies leverage BigChange to consolidate multiple systems and achieve significant, measurable growth.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Case Study 1: Greenskape -->
+                    <a href="https://www.bigchange.com/success-stories/bigchange-drives-expansion-at-grounds-maintenance-company-greenskape" 
+                    target="_blank" 
+                    class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d7fd231b1da69a32437cb7_Greenskape.jpeg" 
+                            alt="Greenskape grounds maintenance team on site" 
+                            class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Greenskape+Image'">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i data-lucide="file-badge" class="w-6 h-6 text-success"></i>
+                                <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">Greenskape: Tender-Winning Software for Education & Schools</h4>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-3">
+                                The MD was told BigChange was "tender winning software" and it delivered, improving services for college and school contracts:
+                            </p>
+                            <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                                <li>Digital job sheets and photos provide irrefutable proof of service.</li>
+                                <li>Client Portal allows caretakers to request ad hoc visits directly.</li>
+                                <li>Eliminated time spent chasing job sheets.</li>
+                            </ul>
+                            <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Case Study 2: Envirocare -->
+                    <a href="https://www.bigchange.com/success-stories/envirocare-transforms-ground-maintenance-services-with-bigchange-tech" 
+                    target="_blank" 
+                    class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d7ffc83b78cb87e476e071_Envirocare.jpeg" 
+                            alt="Envirocare grounds maintenance vehicle" 
+                            class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Envirocare+Image'">
+                        
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i data-lucide="spray-can" class="w-6 h-6 text-success"></i>
+                                <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">Envirocare: Simplifying Complex Operations for Facilities Management</h4>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-3">
+                                A grounds maintenance specialist that required unified system controls to manage complexity:
+                            </p>
+                            <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                                <li>Replaced disparate systems with a single platform for all field operations.</li>
+                                <li>Implemented dynamic scheduling to ensure efficiency across multiple contracts.</li>
+                                <li>Improved compliance and auditability for facilities management and social housing clients.</li>
+                            </ul>
+                            <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- NEXT STEPS CTA -->
+            <div class="text-center p-8 bg-accent/20 rounded-xl mb-12">
+                <h3 class="text-3xl font-extrabold text-accent mb-4">Review the Full Discussion</h3>
+                <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                    Access the full meeting transcript and recording to share with your stakeholders.
+                </p>
+                <div class="w-full max-w-sm mx-auto">
+                    <a href="https://app.fireflies.ai/view/BigChange-x-Majestic-Grounds-Maintenance-Ltd::01K8TG3FC8AVAH727943352R3P" 
+                       target="_blank"
+                       class="inline-flex items-center justify-center w-full px-8 py-4 border border-transparent text-lg font-bold rounded-full text-navy bg-success hover:bg-success-dark transition duration-300 shadow-xl">
+                        <i data-lucide="clapperboard" class="w-6 h-6 mr-3"></i>
+                        Click Here to View Recording
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRICING OPTIONS -->
+            <div>
+                <h3 class="text-4xl font-extrabold text-white mb-6 text-center">Your Bespoke Proposal (17 Licences)</h3>
+                <p class="text-lg text-gray-200 mb-8 max-w-3xl mx-auto text-center">
+                    To move quickly on your December/January timeline and scale your 17 teams, here are two options for implementation.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- OPTION 1: DIGITAL OPERATIONS (SOFTWARE ONLY) -->
+                    <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-success flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-3xl font-extrabold text-success mb-2">Option 1: Digital Operations</h4>
+                            <p class="text-sm text-gray-400 mb-6">Full software access using your existing devices (BYOD) and tracking hardware.</p>
+
+                            <ul class="text-left space-y-3 text-base">
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">17 User Licences (@ £79.95 RRP)</span>
+                                    <span class="font-bold text-accent">£1,359.15</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">Xero Integration Module</span>
+                                    <span class="font-bold text-accent">£100.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">Initial Training & UK Support (Monthly Cost)</span>
+                                    <span class="font-bold text-accent">£150.00</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t-2 border-gray-600">
+                            <p class="text-xl font-extrabold text-white flex justify-between items-center">
+                                <span>TOTAL MONTHLY COST (ex VAT):</span>
+                                <span class="text-success text-3xl">£1,609.15</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- OPTION 2: FULL MANAGED SERVICE (HARDWARE INCLUDED) -->
+                    <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-accent flex flex-col justify-between relative">
+                        <span class="absolute top-[-10px] right-4 bg-accent text-navy px-3 py-1 text-xs font-extrabold rounded-full shadow-md">RECOMMENDED FOR FLEET</span>
+                        <div>
+                            <h4 class="text-3xl font-extrabold text-accent mb-2">Option 2: Full Managed Service</h4>
+                            <p class="text-sm text-gray-400 mb-6">Our full managed service including dedicated hardware and device management (for enhanced security and functionality).</p>
+
+                            <ul class="text-left space-y-3 text-base">
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">17 User Licences (Software & Tracking)</span>
+                                    <span class="font-bold text-accent">£1,359.15</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">7 x Samsung Tab Active 5 + Dashcams Uplift</span>
+                                    <span class="font-bold text-accent">£210.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">Initial Training & UK Support (Monthly Cost)</span>
+                                    <span class="font-bold text-accent">£150.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">Includes Data, Device Management, Cradles</span>
+                                    <span class="font-bold text-accent">INCLUDED</span>
+                                
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t-2 border-gray-600">
+                            <p class="text-xl font-extrabold text-white flex justify-between items-center">
+                                <span>TOTAL MONTHLY COST (ex VAT):</span>
+                                <span class="text-accent text-3xl">£1,719.15</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-8 text-lg text-white mb-6 max-w-xl mx-auto text-center">
+                    The core ROI is gained by keeping your office team lean and focusing MD time on business growth, not administration, which is significantly cheaper than an additional administrative salary.
+                </p>
+                <a href="mailto:oliver.abrahamson@bigchange.com?subject=Majestic%20Grounds%20-%20Confirm%20Proposal" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-accent hover:bg-white hover:text-navy transition duration-300 shadow-lg max-w-xs mx-auto block">
+                    <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                    Confirm Proposal & Next Steps
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        // Use window.onload to ensure the DOM is fully loaded before initializing icons.
+        window.onload = function() {
+            lucide.createIcons();
+            // Scroll past the cover page immediately for desktop users, 
+            // while retaining the visual effect of a first page.
+            if (window.location.hash) {
+                // If a hash is present, don't scroll
+            } else if (window.innerWidth > 768) { 
+                // Only autoscroll on desktop/larger screens
+                const coverPage = document.getElementById('cover-page');
+                if (coverPage) {
+                    // Smooth scroll to the main content section
+                    const offsetTop = coverPage.offsetHeight;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        };
+    </script>
+</body>
+</html>
