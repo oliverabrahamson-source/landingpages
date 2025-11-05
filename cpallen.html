@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Allen & Son Transport & BigChange: Waste Digitalisation & ROI</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define consistent brand colors & styles */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue - Primary Accent */
+            --color-text-light: #E5E7EB; /* Light Gray - General body text on dark BG */
+            --color-secondary-bg: #102B51; /* Lighter Navy for contrast areas */
+            --color-danger: #D9534F; 
+            --color-success: #10B981;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--color-text-light); 
+            background-color: var(--color-navy); 
+        }
+
+        /* Custom colors utility classes */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-accent { border-color: var(--color-accent); }
+        .text-danger { color: var(--color-danger); }
+        .text-success { color: var(--color-success); }
+        .bg-success { background-color: var(--color-success); }
+        .hover\:bg-success-dark:hover { background-color: #0c8a68; }
+
+        /* Custom Shadow and Hover Effect for Cards */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        .icon-size { width: 2.25rem; height: 2.25rem; }
+
+        /* Cover Page Styles: Forces a full-screen display */
+        #cover-page {
+            /* Using a generic transport image as the provided one is a small signature graphic */
+            background-image: url('https://placehold.co/1920x1080/061A3D/00A3FF?text=C+P+Allen+Transport+Hero');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Dark Overlay for contrast */
+        .bg-navy\/90 { background-color: rgba(6, 26, 61, 0.9); }
+    </style>
+</head>
+<body class="min-h-screen">
+    
+    <!-- ============================================== -->
+    <!--          PAGE 1: COVER PAGE (100vh)          -->
+    <!-- ============================================== -->
+    <section id="cover-page" class="relative h-screen w-full flex items-center justify-center p-8 text-center">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-navy/90 z-10"></div>
+        
+        <div class="relative z-20 max-w-4xl w-full">
+            
+            <!-- Company Logos Row -->
+            <div class="flex justify-center items-center space-x-6 mb-12 border-b border-white/20 pb-6">
+                <!-- BigChange Logo -->
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" 
+                     alt="BigChange Logo" 
+                     class="h-10 sm:h-12 object-contain"
+                     onerror="this.onerror=null;this.src='https://placehold.co/180x50/00A3FF/FFFFFF?text=BigChange'">
+                
+                <!-- C P Allen & Son Transport Ltd Logo -->
+                <img src="https://cpallenandsontransport.com/assets/images/Email_Signature_Name.jpg" 
+                     alt="C P Allen & Son Transport Ltd Logo" 
+                     class="h-12 sm:h-16 object-contain invert"
+                     onerror="this.onerror=null;this.src='https://placehold.co/240x60/10B981/FFFFFF?text=CP+Allen+Son'">
+            </div>
+
+            <!-- Proposal Title -->
+            <p class="text-xl sm:text-2xl font-light tracking-widest uppercase opacity-75 mb-4">
+                Digitalisation & Compliance Proposal
+            </p>
+            <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-8">
+                C P Allen & Son: <br class="sm:hidden">
+                <span class="text-accent block mt-2 sm:inline">From Paper Tickets to Digital Compliance</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-light max-w-2xl mx-auto opacity-90">
+                An integrated system to replace paper Waste Transfer Notes and streamline day-to-day transport operations for your fleet.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!--          PAGE 2 ONWARD: MAIN PROPOSAL          -->
+    <!-- ============================================== -->
+    <div id="main-proposal" class="pt-8 pb-16 px-4 sm:px-8 bg-navy text-gray-200">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- ROI HEADER -->
+            <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+                <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                    Digital Waste Management & Compliance for <span class="text-accent">C P Allen & Son</span>
+                </h1>
+                <p class="text-xl sm:text-2xl font-light opacity-90">
+                    Eliminating paper-based risk to streamline collection, disposal, and quarterly Environmental Agency reporting.
+                </p>
+                <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                    The move to BigChange creates a single digital environment, replacing manual ticket writing (03:39) and multiple paper-based systems (08:38) with fully compliant, real-time documentation.
+                </p>
+            </header>
+
+            <!-- PROBLEM VS SOLUTION: CORE PAIN POINTS -->
+            <div class="mb-12 grid lg:grid-cols-2 gap-8">
+                <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-danger">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="file-text" class="icon-size text-danger"></i>
+                        <h2 class="text-3xl font-extrabold text-danger">The Risk of Paper-Based Operations</h2>
+                    </div>
+                    <p class="text-lg font-bold text-white mb-4">Manual processes introduce delays, compliance risk, and significant administrative time waste.</p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="clipboard-list" class="w-5 h-5 text-danger mr-2"></i> Compliance Risk & Admin Burden
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Manual writing of Waste Transfer Notes (WTNs) is highly time-consuming (03:41) and risks compliance failure (e.g., APHA number requirement - 08:46).
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="send" class="w-5 h-5 text-danger mr-2"></i> Delayed Invoicing & Quarterly Reporting
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Drivers handing in paper tickets at the end of the week (09:44) delays invoicing and makes compiling the mandatory **quarterly EA returns report** (45:25) a dreaded manual task.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-danger/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="alert-triangle" class="w-5 h-5 text-danger mr-2"></i> Vehicle & Trailer Check Compliance
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Current 15-minute vehicle and trailer checks are performed manually on paper (48:04), creating audit risk and lacking proper time-logging/tracking.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BigChange Value and ROI -->
+                <div class="bg-secondary-bg p-8 rounded-xl card-shadow border-t-8 border-success">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="check-circle" class="icon-size text-success"></i>
+                        <h2 class="text-3xl font-extrabold text-success">BigChange ROI: Digital Compliance & Control</h2>
+                    </div>
+                    <p class="text-lg font-bold text-white mb-4">One system manages fleet, jobs, and legally compliant documentation from truck to office.</p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-navy rounded-lg border border-success/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="file-check" class="w-5 h-5 text-success mr-2"></i> Digital Waste Tracking & Auditability
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Drivers complete the full WTN (Sections A-D) on their phone/tablet in real-time. **Automated waste code matching** (32:18), multi-waste handling (33:11), and **immediate digital issue of the WTN** to the waste producer (43:52) eliminates paper risk.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-success/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="bar-chart-2" class="w-5 h-5 text-success mr-2"></i> Automated Quarterly Reporting
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                All collected WTN data is instantly compiled into the **National Operator Waste Returns report** (45:02), ready for export to the Environment Agency, saving hours of manual admin time every quarter.
+                            </p>
+                        </div>
+                        <div class="p-4 bg-navy rounded-lg border border-success/50">
+                            <h4 class="font-semibold text-white mb-1 flex items-center">
+                                <i data-lucide="truck" class="w-5 h-5 text-success mr-2"></i> Fleet Management & Safety Checks
+                            </h4>
+                            <p class="text-sm text-gray-400">
+                                Digital pre-shift and trailer checks (48:39) can be customised to RHA standards, timed on the app, and instantly logged. This combines with **holiday/absence tracking** (50:04) and **simple job scheduling** (50:17) for full operational oversight.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WASTE MANAGEMENT CASE STUDIES SECTION -->
+            <div class="mb-12 p-8 bg-secondary-bg rounded-xl shadow-xl border-t-4 border-accent">
+                <h2 class="text-3xl font-extrabold text-center text-accent mb-8">Success in Waste & Commercial Transport</h2>
+                <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Commercial transport and waste haulage companies use BigChange to achieve operational efficiency, auditability, and measurable financial benefits.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Case Study 1: Eurotech Environmental -->
+                    <a href="https://www.bigchange.com/success-stories/bigchange-brings-a-ps1million-benefit-to-eurotech-environmental" 
+                       target="_blank" 
+                       class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d9d087c3995364094fa53a_Eurotech.webp" 
+                             alt="Eurotech Environmental vehicle in city" 
+                             class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=Eurotech+Image'">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i data-lucide="banknote" class="w-6 h-6 text-success"></i>
+                                <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">Eurotech Environmental: £1 Million Operational Benefit</h4>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-3">
+                                Waste and environmental specialists achieved major financial benefits by gaining full digital visibility:
+                            </p>
+                            <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                                <li>Reduced office administration time by **one full day per week**.</li>
+                                <li>Eliminated paper job cards, resulting in a six-figure saving in invoice processing.</li>
+                                <li>Achieved fully integrated digital scheduling and real-time job allocation.</li>
+                            </ul>
+                            <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- Case Study 2: D-Body -->
+                    <a href="https://www.bigchange.com/success-stories/d-body-flushes-job-management-paper-with-bigchange" 
+                       target="_blank" 
+                       class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/80 transition duration-300">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/66fffee78cd123763bd3a732_66696b2ce36da8fb457d5451_664dad56b024ede75fffa0df_1200px_d-body_dsc01535.jpeg" 
+                             alt="D-Body vehicle with BigChange branding" 
+                             class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x200/00A3FF/ffffff?text=D-Body+Image'">
+                        
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <i data-lucide="file-digit" class="w-6 h-6 text-success"></i>
+                                <h4 class="font-extrabold text-xl text-white group-hover:text-accent transition duration-300">D-Body Transport: Moving Beyond Paper with Real-Time Data</h4>
+                            </div>
+                            <p class="text-sm text-gray-400 mb-3">
+                                A general haulage firm that eliminated paperwork and gained complete business visibility:
+                            </p>
+                            <ul class="list-disc ml-5 text-gray-300 space-y-1 text-sm">
+                                <li>Instant access to job status and driver location for office staff.</li>
+                                <li>All compliance forms, including WTNs, completed digitally on handheld devices.</li>
+                                <li>Reduced invoice disputes by using real-time, tamper-proof proof-of-delivery.</li>
+                            </ul>
+                            <span class="mt-4 inline-block text-accent font-semibold text-sm group-hover:underline">Read the Full Story &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- NEXT STEPS CTA -->
+            <div class="text-center p-8 bg-accent/20 rounded-xl mb-12">
+                <h3 class="text-3xl font-extrabold text-accent mb-4">Review the Full Discussion</h3>
+                <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                    Access the full meeting transcript and recording to share with Mick and the team.
+                </p>
+                <div class="w-full max-w-sm mx-auto">
+                    <a href="https://app.fireflies.ai/view/BigChange-x-CP-Allen-Son-Transport-Ltd::01K99R6KHBJHQ06Q7HXNEVBPF0" 
+                       target="_blank"
+                       class="inline-flex items-center justify-center w-full px-8 py-4 border border-transparent text-lg font-bold rounded-full text-navy bg-success hover:bg-success-dark transition duration-300 shadow-xl">
+                        <i data-lucide="clapperboard" class="w-6 h-6 mr-3"></i>
+                        Click Here to View Recording
+                    </a>
+                </div>
+            </div>
+
+            <!-- PRICING OPTIONS -->
+            <div>
+                <h3 class="text-4xl font-extrabold text-white mb-6 text-center">Your Bespoke Proposal (12 Licences)</h3>
+                <p class="text-lg text-gray-200 mb-8 max-w-3xl mx-auto text-center">
+                    Based on your requirements (10 Drivers and 2 Office users), here are your RRP and discounted monthly options.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- OPTION 1: RRP (SOFTWARE ONLY) -->
+                    <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-success flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-3xl font-extrabold text-success mb-2">Option 1: RRP (Standard Pricing)</h4>
+                            <p class="text-sm text-gray-400 mb-6">Full software access including Waste Transfer functionality and UK support.</p>
+
+                            <ul class="text-left space-y-3 text-base">
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">12 User Licences (10 Mobile, 2 Office @ £80 RRP)</span>
+                                    <span class="font-bold text-accent">£960.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">Waste Transfer Note Setup & UK Support (Monthly)</span>
+                                    <span class="font-bold text-accent">£100.00</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t-2 border-gray-600">
+                            <p class="text-xl font-extrabold text-white flex justify-between items-center">
+                                <span>TOTAL MONTHLY COST (ex VAT):</span>
+                                <span class="text-success text-3xl">£1,060.00</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- OPTION 2: NOVEMBER DISCOUNT (25% OFF) -->
+                    <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-accent flex flex-col justify-between relative">
+                        <span class="absolute top-[-10px] right-4 bg-accent text-navy px-3 py-1 text-xs font-extrabold rounded-full shadow-md">NOVEMBER DISCOUNT 25%</span>
+                        <div>
+                            <h4 class="text-3xl font-extrabold text-accent mb-2">Option 2: Special Discounted Rate</h4>
+                            <p class="text-sm text-gray-400 mb-6">Take 25% off all recurring costs for a powerful, digitally compliant solution.</p>
+
+                            <ul class="text-left space-y-3 text-base">
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">12 User Licences (Discounted 25%)</span>
+                                    <span class="font-bold text-accent">£720.00</span> <!-- £960 * 0.75 -->
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">Waste Transfer Note Setup & UK Support (Discounted 25%)</span>
+                                    <span class="font-bold text-accent">£75.00</span> <!-- £100 * 0.75 -->
+                                </li>
+                                <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                    <span class="font-semibold text-white">Total Discount Saved (Monthly)</span>
+                                    <span class="font-bold text-accent">£265.00</span> <!-- (£960 + £100) - (£720 + £75) = £265 -->
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t-2 border-gray-600">
+                            <p class="text-xl font-extrabold text-white flex justify-between items-center">
+                                <span>TOTAL MONTHLY COST (ex VAT):</span>
+                                <span class="text-accent text-3xl">£795.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-8 text-lg text-white mb-6 max-w-xl mx-auto text-center">
+                    The immediate switch to digital saves Rebecca hours per week on WTN administration alone, far exceeding the platform's monthly cost. We are ready to support your implementation immediately.
+                </p>
+                <a href="mailto:oliver.abrahamson@bigchange.com?subject=CP%20Allen%20&%20Son%20Transport%20-%20Confirm%20Proposal" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-accent hover:bg-white hover:text-navy transition duration-300 shadow-lg max-w-xs mx-auto block">
+                    <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                    Confirm Proposal & Next Steps
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        window.onload = function() {
+            lucide.createIcons();
+            // Scroll past the cover page immediately for desktop users, 
+            // while retaining the visual effect of a first page.
+            if (window.location.hash) {
+                // If a hash is present, don't scroll
+            } else if (window.innerWidth > 768) { 
+                // Only autoscroll on desktop/larger screens
+                const coverPage = document.getElementById('cover-page');
+                if (coverPage) {
+                    const offsetTop = coverPage.offsetHeight;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        };
+    </script>
+</body>
+</html>
