@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange Proposal for Knowsley Lift Services Ltd.</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Custom colors based on the BigChange brand style */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue - Primary Accent */
+            --color-secondary-bg: #102B51; /* Lighter Navy - Card/Section Background */
+            --color-danger: #D9534F; /* Soft Red for warnings/pain points */
+            --color-success: #10B981; /* Green for success/benefits */
+            --color-knowsley-gold: #FFC300; /* Custom color inspired by lift maintenance/quality */
+        }
+
+        /* Apply Brand Colors */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-knowsley-gold { border-color: var(--color-knowsley-gold); }
+        .text-knowsley-gold { color: var(--color-knowsley-gold); }
+
+        /* General Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy);
+            color: #E5E7EB; 
+        }
+        
+        /* Custom Shadow for a more defined card look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        .icon-size {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+    </style>
+</head>
+
+<body class="bg-navy text-gray-200 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- HEADER & CORE VALUE PROPOSITION -->
+        <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+            
+            <!-- CO-BRANDING LOGO BLOCK -->
+            <div class="flex items-center justify-center mb-6 space-x-6">
+                <!-- BigChange Logo -->
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" 
+                    alt="BigChange Logo" 
+                    class="h-8 sm:h-10 object-contain"
+                    onerror="this.onerror=null;this.src='https://placehold.co/180x30/00A3FF/ffffff?text=BigChange'">
+
+                <!-- Divider -->
+                <div class="h-10 w-px bg-gray-500/50"></div>
+
+                <!-- Knowsley Lift Services Logo -->
+                <img src="https://lirp.cdn-website.com/29ca8caf/dms3rep/multi/opt/logo-108w.webp" 
+                    alt="Knowsley Lift Services Ltd. Logo" 
+                    class="h-16 sm:h-20 object-contain invert"
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x50/ffffff/061A3D?text=Knowsley+Lifts'">
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                Knowsley Lifts: Elevate Service Delivery and <span class="text-accent">Control Repeat Callouts</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light opacity-90">
+                A modern platform to manage every lift asset, engineer skill set, and call-out history live.
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                Move beyond the limitations of E-Works to achieve <strong>full visibility</strong> over asset history, eliminate paper-based defects, and automate critical invoicing steps.
+            </p>
+        </header>
+
+        <!-- ROI KEY BENEFITS -->
+        <div class="mb-8 p-8 bg-secondary-bg rounded-xl card-shadow border-t-4 border-knowsley-gold">
+            <h2 class="text-3xl font-extrabold text-center text-knowsley-gold mb-8">Key Return on Investment (ROI)</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                Based on our discussion, BigChange directly addresses your key efficiency challenges to increase profitability and consistency.
+            </p>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                
+                <!-- Benefit 1: Repeat Callout Prevention (Original) -->
+                <div class="p-6 bg-navy rounded-xl border border-knowsley-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="bell-ring" class="icon-size text-danger mb-3"></i>
+                    <h4 class="font-bold text-xl text-white mb-2">Automated Repeat Callout Warnings</h4>
+                    <p class="text-sm text-gray-400">Eliminate missed problem jobs. The system provides mandatory, visual <strong>pop-up warnings</strong> (instead of ignorable fields) when logging a repeat call to a site within a specific time frame (e.g., 30 days).</p>
+                </div>
+                
+                <!-- Benefit 2: Financial Streamlining (Original) -->
+                <div class="p-6 bg-navy rounded-xl border border-knowsley-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="banknote" class="icon-size text-success mb-3"></i>
+                    <h4 class="font-bold text-xl text-white mb-2">Sage Live Sync & Rate Cards</h4>
+                    <p class="text-sm text-gray-400">Achieve live <strong>two-way synchronisation with Sage 50</strong>. Automated job-to-invoice generation using precise, pre-defined client rate cards (e.g., standard, 5-12, weekend rates), ensuring accurate and fast billing.</p>
+                </div>
+
+                <!-- NEW Benefit 3: Communication Automation & Paperwork -->
+                <div class="p-6 bg-navy rounded-xl border border-knowsley-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="mail-check" class="icon-size text-accent mb-3"></i>
+                    <h4 class="font-bold text-xl text-white mb-2">Auto-Reporting & Client Messaging</h4>
+                    <p class="text-sm text-gray-400">Save hours of office admin by **automatically sending digital job reports** (PDF) post-completion. Also automates job confirmations and 'on the way' messages to clients, drastically reducing inbound/outbound phone calls.</p>
+                </div>
+                
+                <!-- Consolidated Asset History as an extra feature block -->
+                <div class="lg:col-span-3 p-6 bg-navy rounded-xl border border-knowsley-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="layers-3" class="w-8 h-8 text-white/50 mb-2"></i>
+                    <h4 class="font-bold text-lg text-white mb-1">Key Feature: Granular Asset & Job History</h4>
+                    <p class="text-sm text-gray-500">Schedule directly against a specific lift serial number (asset). Instantly pull up all maintenance, call-outs, and inspection history against that individual asset, crucial for detailed reporting and client accountability.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- NEW ROI CALCULATOR SECTION -->
+        <div class="mb-12 text-center p-8 bg-knowsley-gold/20 rounded-xl border-t-4 border-knowsley-gold">
+            <h3 class="text-3xl font-extrabold text-knowsley-gold mb-4">Calculate Your Potential ROI</h3>
+            <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                Discover the real savings made by real customers using data-backed metrics. Use our interactive tool to estimate your own return on investment.
+            </p>
+            <div class="w-full max-w-xs mx-auto">
+                <a href="https://arabismail-cpu.github.io/costsavingscalc/" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center w-full px-8 py-4 border border-transparent text-lg font-bold rounded-full text-navy bg-knowsley-gold hover:bg-knowsley-gold/80 transition duration-300 shadow-xl">
+                    <i data-lucide="calculator" class="w-6 h-6 mr-3"></i>
+                    Run the Calculator
+                </a>
+            </div>
+        </div>
+        
+        <!-- INDUSTRY EXPERTISE / TRUST SECTION -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl card-shadow border-t-4 border-knowsley-gold">
+            <h2 class="text-3xl font-extrabold text-center text-white mb-8">Trusted by UK Lift and Elevator Specialists</h2>
+            <p class="text-center text-gray-300 mb-10 max-w-3xl mx-auto">
+                BigChange powers operations for leading companies across the UK lift sector, managing everything from routine maintenance to complex installations.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-center">
+                
+                <!-- Company 1: Midland Lifts (Mentioned in Transcript) -->
+                <div class="p-4 h-24 flex items-center justify-center bg-navy rounded-lg shadow-md hover:bg-navy/70 transition duration-200">
+                    <img src="https://placehold.co/150x50/102B51/FFC300?text=Midland+Lifts" 
+                         alt="Midland Lifts Logo Placeholder" 
+                         class="max-h-16 w-auto object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/150x50/102B51/FFC300?text=Midland+Lifts'">
+                </div>
+
+                <!-- Company 2: Gartec -->
+                <div class="p-4 h-24 flex items-center justify-center bg-navy rounded-lg shadow-md hover:bg-navy/70 transition duration-200">
+                    <img src="https://placehold.co/150x50/102B51/FFC300?text=Gartec" 
+                         alt="Gartec Logo Placeholder" 
+                         class="max-h-16 w-auto object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/150x50/102B51/FFC300?text=Gartec'">
+                </div>
+
+                <!-- Company 3: Target Lifts -->
+                <div class="p-4 h-24 flex items-center justify-center bg-navy rounded-lg shadow-md hover:bg-navy/70 transition duration-200">
+                    <img src="https://placehold.co/150x50/102B51/FFC300?text=Target+Lifts" 
+                         alt="Target Lifts Logo Placeholder" 
+                         class="max-h-16 w-auto object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/150x50/102B51/FFC300?text=Target+Lifts'">
+                </div>
+
+                <!-- Company 4: White Lift Services -->
+                <div class="p-4 h-24 flex items-center justify-center bg-navy rounded-lg shadow-md hover:bg-navy/70 transition duration-200">
+                    <img src="https://placehold.co/150x50/102B51/FFC300?text=White+Lift+Services" 
+                         alt="White Lift Services Logo Placeholder" 
+                         class="max-h-16 w-auto object-contain"
+                         onerror="this.onerror=null;this.src='https://placehold.co/150x50/102B51/FFC300?text=White+Lift+Services'">
+                </div>
+            </div>
+        </div>
+        
+        <!-- COST PROPOSAL (Based on Transcript) -->
+        <div class="mt-12">
+            <h3 class="text-4xl font-extrabold text-white mb-6 text-center">Your Investment Proposal</h3>
+            <p class="text-lg text-gray-200 mb-8 max-w-3xl mx-auto text-center">
+                The following indicative pricing is based on a **per user per month** license, plus the mandatory Onboarding & Support fee.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Engineer/Office User License -->
+                <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-accent flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-accent mb-2">Per User License (Office & Mobile)</h4>
+                        <p class="text-sm text-gray-400 mb-6">Full software access, including vehicle tracking for Mobile Users.</p>
+                        
+                        <ul class="text-left space-y-3 text-base">
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Monthly Cost Per User (ex VAT)</span>
+                                <span class="font-bold text-knowsley-gold">£79.95</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Applies to: Office Staff (Scheduler, Accounts)</span>
+                                <span class="font-bold text-success">YES</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Applies to: Mobile Engineers (Field App, Tracking)</span>
+                                <span class="font-bold text-success">YES</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Support and Onboarding -->
+                <div class="bg-navy p-6 rounded-xl shadow-2xl border-t-4 border-success flex flex-col justify-between relative">
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-success mb-2">Onboarding & Mandatory Support Package</h4>
+                        <p class="text-sm text-gray-400 mb-6">Covers initial setup, training, and 24/7 UK-based helpdesk support.</p>
+                        
+                        <ul class="text-left space-y-3 text-base">
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Monthly Onboarding & Support Fee (Mandatory)</span>
+                                <span class="font-bold text-accent">£150.00</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Includes Helpdesk Access (24/7)</span>
+                                <span class="font-bold text-success">YES</span>
+                            </li>
+                            <li class="flex justify-between items-center pb-2 border-b border-gray-700">
+                                <span class="font-semibold text-white">Onboarding & Training</span>
+                                <span class="font-bold text-success">INCLUDED</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-xs text-center text-gray-500 mt-8">*All prices are exclusive of VAT. Price is negotiable based on license volume and commitment.</p>
+        </div>
+        
+        <!-- NEXT STEPS CTA -->
+        <div class="text-center p-8 bg-accent/20 rounded-xl mt-12">
+            <h3 class="text-3xl font-extrabold text-accent mb-4">Review the Full Discussion</h3>
+            <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                A dedicated recording and transcript of our meeting is provided below for your team's review.
+            </p>
+            <div class="w-full max-w-sm mx-auto">
+                <a href="https://app.fireflies.ai/view/BigChange-System-Demo-For-Knowsley-Lift-Services-Ltd::01KABXR0E62QEJFJJEM1NASE3D" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center w-full px-8 py-4 border border-transparent text-lg font-bold rounded-full text-navy bg-success hover:bg-success-dark transition duration-300 shadow-xl">
+                    <i data-lucide="clapperboard" class="w-6 h-6 mr-3"></i>
+                    Click to View Meeting Recording
+                </a>
+            </div>
+            
+            <p class="mt-8 text-lg text-white mb-6 max-w-xl mx-auto">
+                Ready to take the next step or book a follow-up with your accounts team?
+            </p>
+            <a href="mailto:oliver.abrahamson@bigchange.com?subject=Knowsley%20Lifts%20-%20Followup%20on%20BigChange%20Proposal" 
+               target="_blank"
+               class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-accent hover:bg-white hover:text-navy transition duration-300 shadow-lg">
+                <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                Schedule Follow-Up or Confirm Interest
+            </a>
+        </div>
+        
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
