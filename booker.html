@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChange Proposal for Booker & Best</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Custom colors based on the BigChange brand style */
+        :root {
+            --color-navy: #061A3D; /* Deep Blue - Primary Background */
+            --color-accent: #00A3FF; /* Vibrant Cyan/Blue - Primary Accent */
+            --color-secondary-bg: #102B51; /* Lighter Navy - Card/Section Background */
+            --color-danger: #D9534F; /* Soft Red for warnings/pain points */
+            --color-success: #10B981; /* Green for success/benefits */
+            --color-gold: #FFC300; /* General accent colour for this proposal */
+        }
+
+        /* Apply Brand Colors */
+        .bg-navy { background-color: var(--color-navy); }
+        .bg-secondary-bg { background-color: var(--color-secondary-bg); }
+        .text-accent { color: var(--color-accent); }
+        .border-gold { border-color: var(--color-gold); }
+        .text-gold { color: var(--color-gold); }
+
+        /* General Styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-navy);
+            color: #E5E7EB; 
+        }
+        
+        /* Custom Shadow for a more defined card look */
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 163, 255, 0.3), 0 4px 6px -4px rgba(0, 163, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        .icon-size {
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+    </style>
+</head>
+
+<body class="bg-navy text-gray-200 min-h-screen p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- HEADER & CORE VALUE PROPOSITION -->
+        <header class="text-center mb-12 p-8 bg-secondary-bg text-white rounded-xl shadow-2xl shadow-blue-900/50">
+            
+            <!-- CO-BRANDING LOGO BLOCK - ONLY BIGCHANGE LOGO REMAINS -->
+            <div class="flex items-center justify-center mb-6 space-x-6">
+                <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" 
+                    alt="BigChange Logo" 
+                    class="h-10 sm:h-12 object-contain"
+                    onerror="this.onerror=null;this.src='https://placehold.co/200x40/00A3FF/ffffff?text=BigChange'">
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight">
+                Booker & Best: Scale Responsive Repairs and <span class="text-accent">Eliminate Mobile Inefficiency</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-light opacity-90">
+                Upgrade from Total Mobile to an end-to-end platform that automates complex surveys and ensures full compliance across 30+ operatives.
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-lg font-light text-gray-300">
+                BigChange provides the powerful, dynamic mobile and scheduling functionality required to efficiently manage your current reactive workload and confidently scale for new social housing contracts.
+            </p>
+        </header>
+
+        <!-- ROI KEY BENEFITS (Using Gold Accent) -->
+        <div class="mb-8 p-8 bg-secondary-bg rounded-xl card-shadow border-t-4 border-gold">
+            <h2 class="text-3xl font-extrabold text-center text-gold mb-8">Key Return on Investment (ROI)</h2>
+            <p class="text-center text-gray-300 mb-8 max-w-3xl mx-auto">
+                BigChange closes the operational gaps found in your existing system, boosting efficiency and data quality.
+            </p>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                
+                <!-- Benefit 1: Dynamic Workflow Builder (NEW) -->
+                <div class="p-6 bg-navy rounded-xl border border-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="layout-grid" class="icon-size text-danger mb-3"></i>
+                    <h4 class="font-bold text-xl text-white mb-2">Dynamic Mobile Workflow Builder</h4>
+                    <p class="text-sm text-gray-400">Replaces the basic surveys in Total Mobile with a powerful builder that handles complex conditional logic (like unit types/colours) and significantly reduces data collection time and errors (25:13).</p>
+                </div>
+                
+                <!-- Benefit 2: Live Route Optimization & Tracking (NEW) -->
+                <div class="p-6 bg-navy rounded-xl border border-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="map-pin" class="icon-size text-success mb-3"></i>
+                    <h4 class="font-bold text-xl text-white mb-2">Live Geofence Scheduling</h4>
+                    <p class="text-sm text-gray-400">Uses live telematics data (not just postcodes) for accurate 'on the way' messages and calculates the *true* most efficient route for multiple jobs, lowering travel time and cost (06:35, 50:40).</p>
+                </div>
+
+                <!-- Benefit 3: Forced Compliance (NEW) -->
+                <div class="p-6 bg-navy rounded-xl border border-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="check-square" class="icon-size text-accent mb-3"></i>
+                    <h4 class="font-bold text-xl text-white mb-2">Forced Vehicle/Timesheet Compliance</h4>
+                    <p class="text-sm text-gray-400">Automates timesheet logging and forces engineers to complete vehicle checks (46:46) and view compliance documents (51:48) before starting a job, ensuring accurate labor costs and legal adherence.</p>
+                </div>
+                
+                <!-- Feature block for new Contract Onboarding -->
+                <div class="lg:col-span-3 p-6 bg-navy rounded-xl border border-gold/50 flex flex-col items-center text-center">
+                    <i data-lucide="package-open" class="w-8 h-8 text-white/50 mb-2"></i>
+                    <h4 class="font-bold text-lg text-white mb-1">Key Feature: Fast Scalability for New Social Housing Contracts</h4>
+                    <p class="text-sm text-gray-500">The platform is designed to instantly scale the diary system (03:39) without manual bottlenecks, allowing you to absorb the 15-20 new diaries seamlessly if your new contract is secured (08:36).</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ROI CALCULATOR SECTION -->
+        <div class="mb-12 text-center p-8 bg-gold/20 rounded-xl border-t-4 border-gold">
+            <h3 class="text-3xl font-extrabold text-gold mb-4">Calculate Your Potential ROI</h3>
+            <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                Discover the real savings made by real customers using data-backed metrics. Use our interactive tool to estimate your own return on investment.
+            </p>
+            <div class="w-full max-w-xs mx-auto">
+                <a href="https://arabismail-cpu.github.io/costsavingscalc/" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center w-full px-8 py-4 border border-transparent text-lg font-bold rounded-full text-navy bg-gold hover:bg-gold/80 transition duration-300 shadow-xl">
+                    <i data-lucide="calculator" class="w-6 h-6 mr-3"></i>
+                    Run the Calculator
+                </a>
+            </div>
+        </div>
+        
+        <!-- INDUSTRY EXPERTISE / TRUST SECTION - NEW SOCIAL HOUSING CASE STUDIES -->
+        <div class="mb-12 p-8 bg-secondary-bg rounded-xl card-shadow border-t-4 border-gold">
+            <h2 class="text-3xl font-extrabold text-center text-white mb-8">Success in Social Housing & Facilities Management</h2>
+            <p class="text-center text-gray-300 mb-10 max-w-3xl mx-auto">
+                BigChange is the platform of choice for multi-trade contractors servicing large-scale residential and council contracts across the UK.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 items-center">
+                
+                <!-- Case Study 1: DFP Services -->
+                <a href="https://www.bigchange.com/success-stories/dfp-services-has-transformed-its-business-with-the-latest-cloud-and-mobile-technology" 
+                   target="_blank"
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/70 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67da839bc08707bc16773d0a_DFP.jpeg" 
+                        alt="DFP Services Case Study Image" 
+                        class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x200/FFC300/061A3D?text=DFP+Services'">
+                    <div class="p-4">
+                        <h4 class="font-extrabold text-lg text-white group-hover:text-accent transition duration-300">DFP Services: Multi-Trade Compliance</h4>
+                        <p class="text-sm text-gray-400 mt-1">Transformed multi-trade repairs (plumbing/heating/electric) with cloud and mobile technology across social housing contracts.</p>
+                        <span class="mt-2 inline-block text-accent font-semibold text-xs group-hover:underline">Read the Story →</span>
+                    </div>
+                </a>
+
+                <!-- Case Study 2: London Drainage Facilities -->
+                <a href="https://www.bigchange.com/success-stories/london-drainage-facilities-boosts-business-growth-with-bigchange-mobile-tech" 
+                   target="_blank"
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/70 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/66696b3441845fb58383993a_659d6beaad705732e7d561d7_BigChange_London_Drainage_Facilities-1024x766.avif" 
+                         alt="London Drainage Facilities Case Study Image" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/FFC300/061A3D?text=London+Drainage'">
+                    <div class="p-4">
+                        <h4 class="font-extrabold text-lg text-white group-hover:text-accent transition duration-300">London Drainage: Facilities Growth</h4>
+                        <p class="text-sm text-gray-400 mt-1">A facilities management specialist managing responsive repairs and planned maintenance across varied client sites.</p>
+                        <span class="mt-2 inline-block text-accent font-semibold text-xs group-hover:underline">Read the Story →</span>
+                    </div>
+                </a>
+
+                <!-- Case Study 3: DSSL (Social Housing - Greener Future) -->
+                <a href="https://www.bigchange.com/success-stories/dssl-secures-greener-future-with-bigchange" 
+                   target="_blank"
+                   class="block bg-navy rounded-xl card-shadow overflow-hidden group hover:bg-navy/70 transition duration-300">
+                    <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/6622546669003ea41a54d2df_1200pix_bigchange_dssl_01488.avif" 
+                         alt="DSSL Secures Greener Future Case Study Image" 
+                         class="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x200/FFC300/061A3D?text=DSSL+Greener+Future'">
+                    <div class="p-4">
+                        <h4 class="font-extrabold text-lg text-white group-hover:text-accent transition duration-300">DSSL: Green Technology Rollout</h4>
+                        <p class="text-sm text-gray-400 mt-1">Successfully rolled out green energy installations for social housing clients, demonstrating flexibility and scalability.</p>
+                        <span class="mt-2 inline-block text-accent font-semibold text-xs group-hover:underline">Read the Story →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- COST PROPOSAL (STREAMLINED) -->
+        <div class="mt-12 p-8 bg-secondary-bg rounded-xl card-shadow border-t-4 border-accent">
+            <h3 class="text-4xl font-extrabold text-white mb-6 text-center">Your Investment Proposal</h3>
+            <p class="text-lg text-gray-200 mb-8 max-w-3xl mx-auto text-center">
+                Transparent and predictable monthly costs, reflecting our commitment to partnership. (All prices are exclusive of VAT).
+            </p>
+
+            <div class="max-w-xl mx-auto space-y-4">
+                
+                <!-- Pricing Item 1: Back Office User -->
+                <div class="bg-navy p-4 rounded-xl flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="monitor" class="w-6 h-6 text-accent"></i>
+                        <span class="font-semibold text-white text-lg">1. Back Office User (Scheduling, Admin)</span>
+                    </div>
+                    <span class="font-bold text-gold text-2xl">£79.95</span>
+                </div>
+
+                <!-- Pricing Item 2: Mobile Engineer -->
+                <div class="bg-navy p-4 rounded-xl flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="truck" class="w-6 h-6 text-success"></i>
+                        <span class="font-semibold text-white text-lg">2. Mobile Engineer App (inc. Tracking)</span>
+                    </div>
+                    <span class="font-bold text-gold text-2xl">£79.95</span>
+                </div>
+
+                <!-- Pricing Item 3: Onboarding & Support -->
+                <div class="bg-navy p-4 rounded-xl flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="life-buoy" class="w-6 h-6 text-gold"></i>
+                        <span class="font-semibold text-white text-lg">3. Onboarding & Support (Per Month)</span>
+                    </div>
+                    <span class="font-bold text-gold text-2xl">£150.00</span>
+                </div>
+                
+                <p class="text-xs text-center text-gray-500 pt-2">
+                    *The single monthly Support fee covers initial setup, training, and 24/7 UK-based helpdesk support for the duration of the term. Price is negotiable based on license volume and commitment.
+                </p>
+            </div>
+        </div>
+        
+        <!-- NEXT STEPS CTA -->
+        <div class="text-center p-8 bg-accent/20 rounded-xl mt-12">
+            <h3 class="text-3xl font-extrabold text-accent mb-4">Review the Full Discussion</h3>
+            <p class="text-lg text-white mb-6 max-w-xl mx-auto">
+                A dedicated recording and transcript of our meeting is provided below for your team's review.
+            </p>
+            <div class="w-full max-w-sm mx-auto">
+                <a href="https://app.fireflies.ai/view/BigChange-x-Booker-Best::01KB2NM1Z7VG3BY8SPGH5J87X6" 
+                   target="_blank"
+                   class="inline-flex items-center justify-center w-full px-8 py-4 border border-transparent text-lg font-bold rounded-full text-navy bg-gold hover:bg-navy transition duration-300 shadow-xl">
+                    <i data-lucide="clapperboard" class="w-6 h-6 mr-3"></i>
+                    Click to View Meeting Recording
+                </a>
+            </div>
+            
+            <p class="mt-8 text-lg text-white mb-6 max-w-xl mx-auto">
+                Ready to take the next step or book a follow-up discussion for early January?
+            </p>
+            <a href="mailto:oliver.abrahamson@bigchange.com?subject=Booker%20and%20Best%20-%20Followup%20on%20BigChange%20Proposal%20(January)" 
+               target="_blank"
+               class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-accent hover:bg-white hover:text-navy transition duration-300 shadow-lg">
+                <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                Schedule Follow-Up or Confirm Interest
+            </a>
+        </div>
+        
+    </div>
+
+    <!-- Initialize Lucide icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
