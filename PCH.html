@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plymouth Community Homes: One Platform, Infinite Possibilities</title>
+    <meta name="description" content="A tailored proposal for Plymouth Community Homes to replace paper-based workflows and Excel silos with a unified digital platform.">
+    <meta name="author" content="BigChange">
+    
+    <style>
+        :root {
+            --bc-energy-blue: #0072CE;
+            --bc-navy: #0A2240;
+            --bc-green: #28E289;
+            --bc-orange: #FF6B00;
+            --bc-light-grey: #F4F4F4;
+            --bc-charcoal: #282922;
+            --bc-white: #FFFFFF;
+            --bc-red: #E02B20;
+            
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-4: 1rem;
+            --spacing-6: 1.5rem;
+            --spacing-8: 2rem;
+            --spacing-12: 3rem;
+            --spacing-16: 4rem;
+            
+            --border-radius: 0.75rem;
+            --box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --transition-speed: 0.3s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bc-white);
+            color: var(--bc-charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-6); }
+        section { padding: var(--spacing-16) 0; }
+        h1, h2, h3, h4 { color: var(--bc-navy); line-height: 1.2; margin-bottom: var(--spacing-4); }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        a { color: var(--bc-energy-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .section-title { text-align: center; margin-bottom: var(--spacing-12); }
+        .section-title .icon {
+            color: var(--bc-energy-blue);
+            width: 48px;
+            height: 48px;
+            margin: 0 auto var(--spacing-4);
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--bc-navy);
+            color: var(--bc-white);
+            padding-top: var(--spacing-16);
+            padding-bottom: var(--spacing-16);
+            text-align: center;
+        }
+        #hero h1, #hero h2, #hero p { color: var(--bc-white); }
+        #hero h1 { font-size: 3rem; }
+        #hero .subhead { font-size: 1.25rem; max-width: 800px; margin: var(--spacing-4) auto var(--spacing-8); opacity: 0.9; }
+        .cta-buttons { display: flex; justify-content: center; gap: var(--spacing-4); flex-wrap: wrap; }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all var(--transition-speed);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary { background-color: var(--bc-energy-blue); color: var(--bc-white); }
+        .btn-primary:hover { background-color: #005bb5; }
+        .btn-secondary { background-color: transparent; color: var(--bc-white); border-color: var(--bc-white); }
+        .btn-secondary:hover { background-color: var(--bc-white); color: var(--bc-navy); }
+
+        /* Case Studies Section */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-8);
+        }
+        .case-study-card {
+            background: var(--bc-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e5e7eb;
+        }
+        .case-study-card:hover {
+            transform: translateY(-5px);
+        }
+        .case-study-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .case-study-content {
+            padding: var(--spacing-6);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .case-study-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-4);
+        }
+        .case-study-content p {
+            font-size: 0.95rem;
+            margin-bottom: var(--spacing-6);
+            color: #4b5563;
+        }
+        .case-study-link {
+            font-weight: 700;
+            color: var(--bc-energy-blue);
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Infographic Section */
+        .infographic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-12); align-items: start; }
+        .state-card { background-color: var(--bc-light-grey); padding: var(--spacing-8); border-radius: var(--border-radius); }
+        .state-card h3 { display: flex; align-items: center; gap: var(--spacing-4); }
+        .state-card ul { list-style: none; margin-top: var(--spacing-6); }
+        .state-card li { padding-left: 2rem; position: relative; margin-bottom: var(--spacing-4); }
+        .state-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .state-card.current li::before { background-color: var(--bc-orange); }
+        .state-card.future li::before { background-color: var(--bc-green); }
+
+        /* Meetings Recap */
+        .meetings-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-8); max-width: 800px; margin: 0 auto; }
+        .meeting-card { background-color: var(--bc-white); border: 1px solid #e5e7eb; border-radius: var(--border-radius); padding: var(--spacing-6); position: relative; overflow: hidden; }
+        .meeting-number { background-color: var(--bc-light-grey); color: var(--bc-navy); font-weight: 700; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: var(--spacing-4); }
+        .meeting-card ul { margin-left: var(--spacing-4); margin-bottom: var(--spacing-6); list-style: disc; }
+        .meeting-card li { margin-bottom: var(--spacing-2); font-size: 0.95rem; }
+
+        /* MEDDIC/Case Cards */
+        .meddic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6); }
+        .meddic-card { background-color: var(--bc-light-grey); padding: var(--spacing-6); border-radius: var(--border-radius); }
+        .meddic-card h4 { color: var(--bc-energy-blue); font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: var(--spacing-2); }
+        .meddic-card h4 .icon { width: 20px; height: 20px; }
+        .meddic-card p, .meddic-card ul { font-size: 0.95rem; }
+        .meddic-card ul { list-style-position: inside; padding-left: var(--spacing-2); }
+
+        /* ROI Calculator */
+        #roi { background-color: var(--bc-light-grey); }
+        .calculator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: var(--spacing-8);
+            background-color: var(--bc-white);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .calculator-input { margin-bottom: var(--spacing-6); }
+        .calculator-input label { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--spacing-2); }
+        .calculator-input label span:last-child { color: var(--bc-energy-blue); }
+        input[type="range"] { -webkit-appearance: none; width: 100%; height: 8px; background: #e0e0e0; border-radius: 5px; outline: none; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; background: var(--bc-energy-blue); cursor: pointer; border-radius: 50%; }
+        .roi-results { text-align: center; }
+        .total-savings { font-size: 3.5rem; font-weight: 800; color: var(--bc-green); line-height: 1; }
+        #assumptions-container { margin-top: var(--spacing-8); background-color: #f9fafb; border: 1px solid #e0e0e0; padding: var(--spacing-6); border-radius: var(--border-radius); }
+        #assumptions-list { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4); }
+        #assumptions-list p { font-size: 0.85rem; }
+
+        /* Chart */
+        .donut-chart-container { position: relative; width: 220px; height: 220px; margin: var(--spacing-6) auto; }
+        .donut-chart { transform: rotate(-90deg); }
+        .donut-segment { fill: none; stroke-width: 15; transition: stroke-dashoffset 0.5s ease; }
+        .donut-legend { list-style: none; display: flex; justify-content: center; gap: var(--spacing-6); flex-wrap: wrap; margin-top: var(--spacing-4); }
+        .donut-legend li { display: flex; align-items: center; gap: var(--spacing-2); font-size: 0.9rem; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+        /* Details */
+        .calculation-breakdown { display: flex; flex-direction: column; gap: var(--spacing-4); margin-top: var(--spacing-8); text-align: left; }
+        details { background-color: var(--bc-white); border: 1px solid #e5e7eb; border-radius: var(--border-radius); overflow: hidden; }
+        summary { padding: var(--spacing-4); cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; }
+        .detail-content { padding: var(--spacing-4); border-top: 1px solid #e5e7eb; font-size: 0.9rem; }
+
+        /* Next Steps */
+        #next-steps { background-color: var(--bc-navy); color: var(--bc-white); text-align: center; }
+        .next-steps-card { background-color: var(--bc-white); color: var(--bc-charcoal); border-radius: var(--border-radius); padding: var(--spacing-8); max-width: 800px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border-top: 6px solid var(--bc-energy-blue); }
+
+        footer { background-color: var(--bc-navy); color: var(--bc-light-grey); padding: var(--spacing-8) 0; font-size: 0.9rem; }
+
+        @media (max-width: 1024px) {
+            .infographic-grid, .calculator-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div style="padding: 10px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                        <img src="https://www.plymouthcommunityhomes.co.uk/media/z0gjwtn4/plymouth-logo-white.svg" alt="PCH Logo" style="height: 60px; display: block;">
+                    </div>
+                    <span style="font-size: 2.5rem; font-weight: 300; color: var(--bc-energy-blue);">+</span>
+                    <img src="https://i.postimg.cc/ydbgqXFm/Big-Change-White.png" alt="BigChange Logo" style="height: 54px;">
+                </div>
+                <h1>PCH: From Spreadsheet Silos to Digital Excellence</h1>
+                <p class="subhead">Ending "Paper-Based 2026." A strategic plan for Andy Miller and the Environmental Services team to unify grounds and caretaking operations into one unstoppable platform.</p>
+                <div class="cta-buttons">
+                    <a href="https://copilot.clari.com/guest/sharedCall/698b15a6309bb22a47a20c3a" target="_blank" class="btn btn-primary" style="background-color: var(--bc-orange);">Watch Meeting Recording</a>
+                    <a href="#next-steps" class="btn btn-primary" style="background-color: var(--bc-green); border-color: var(--bc-green); color: var(--bc-navy);">View Next Steps</a>
+                    <a href="#business-case" class="btn btn-secondary">The Business Case</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discovery Recap -->
+        <section id="meetings-recap" style="background-color: var(--bc-light-grey);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Discovery & Goals</h2>
+                    <p>Recapping the core objectives for Environmental Services.</p>
+                </div>
+                <div class="meetings-grid">
+                    <div class="meeting-card">
+                        <span class="meeting-number">Discovery: Feb 10, 2026</span>
+                        <h3>Unifying the "Biggest Department"</h3>
+                        <p><strong>Stakeholders:</strong> Andy Miller, Sandra Fear, Dave Ryland, Joe Berryman, Paul Hutchings.</p>
+                        <p style="margin-top: 1rem;">The goal is to move Environmental Services (Grounds, Caretaking) off disjointed Excel sheets and paper. Key challenges identified:</p>
+                        <ul>
+                            <li><strong>Manual Workflow Gap:</strong> Work is still handed out on "bits of paper" every morning, creating a massive administrative burden.</li>
+                            <li><strong>Manual Math Bottleneck:</strong> Management and IT spend excessive time manually calculating KPIs and responding to tenant queries.</li>
+                            <li><strong>Lone Worker Safety:</strong> Need for integrated GPS tracking for high-risk reactive works and mobile operatives across the city.</li>
+                            <li><strong>Resident Transparency:</strong> A vision to surface "last cut" data into the tenant portal via API.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current vs Future -->
+        <section id="current-future">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Current State vs. Future State</h2>
+                    <p>Modernizing the tools for PCH's frontline teams.</p>
+                </div>
+                <div class="infographic-grid">
+                    <div class="state-card current">
+                        <h3>Current State (Paper & Excel)</h3>
+                        <ul>
+                            <li><strong>Reactive Friction:</strong> Emergency maintenance or fly-tipping requires manual coordination and manual input.</li>
+                            <li><strong>Data Re-Entry:</strong> Staff spend hours daily moving data from paper sheets into spreadsheets for reporting.</li>
+                            <li><strong>Limited Visibility:</strong> Difficult to track city-wide ride-on mower progress in real-time.</li>
+                        </ul>
+                    </div>
+                    <div class="state-card future">
+                        <h3>Future State (BigChange)</h3>
+                        <ul>
+                            <li><strong>Live Field Reports:</strong> Thumbs up/down completion with photos, instantly visible to Ops Managers.</li>
+                            <li><strong>Automated Scheduling:</strong> Route optimization for grounds teams to minimize fuel and maximize site time.</li>
+                            <li><strong>Dynamic Site History:</strong> Every communal area and green space has a digital history—visible on site via mobile maps.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Case -->
+        <section id="business-case">
+            <div class="container">
+                <div class="section-title">
+                    <h2>The Business Case for PCH</h2>
+                    <p>Driving efficiency across 2,000+ sites and 70,000+ residents.</p>
+                </div>
+                <div class="meddic-grid">
+                    <div class="meddic-card">
+                        <h4>Operational Efficiency</h4>
+                        <p><strong>Route Optimization:</strong> Maximize the impact of the ride-on mower and mobile teams by clustering jobs geographically, reducing "dead time" across Plymouth.</p>
+                    </div>
+                    <div class="meddic-card">
+                        <h4>Grounds Management</h4>
+                        <p><strong>Site-Based Tracking:</strong> Field teams can log completions directly against site records, providing a clear digital trail of all grounds maintenance activities.</p>
+                    </div>
+                    <div class="meddic-card">
+                        <h4>Admin & IT Recovery</h4>
+                        <p><strong>API-First Integration:</strong> Power BI or Snowflake integration allows Sandra and Paul to surface KPIs without manual data cleansing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Metrics Section -->
+        <section id="metrics-framework" style="background-color: var(--bc-white); padding-top: 0;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Success Metrics for PCH</h2>
+                    <p>How we will measure the "BigChange" in Environmental Services.</p>
+                </div>
+                <div class="meddic-grid">
+                    <div class="meddic-card">
+                        <h4>Field Productivity</h4>
+                        <ul>
+                            <li><strong>15% Capacity Gain:</strong> Reducing travel and admin time allows teams to cover more sites per week.</li>
+                            <li><strong>Real-time Proof:</strong> 100% photo evidence for every grass cut and communal clean.</li>
+                        </ul>
+                    </div>
+                    <div class="meddic-card">
+                        <h4>Safety & Compliance</h4>
+                        <ul>
+                            <li><strong>Lone Worker Compliance:</strong> Integrated check-ins and GPS breadcrumbs for staff working in isolated areas.</li>
+                            <li><strong>Audit Readiness:</strong> Digital waste transfer notes for every fly-tip removal, stored for 7 years.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies" style="background-color: var(--bc-light-grey);">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A4.833 4.833 0 0112 12.75c-1.393 0-2.671-.587-3.582-1.536V21h10.5z" />
+                    </svg>
+                    <h2>Proven Success in Housing & FM</h2>
+                    <p>See how other industry leaders have transformed their operations with BigChange.</p>
+                </div>
+                <div class="case-study-grid">
+                    <!-- Pinnacle Group Case Study -->
+                    <div class="case-study-card">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d92cfb5bca5da2c275c1f4_Pinnacle%20Group.jpeg" alt="Pinnacle Group Case Study" class="case-study-image">
+                        <div class="case-study-content">
+                            <h3>Pinnacle Group: Business Transformation</h3>
+                            <p>Discover how Pinnacle Group unified their FM operations and drove company-wide digital transformation using BigChange's all-in-one platform.</p>
+                            <a href="https://www.bigchange.com/success-stories/bigchange-facilitates-business-transformation-for-pinnacle-group" target="_blank" class="case-study-link">
+                                Read Full Story 
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Thirteen Group Case Study -->
+                    <div class="case-study-card">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d9ca6f7cf922a2f7575f1c_Thirteen.webp" alt="Thirteen Group Case Study" class="case-study-image">
+                        <div class="case-study-content">
+                            <h3>Thirteen: Boosting FM with Mobile Tech</h3>
+                            <p>Learn how Thirteen Group enhanced their facility management services, improving operative productivity and service transparency for residents.</p>
+                            <a href="https://www.bigchange.com/success-stories/thirteen-boosts-fm-services-with-bigchange-mobile-tech" target="_blank" class="case-study-link">
+                                Read Full Story 
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Savings Calculator -->
+        <section id="roi">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Savings Calculator</h2>
+                    <p>Forecast the value for PCH's field and office teams.</p>
+                </div>
+                <div class="calculator-wrapper">
+                    <div class="calculator-inputs">
+                        <h3>Business Details</h3>
+                        <div class="calculator-input">
+                            <label for="engineers"><span>Field Engineers</span><span id="engineers-value">15</span></label>
+                            <input type="range" id="engineers" min="5" max="150" value="15">
+                        </div>
+                        <div class="calculator-input">
+                            <label for="jobsPerDay"><span>Jobs per Day</span><span id="jobsPerDay-value">4</span></label>
+                            <input type="range" id="jobsPerDay" min="1" max="15" value="4">
+                        </div>
+                        <div class="calculator-input">
+                            <label for="officeStaff"><span>Office Staff</span><span id="officeStaff-value">5</span></label>
+                            <input type="range" id="officeStaff" min="1" max="20" value="5">
+                        </div>
+                        <div class="calculator-input">
+                            <label for="officeSalary"><span>Office Staff Avg. Salary (£)</span><span id="officeSalary-value">£25,000</span></label>
+                            <input type="range" id="officeSalary" min="20000" max="60000" value="25000" step="500">
+                        </div>
+
+                        <div id="assumptions-container">
+                            <h3>Key Assumptions</h3>
+                            <div id="assumptions-list">
+                                <p>Field Productivity Gain: 15%</p>
+                                <p>Office Admin Reduction: 20%</p>
+                                <p>Fuel Savings: 12%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="roi-results">
+                        <h3>Estimated Annual Savings</h3>
+                        <p class="total-savings" id="total-savings">£0</p>
+                        <p>Total Annual Business Benefit</p>
+                        
+                        <div class="donut-chart-container">
+                            <svg id="savingsChart" class="donut-chart" width="100%" height="100%" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="transparent" stroke="#e0e0e0" stroke-width="15"></circle>
+                                <circle id="donut-engineer" class="donut-segment" cx="50" cy="50" r="40" stroke-dasharray="0 251.2" stroke="var(--bc-energy-blue)"></circle>
+                                <circle id="donut-office" class="donut-segment" cx="50" cy="50" r="40" stroke-dasharray="0 251.2" stroke="var(--bc-green)"></circle>
+                                <circle id="donut-fuel" class="donut-segment" cx="50" cy="50" r="40" stroke-dasharray="0 251.2" stroke="var(--bc-orange)"></circle>
+                            </svg>
+                        </div>
+                        <ul class="donut-legend">
+                            <li><span class="legend-dot" style="background-color: var(--bc-energy-blue);"></span>Field</li>
+                            <li><span class="legend-dot" style="background-color: var(--bc-green);"></span>Office</li>
+                            <li><span class="legend-dot" style="background-color: var(--bc-orange);"></span>Fuel</li>
+                        </ul>
+
+                        <div class="calculation-breakdown">
+                            <h3>Calculation Breakdown</h3>
+                            <details open>
+                                <summary><span>Improved Field Productivity</span><span id="engineer-savings-total" style="color:var(--bc-green);">£0</span></summary>
+                                <div class="detail-content" id="engineer-calc-details">Loading...</div>
+                            </details>
+                            <details open>
+                                <summary><span>Improved Office Productivity</span><span id="office-savings-total" style="color:var(--bc-green);">£0</span></summary>
+                                <div class="detail-content" id="office-calc-details">Loading...</div>
+                            </details>
+                            <details open>
+                                <summary><span>Fuel Savings</span><span id="fuel-savings-total" style="color:var(--bc-green);">£0</span></summary>
+                                <div class="detail-content" id="fuel-calc-details">Loading...</div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section id="next-steps">
+            <div class="container">
+                <div class="next-steps-card">
+                    <h3>Next Steps for Sandra & Dave</h3>
+                    <p>The feedback on communal maintenance and mobile scheduling was excellent.</p>
+                    <p>As discussed, the next step is a <strong>15-20 minute follow-up call</strong> between BigChange, <strong>Sandra Fear</strong>, and <strong>Dave Ryland</strong> to finalize:</p>
+                    <div style="text-align: left; max-width: 500px; margin: 0 auto 2rem;">
+                        <ul style="list-style: disc; padding-left: 1.5rem;">
+                            <li>Commercial pricing matrix based on PCH licenses.</li>
+                            <li>Onboarding & Implementation timeline (Targeting 2026).</li>
+                            <li>Training structure for the <strong>100+ mobile operatives</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container" style="text-align: center;">
+                <h3 style="color: var(--bc-light-grey);">Ready to Modernize PCH?</h3>
+                <p>&copy; 2025 BigChange. Tailored Proposal for Plymouth Community Homes.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = {
+                eng: document.getElementById('engineers'),
+                jobs: document.getElementById('jobsPerDay'),
+                staff: document.getElementById('officeStaff'),
+                sal: document.getElementById('officeSalary')
+            };
+            const labels = {
+                eng: document.getElementById('engineers-value'),
+                jobs: document.getElementById('jobsPerDay-value'),
+                staff: document.getElementById('officeStaff-value'),
+                sal: document.getElementById('officeSalary-value')
+            };
+            const displays = {
+                total: document.getElementById('total-savings'),
+                engTotal: document.getElementById('engineer-savings-total'),
+                offTotal: document.getElementById('office-savings-total'),
+                fuelTotal: document.getElementById('fuel-savings-total'),
+                engCalc: document.getElementById('engineer-calc-details'),
+                offCalc: document.getElementById('office-calc-details'),
+                fuelCalc: document.getElementById('fuel-calc-details')
+            };
+            const donuts = {
+                eng: document.getElementById('donut-engineer'),
+                off: document.getElementById('donut-office'),
+                fuel: document.getElementById('donut-fuel')
+            };
+
+            function update() {
+                const nEng = parseInt(inputs.eng.value);
+                const nJobs = parseInt(inputs.jobs.value);
+                const nStaff = parseInt(inputs.staff.value);
+                const sStaff = parseInt(inputs.sal.value);
+
+                labels.eng.textContent = nEng;
+                labels.jobs.textContent = nJobs;
+                labels.staff.textContent = nStaff;
+                labels.sal.textContent = `£${sStaff.toLocaleString()}`;
+
+                const engHourly = 35; 
+                const workingDays = 252;
+                const fuelPerVan = 4000;
+
+                const sEng = (8 * 0.15) * engHourly * workingDays * nEng;
+                const sOff = (sStaff * 0.20) * nStaff;
+                const sFuel = (fuelPerVan * 0.12) * nEng;
+                const total = sEng + sOff + sFuel;
+
+                displays.total.textContent = `£${Math.round(total).toLocaleString()}`;
+                displays.engTotal.textContent = `£${Math.round(sEng).toLocaleString()}`;
+                displays.offTotal.textContent = `£${Math.round(sOff).toLocaleString()}`;
+                displays.fuelTotal.textContent = `£${Math.round(sFuel).toLocaleString()}`;
+
+                displays.engCalc.textContent = `${nEng} operatives x 1.2hrs/day gain @ £${engHourly}/hr x ${workingDays} days.`;
+                displays.offCalc.textContent = `${nStaff} office staff x 20% efficiency gain @ £${sStaff.toLocaleString()} avg salary.`;
+                displays.fuelCalc.textContent = `${nEng} vehicles x 12% reduction in fuel waste via route optimization.`;
+
+                const circ = 251.2;
+                const pEng = sEng / total || 0;
+                const pOff = sOff / total || 0;
+                const pFuel = sFuel / total || 0;
+
+                donuts.eng.style.strokeDasharray = `${pEng * circ} ${circ}`;
+                donuts.off.style.strokeDasharray = `${pOff * circ} ${circ}`;
+                donuts.off.style.strokeDashoffset = -(pEng * circ);
+                donuts.fuel.style.strokeDasharray = `${pFuel * circ} ${circ}`;
+                donuts.fuel.style.strokeDashoffset = -((pEng + pOff) * circ);
+            }
+
+            Object.values(inputs).forEach(i => i.addEventListener('input', update));
+            update();
+        });
+    </script>
+</body>
+</html>
