@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barden FM | Blueprint for Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-bc-navy { background-color: #002b49; }
+        .text-bc-navy { color: #002b49; }
+        .bg-bc-blue { background-color: #00b5e2; }
+        .text-bc-blue { color: #00b5e2; }
+        .border-bc-blue { border-color: #00b5e2; }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Front Cover Page -->
+    <section class="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden bg-bc-navy">
+        <div class="absolute inset-0 z-0">
+            <img src="https://bardenfm.co.uk/wp-content/uploads/2021/02/Barden-FM-2015.jpg" alt="Barden FM Hero" class="w-full h-full object-cover opacity-15 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#002b49]/95 via-[#002b49]/80 to-[#002b49]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl space-y-10">
+            <!-- Partnership Logo Section -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-4">
+                <div class="bg-white p-5 rounded-2xl shadow-2xl flex items-center justify-center border border-white/10">
+                    <img src="https://bardenfm.co.uk/wp-content/uploads/2023/07/BARDENLOGOHigh-FF.jpg" alt="Barden FM Logo" class="h-16 md:h-20 object-contain">
+                </div>
+                <div class="bg-bc-blue rounded-full p-2 shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-2xl flex items-center justify-center border border-white/10">
+                    <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" alt="BigChange Logo" class="h-16 md:h-20 object-contain">
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none">
+                    BLUEPRINT FOR <span class="text-bc-blue">SUCCESS</span>
+                </h1>
+                <div class="h-1.5 w-48 bg-bc-blue mx-auto rounded-full"></div>
+                <p class="text-xl md:text-2xl text-blue-100 font-light tracking-widest uppercase mt-6">
+                    Strategic Partnership & System Roll-Out
+                </p>
+            </div>
+
+            <div class="pt-16 animate-bounce">
+                <a href="#mapping" class="text-white flex flex-col items-center gap-2 group cursor-pointer opacity-60 hover:opacity-100 transition-opacity">
+                    <span class="text-xs font-black tracking-[0.3em] uppercase">Explore Deployment Strategy</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-bc-navy text-white py-4 border-b border-white/10 hidden md:block px-6 shadow-xl">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="font-bold text-bc-blue">Barden FM</span>
+                <span class="text-white/30">|</span>
+                <span class="text-xs font-medium text-blue-200 uppercase tracking-widest">BigChange Deployment</span>
+            </div>
+            <div class="flex gap-8 text-[10px] font-black tracking-widest uppercase">
+                <a href="#mapping" class="hover:text-bc-blue transition-colors">Data Mapping</a>
+                <a href="#ops" class="hover:text-bc-blue transition-colors">Operations</a>
+                <a href="#scheduling" class="hover:text-bc-blue transition-colors">Scheduling</a>
+                <a href="#ppm" class="hover:text-bc-blue transition-colors">PPM</a>
+                <a href="#finance" class="hover:text-bc-blue transition-colors">Financials</a>
+                <a href="#portal" class="hover:text-bc-blue transition-colors">Client Portal</a>
+                <a href="#future" class="hover:text-bc-blue transition-colors">Future</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto py-24 px-6 md:px-12 space-y-32">
+        
+        <!-- Section Header Helper Class Style Applied Directly -->
+
+        <!-- Section 1: Data Mapping -->
+        <section id="mapping" class="scroll-mt-24">
+            <div class="mb-12 border-l-8 border-bc-blue pl-6 py-2">
+                <div class="flex items-center gap-3 text-bc-navy mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><path d="M3 8s1-1 4-1 4 1 4 1v11s-1-1-4-1-4 1-4 1V8z"></path><path d="M21 8s-1-1-4-1-4 1-4 1v11s1-1 4-1 4 1 4 1V8z"></path></svg>
+                    <h2 class="text-3xl font-bold tracking-tight uppercase">Data Architecture & Mapping</h2>
+                </div>
+                <p class="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">Translating the core logic from Clik into the BigChange ecosystem for seamless continuity.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200">
+                            <th class="px-8 py-5 font-bold text-slate-500 uppercase text-xs tracking-wider">Clik Field (Source)</th>
+                            <th class="px-8 py-5 font-bold text-bc-navy uppercase text-xs tracking-wider">BigChange Destination</th>
+                            <th class="px-8 py-5 font-bold text-slate-500 uppercase text-xs tracking-wider">Operational Logic</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-8 py-6 font-semibold text-slate-700">Job Fault Code</td>
+                            <td class="px-8 py-6 font-bold text-bc-blue">SLA Level</td>
+                            <td class="px-8 py-6 text-sm text-slate-500 italic">Drives automatic countdown timers on the planning board.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-8 py-6 font-semibold text-slate-700">Category Prefix</td>
+                            <td class="px-8 py-6 font-bold text-bc-blue">Job Category</td>
+                            <td class="px-8 py-6 text-sm text-slate-500 italic">Separates Building and Pest divisions for filtered reporting.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-8 py-6 font-semibold text-slate-700">Category</td>
+                            <td class="px-8 py-6 font-bold text-bc-blue">Job Type</td>
+                            <td class="px-8 py-6 text-sm text-slate-500 italic">Specific work definitions within each category.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-8 py-6 font-semibold text-slate-700">Job Title</td>
+                            <td class="px-8 py-6 font-bold text-bc-blue">Job Custom Field</td>
+                            <td class="px-8 py-6 text-sm text-slate-500 italic">Preserves the original descriptive text for the job.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-8 py-6 font-semibold text-slate-700">Statuses</td>
+                            <td class="px-8 py-6 font-bold text-bc-blue">Flags</td>
+                            <td class="px-8 py-6 text-sm text-slate-500 italic">Full color-matching for visual consistency for the dispatch team.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 2: Operations -->
+        <section id="ops" class="scroll-mt-24">
+            <div class="mb-12 border-l-8 border-bc-blue pl-6 py-2">
+                <div class="flex items-center gap-3 text-bc-navy mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <h2 class="text-3xl font-bold tracking-tight uppercase">Operational Workflows</h2>
+                </div>
+                <p class="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">Differentiating between reactive speed and contract-led documentation.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-sky-50 p-10 rounded-3xl border border-blue-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-navy"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <h3 class="text-xl font-bold text-bc-navy">Reactive Jobs</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-6">Reactive jobs are designed for velocity. They bypass the manual Note phase, populating the <strong>Unallocated Planning Board</strong> instantly upon creation.</p>
+                    <div class="flex items-center gap-2 text-sm font-bold text-bc-navy">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        Reduced Administrative Friction
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-navy"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                        <h3 class="text-xl font-bold text-bc-navy">Contract Manager Notes</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed mb-4">Non-reactive jobs utilize a custom <strong>"Responsible Contact"</strong> field which maps directly to the Note Owner.</p>
+                    <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-inner font-mono text-xs text-slate-500">
+                        Subject: [Job Number] - [Clik Job Title]
+                    </div>
+                    <p class="mt-4 text-xs text-slate-400 italic text-center">Ensures managers can identify job-linked notes at a glance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Scheduling -->
+        <section id="scheduling" class="scroll-mt-24">
+            <div class="mb-12 border-l-8 border-bc-blue pl-6 py-2">
+                <div class="flex items-center gap-3 text-bc-navy mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <h2 class="text-3xl font-bold tracking-tight uppercase">Resource & Scheduling Strategy</h2>
+                </div>
+                <p class="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">Managing shift patterns and dedicated engineer routes.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-8 border border-slate-100 rounded-2xl shadow-sm bg-white">
+                    <h4 class="text-bc-blue font-bold uppercase text-xs tracking-widest mb-4">Shift Groups</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Resources are grouped as <strong>NIGHT</strong> (by Trade) or <strong>DAY</strong> to allow rapid filtering during emergency outages.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl shadow-sm bg-white">
+                    <h4 class="text-bc-blue font-bold uppercase text-xs tracking-widest mb-4">Fixed Allocations</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Specific recurring jobs (e.g. <strong>LEE @ HARRODS</strong>) are hard-linked to specific engineers on set days of the week.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl shadow-sm bg-white">
+                    <h4 class="text-bc-blue font-bold uppercase text-xs tracking-widest mb-4">Bulk Rescheduling</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">A "Yesterday" catch-all view allows the planning team to bulk-move incomplete works from the prior day at 8:00 AM.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: PPM -->
+        <section id="ppm" class="scroll-mt-24">
+            <div class="mb-12 border-l-8 border-bc-blue pl-6 py-2">
+                <div class="flex items-center gap-3 text-bc-navy mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <h2 class="text-3xl font-bold tracking-tight uppercase">PPM & Asset Efficiency</h2>
+                </div>
+                <p class="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">Simplifying maintenance cycles for high-asset sites.</p>
+            </div>
+            <div class="bg-bc-navy rounded-3xl p-12 text-white flex flex-col md:flex-row gap-12 items-center shadow-2xl overflow-hidden relative">
+                <div class="flex-1 space-y-6 relative z-10">
+                    <h3 class="text-2xl font-bold">The Multi-Asset Approach</h3>
+                    <p class="text-blue-100 leading-relaxed font-light">Rather than cluttering the board with "one job per asset," Barden FM will utilize <strong>Multi-Asset Job Sheets</strong>. A single visit covers all site equipment, with individual asset checklist results stored within the parent job.</p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-white/10 p-4 rounded-lg border border-white/10 backdrop-blur-sm">
+                            <span class="block text-bc-blue font-bold text-lg">Recursive</span>
+                            <span class="text-xs uppercase opacity-60 italic tracking-tighter">Emergency Light Cycles</span>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg border border-white/10 backdrop-blur-sm">
+                            <span class="block text-bc-blue font-bold text-lg">Unallocated</span>
+                            <span class="text-xs uppercase opacity-60 italic tracking-tighter">Trade-specific PPM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full max-w-sm relative z-10 flex justify-center">
+                    <div class="aspect-square w-64 h-64 bg-bc-blue rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white relative z-10"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <div class="absolute inset-0 border-8 border-white/20 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                <div class="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 bg-bc-blue opacity-5 rounded-full blur-3xl"></div>
+            </div>
+        </section>
+
+        <!-- Section 5: Finance -->
+        <section id="finance" class="scroll-mt-24">
+            <div class="mb-12 border-l-8 border-bc-blue pl-6 py-2">
+                <div class="flex items-center gap-3 text-bc-navy mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                    <h2 class="text-3xl font-bold tracking-tight uppercase">Financial Integration</h2>
+                </div>
+                <p class="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">Sage 50 mapping and ProNet reconciliation logic.</p>
+            </div>
+            <div class="bg-slate-50 border border-slate-200 p-10 rounded-3xl shadow-sm">
+                <h3 class="text-xl font-bold text-bc-navy mb-8">Sage 50 Nominal & Department Sync</h3>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-bc-blue text-white flex items-center justify-center font-bold">1</div>
+                            <p class="text-sm font-semibold text-slate-700">Automatic Nominal splitting by Job Type.</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-bc-blue text-white flex items-center justify-center font-bold">2</div>
+                            <p class="text-sm font-semibold text-slate-700">ProNet reconciliation via Multi-Select Job Invoicing.</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-bc-blue text-white flex items-center justify-center font-bold">3</div>
+                            <p class="text-sm font-semibold text-slate-700">Pro-rated Annual Contracts (Fixed Monthly Billing).</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                        <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">Approval Protocol</h4>
+                        <div class="p-4 bg-blue-50 border border-blue-100 rounded-xl text-sm text-blue-800 italic leading-relaxed">
+                            "A job-level Flag must be set to 'Reconciled' before the Purchase Invoice is approved for Sage payment."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Customer Portal -->
+        <section id="portal" class="scroll-mt-24">
+            <div class="mb-12 border-l-8 border-bc-blue pl-6 py-2">
+                <div class="flex items-center gap-3 text-bc-navy mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <h2 class="text-3xl font-bold tracking-tight uppercase">The Barden Client Portal</h2>
+                </div>
+                <p class="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">24/7 transparency for Barden FM customers.</p>
+            </div>
+            <div class="border-4 border-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl bg-white">
+                <div class="bg-slate-900 px-6 py-4 flex justify-between items-center">
+                    <div class="flex gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <span class="text-[10px] text-white font-mono opacity-50 uppercase tracking-[0.3em]">Barden FM Client Gateway</span>
+                    <div class="w-10"></div>
+                </div>
+                <div class="bg-white p-12 md:p-24">
+                    <div class="max-w-3xl mx-auto text-center space-y-10">
+                        <div class="inline-block px-4 py-1.5 bg-sky-50 text-bc-navy rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">Client Value Add</div>
+                        <h3 class="text-4xl md:text-5xl font-black text-bc-navy tracking-tighter">Total Site Visibility</h3>
+                        <p class="text-slate-500 text-lg leading-relaxed font-light">Configurable by Customer or Site. Allow your clients to view real-time PPM schedules, download previous worksheets, and track live reactive faults without picking up the phone.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="p-5 border border-slate-100 rounded-2xl font-black text-[10px] uppercase tracking-widest text-bc-navy bg-slate-50 shadow-sm">PPM Schedules</div>
+                            <div class="p-5 border border-slate-100 rounded-2xl font-black text-[10px] uppercase tracking-widest text-bc-navy bg-slate-50 shadow-sm">Job History</div>
+                            <div class="p-5 border border-slate-100 rounded-2xl font-black text-[10px] uppercase tracking-widest text-bc-navy bg-slate-50 shadow-sm">Photos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Future Benefits -->
+        <section id="future" class="scroll-mt-24 pb-24">
+            <div class="mb-12 border-l-8 border-bc-blue pl-6 py-2">
+                <div class="flex items-center gap-3 text-bc-navy mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-bc-blue"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <h2 class="text-3xl font-bold tracking-tight uppercase">Future Benefits</h2>
+                </div>
+                <p class="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">Extending the platform to drive long-term operational excellence and compliance.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-bc-blue hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center text-bc-blue mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-bc-navy mb-4">TR19 Job Reports</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Streamlined kitchen extract cleaning certification. Standardised digital reporting for ductwork hygiene, including evidence-based photo documentation and micron readings.</p>
+                </div>
+
+                <div class="group bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-bc-blue hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center text-bc-blue mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-bc-navy mb-4">Fleet & Vehicle Tracking</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Real-time visibility of the Barden FM fleet. Optimise routing based on live traffic, reduce fuel consumption, and improve engineer safety through behaviour monitoring.</p>
+                </div>
+
+                <div class="group bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-bc-blue hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center text-bc-blue mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-bc-navy mb-4">Skills Matrix & Compliance</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Automated tracking of engineer certifications. Ensure the right person is assigned to the job with alerts for expiring qualifications and compliance gaps.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Final Call to Action Footer -->
+    <footer class="bg-bc-navy text-white py-24 px-6 border-t-[12px] border-bc-blue">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16">
+            <div class="space-y-6 text-center md:text-left">
+                <h2 class="text-4xl font-black tracking-tighter uppercase leading-none">Ready for Deployment</h2>
+                <p class="text-blue-200 opacity-60 max-w-md font-light leading-relaxed">This guide serves as the architectural foundation for the Barden FM & BigChange system migration.</p>
+            </div>
+            <a href="#" class="bg-white text-bc-navy px-12 py-5 rounded-full font-black uppercase tracking-[0.2em] hover:bg-bc-blue hover:text-white transition-all shadow-2xl active:scale-95 text-xs">
+                Return to Cover
+            </a>
+        </div>
+        <div class="max-w-6xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] opacity-40 uppercase tracking-[0.4em] font-medium text-center">
+            <span>Barden FM Deployment Phase 1.0</span>
+            <span>&copy; 2024 Strategic Integration</span>
+            <img src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" alt="BigChange Partner" class="h-4 brightness-0 invert mx-auto md:mx-0">
+        </div>
+    </footer>
+
+</body>
+</html>
