@@ -1,0 +1,397 @@
+import React, { useEffect, useState } from 'react';
+import { 
+  Settings, 
+  Calendar, 
+  CreditCard, 
+  ShieldCheck, 
+  Monitor, 
+  FileText, 
+  ArrowRightLeft, 
+  Clock, 
+  Database,
+  CheckCircle2,
+  ChevronDown,
+  Info,
+  Plus,
+  Truck,
+  Award,
+  ClipboardList,
+  Sparkles
+} from 'lucide-react';
+
+const App = () => {
+  const bcNavy = "#002b49";
+  const bcEnergyBlue = "#00b5e2";
+
+  const SectionHeader = ({ title, icon: Icon, subtitle }) => (
+    <div className="mb-12 border-l-8 border-[#00b5e2] pl-6 py-2">
+      <div className="flex items-center gap-3 text-[#002b49] mb-2">
+        {Icon && <Icon size={32} className="text-[#00b5e2]" />}
+        <h2 className="text-3xl font-bold tracking-tight uppercase">{title}</h2>
+      </div>
+      {subtitle && <p className="text-slate-500 text-lg max-w-2xl font-light leading-relaxed">{subtitle}</p>}
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-white font-sans text-slate-900 scroll-smooth">
+      {/* Front Cover Page */}
+      <section className="relative h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden bg-[#002b49]">
+        {/* Hero Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://bardenfm.co.uk/wp-content/uploads/2021/02/Barden-FM-2015.jpg" 
+            alt="Barden FM Hero" 
+            className="w-full h-full object-cover opacity-15 grayscale"
+            onError={(e) => { e.target.style.display = 'none'; }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#002b49]/95 via-[#002b49]/80 to-[#002b49]"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-5xl space-y-10">
+          {/* Partnership Logo Section */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-4 animate-in fade-in zoom-in duration-700">
+             <div className="bg-white p-5 rounded-2xl shadow-2xl flex items-center justify-center border border-white/10">
+                <img 
+                  src="https://bardenfm.co.uk/wp-content/uploads/2023/07/BARDENLOGOHigh-FF.jpg" 
+                  alt="Barden FM Logo" 
+                  className="h-16 md:h-20 object-contain"
+                />
+             </div>
+             <div className="bg-[#00b5e2] rounded-full p-2 shadow-lg">
+                <Plus size={24} className="text-white font-bold" />
+             </div>
+             <div className="bg-white p-5 rounded-2xl shadow-2xl flex items-center justify-center border border-white/10">
+                <img 
+                  src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" 
+                  alt="BigChange Logo" 
+                  className="h-16 md:h-20 object-contain"
+                />
+             </div>
+          </div>
+
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-none">
+              BLUEPRINT FOR <span className="text-[#00b5e2]">SUCCESS</span>
+            </h1>
+            <div className="h-1.5 w-48 bg-[#00b5e2] mx-auto rounded-full"></div>
+            <p className="text-xl md:text-2xl text-blue-100 font-light tracking-widest uppercase mt-6">
+              Strategic Partnership & System Roll-Out
+            </p>
+          </div>
+
+          <div className="pt-16 animate-bounce">
+            <button 
+              onClick={() => document.getElementById('mapping').scrollIntoView({ behavior: 'smooth' })}
+              className="text-white flex flex-col items-center gap-2 group cursor-pointer"
+            >
+              <span className="text-xs font-black tracking-[0.3em] uppercase opacity-60 group-hover:opacity-100 transition-opacity">Explore Deployment Strategy</span>
+              <ChevronDown size={32} />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Navigation Bar (Sticky after scroll) */}
+      <nav className="sticky top-0 z-50 bg-[#002b49] text-white py-4 border-b border-white/10 hidden md:block px-6">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <span className="font-bold text-[#00b5e2]">Barden FM</span>
+            <span className="text-white/30">|</span>
+            <span className="text-xs font-medium text-blue-200">BigChange Deployment</span>
+          </div>
+          <div className="flex gap-8 text-[10px] font-black tracking-widest uppercase">
+            <a href="#mapping" className="hover:text-[#00b5e2] transition-colors">Data Mapping</a>
+            <a href="#ops" className="hover:text-[#00b5e2] transition-colors">Operations</a>
+            <a href="#scheduling" className="hover:text-[#00b5e2] transition-colors">Scheduling</a>
+            <a href="#ppm" className="hover:text-[#00b5e2] transition-colors">PPM</a>
+            <a href="#finance" className="hover:text-[#00b5e2] transition-colors">Financials</a>
+            <a href="#portal" className="hover:text-[#00b5e2] transition-colors">Client Portal</a>
+            <a href="#future" className="hover:text-[#00b5e2] transition-colors">Future</a>
+          </div>
+        </div>
+      </nav>
+
+      <main className="max-w-6xl mx-auto py-24 px-6 md:px-12 space-y-32">
+        
+        {/* Section 1: Data Mapping */}
+        <section id="mapping" className="scroll-mt-24">
+          <SectionHeader 
+            title="Data Architecture & Mapping" 
+            icon={Database} 
+            subtitle="Translating the core logic from Clik into the BigChange ecosystem for seamless continuity."
+          />
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="bg-slate-50 border-b border-slate-200">
+                  <th className="px-8 py-5 font-bold text-slate-500 uppercase text-xs tracking-wider">Clik Field (Source)</th>
+                  <th className="px-8 py-5 font-bold text-[#002b49] uppercase text-xs tracking-wider">BigChange Destination</th>
+                  <th className="px-8 py-5 font-bold text-slate-500 uppercase text-xs tracking-wider">Operational Logic</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {[
+                  { from: "Job Fault Code", to: "SLA Level", logic: "Drives automatic countdown timers on the planning board." },
+                  { from: "Category Prefix", to: "Job Category", logic: "Separates Building and Pest divisions for filtered reporting." },
+                  { from: "Category", to: "Job Type", logic: "Specific work definitions within each category." },
+                  { from: "Job Title", to: "Job Custom Field", logic: "Preserves the original descriptive text for the job." },
+                  { from: "Statuses", to: "Flags", logic: "Full color-matching for visual consistency for the dispatch team." },
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-slate-50 transition-colors">
+                    <td className="px-8 py-6 font-semibold text-slate-700">{row.from}</td>
+                    <td className="px-8 py-6 font-bold text-[#00b5e2]">{row.to}</td>
+                    <td className="px-8 py-6 text-sm text-slate-500 italic">{row.logic}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Section 2: Operations */}
+        <section id="ops" className="scroll-mt-24">
+          <SectionHeader 
+            title="Operational Workflows" 
+            icon={Settings} 
+            subtitle="Differentiating between reactive speed and contract-led documentation."
+          />
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-[#f0f9ff] p-10 rounded-3xl border border-blue-100 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <Clock className="text-[#002b49]" />
+                <h3 className="text-xl font-bold text-[#002b49]">Reactive Jobs</h3>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Reactive jobs are designed for velocity. They bypass the manual Note phase, populating the 
+                <strong> Unallocated Planning Board</strong> instantly upon creation.
+              </p>
+              <div className="flex items-center gap-2 text-sm font-bold text-[#002b49]">
+                <CheckCircle2 size={16} className="text-[#00b5e2]" />
+                Reduced Administrative Friction
+              </div>
+            </div>
+
+            <div className="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-sm">
+              <div className="flex items-center gap-3 mb-6">
+                <FileText className="text-[#002b49]" />
+                <h3 className="text-xl font-bold text-[#002b49]">Contract Manager Notes</h3>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Non-reactive jobs utilize a custom <strong>"Responsible Contact"</strong> field which maps directly to the Note Owner.
+              </p>
+              <div className="bg-white p-4 rounded-lg border border-slate-200 shadow-inner font-mono text-xs text-slate-500">
+                Subject: [Job Number] - [Clik Job Title]
+              </div>
+              <p className="mt-4 text-xs text-slate-400 italic">Ensures managers can identify job-linked notes at a glance without opening them.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Scheduling */}
+        <section id="scheduling" className="scroll-mt-24">
+          <SectionHeader 
+            title="Resource & Scheduling Strategy" 
+            icon={Calendar} 
+            subtitle="Managing shift patterns and dedicated engineer routes."
+          />
+          <div className="space-y-8">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="p-8 border border-slate-100 rounded-2xl shadow-sm bg-white">
+                <h4 className="text-[#00b5e2] font-bold uppercase text-xs tracking-widest mb-4">Shift Groups</h4>
+                <p className="text-sm text-slate-600">Resources are grouped as <strong>NIGHT</strong> (by Trade) or <strong>DAY</strong> to allow rapid filtering during emergency outages.</p>
+              </div>
+              <div className="p-8 border border-slate-100 rounded-2xl shadow-sm bg-white">
+                <h4 className="text-[#00b5e2] font-bold uppercase text-xs tracking-widest mb-4">Fixed Allocations</h4>
+                <p className="text-sm text-slate-600">Specific recurring jobs (e.g. <strong>LEE @ HARRODS</strong>) are hard-linked to specific engineers on set days of the week.</p>
+              </div>
+              <div className="p-8 border border-slate-100 rounded-2xl shadow-sm bg-white">
+                <h4 className="text-[#00b5e2] font-bold uppercase text-xs tracking-widest mb-4">Bulk Rescheduling</h4>
+                <p className="text-sm text-slate-600">A "Yesterday" catch-all view allows the planning team to bulk-move incomplete works from the prior day at 8:00 AM.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: PPM */}
+        <section id="ppm" className="scroll-mt-24">
+          <SectionHeader 
+            title="PPM & Asset Efficiency" 
+            icon={ShieldCheck} 
+            subtitle="Simplifying maintenance cycles for high-asset sites."
+          />
+          <div className="bg-[#002b49] rounded-3xl p-12 text-white flex flex-col md:flex-row gap-12 items-center shadow-2xl overflow-hidden relative">
+            <div className="flex-1 space-y-6 relative z-10">
+              <h3 className="text-2xl font-bold">The Multi-Asset Approach</h3>
+              <p className="text-blue-100 leading-relaxed font-light">
+                Rather than cluttering the board with "one job per asset," Barden FM will utilize <strong>Multi-Asset Job Sheets</strong>. 
+                A single visit covers all site equipment, with individual asset checklist results stored within the parent job.
+              </p>
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                <div className="bg-white/10 p-4 rounded-lg border border-white/10 backdrop-blur-sm">
+                  <span className="block text-[#00b5e2] font-bold text-lg">Recursive</span>
+                  <span className="text-xs uppercase opacity-60 italic tracking-tighter">Emergency Light Cycles</span>
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg border border-white/10 backdrop-blur-sm">
+                  <span className="block text-[#00b5e2] font-bold text-lg">Unallocated</span>
+                  <span className="text-xs uppercase opacity-60 italic tracking-tighter">Trade-specific PPM</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1 w-full max-w-sm relative z-10">
+               <div className="aspect-square bg-[#00b5e2] rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden group">
+                  <ShieldCheck size={120} className="text-white relative z-10" />
+                  <div className="absolute inset-0 border-8 border-white/20 rounded-full animate-pulse"></div>
+               </div>
+            </div>
+            <div className="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 bg-[#00b5e2] opacity-5 rounded-full blur-3xl"></div>
+          </div>
+        </section>
+
+        {/* Section 5: Finance */}
+        <section id="finance" className="scroll-mt-24">
+          <SectionHeader 
+            title="Financial Integration" 
+            icon={CreditCard} 
+            subtitle="Sage 50 mapping and ProNet reconciliation logic."
+          />
+          <div className="space-y-8">
+            <div className="bg-slate-50 border border-slate-200 p-10 rounded-3xl shadow-sm">
+              <h3 className="text-xl font-bold text-[#002b49] mb-8">Sage 50 Nominal & Department Sync</h3>
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#00b5e2] text-white flex items-center justify-center font-bold">1</div>
+                    <p className="text-sm font-semibold">Automatic Nominal splitting by Job Type.</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#00b5e2] text-white flex items-center justify-center font-bold">2</div>
+                    <p className="text-sm font-semibold">ProNet reconciliation via Multi-Select Job Invoicing.</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#00b5e2] text-white flex items-center justify-center font-bold">3</div>
+                    <p className="text-sm font-semibold">Pro-rated Annual Contracts (Fixed Monthly Billing).</p>
+                  </div>
+                </div>
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                  <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4">Approval Protocol</h4>
+                  <div className="p-4 bg-blue-50 border border-blue-100 rounded-xl text-sm text-blue-800 italic leading-relaxed">
+                    "A job-level Flag must be set to 'Reconciled' before the Purchase Invoice is approved for Sage payment."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 6: Customer Portal */}
+        <section id="portal" className="scroll-mt-24">
+          <SectionHeader 
+            title="The Barden Client Portal" 
+            icon={Monitor} 
+            subtitle="24/7 transparency for Barden FM customers."
+          />
+          <div className="border-4 border-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl bg-white">
+            <div className="bg-slate-900 px-6 py-4 flex justify-between items-center">
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span className="text-[10px] text-white font-mono opacity-50 uppercase tracking-[0.3em]">Barden FM Client Gateway</span>
+              <div className="w-10"></div>
+            </div>
+            <div className="bg-white p-12 md:p-24">
+              <div className="max-w-3xl mx-auto text-center space-y-10">
+                <div className="inline-block px-4 py-1.5 bg-[#f0f9ff] text-[#00b5e2] rounded-full text-[10px] font-black uppercase tracking-widest border border-blue-100">
+                  Client Value Add
+                </div>
+                <h3 className="text-4xl md:text-5xl font-black text-[#002b49] tracking-tighter">Total Site Visibility</h3>
+                <p className="text-slate-500 text-lg leading-relaxed font-light">
+                  Configurable by Customer or Site. Allow your clients to view real-time PPM schedules, 
+                  download previous worksheets, and track live reactive faults without picking up the phone.
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {["PPM Schedules", "Job History", "Photos"].map((item, i) => (
+                    <div key={i} className="p-5 border border-slate-100 rounded-2xl font-black text-[10px] uppercase tracking-widest text-[#002b49] bg-slate-50 shadow-sm">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 7: Future Benefits */}
+        <section id="future" className="scroll-mt-24 pb-24">
+          <SectionHeader 
+            title="Future Benefits" 
+            icon={Sparkles} 
+            subtitle="Extending the platform to drive long-term operational excellence and compliance."
+          />
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-[#00b5e2] hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-[#f0f9ff] rounded-2xl flex items-center justify-center text-[#00b5e2] mb-6 group-hover:bg-[#00b5e2] group-hover:text-white transition-colors">
+                <ClipboardList size={28} />
+              </div>
+              <h3 className="text-xl font-bold text-[#002b49] mb-4">TR19 Job Reports</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                Streamlined kitchen extract cleaning certification. Standardised digital reporting for ductwork hygiene, including before/after photo evidence and micron readings.
+              </p>
+            </div>
+
+            <div className="group bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-[#00b5e2] hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-[#f0f9ff] rounded-2xl flex items-center justify-center text-[#00b5e2] mb-6 group-hover:bg-[#00b5e2] group-hover:text-white transition-colors">
+                <Truck size={28} />
+              </div>
+              <h3 className="text-xl font-bold text-[#002b49] mb-4">Fleet & Vehicle Tracking</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                Real-time visibility of the Barden FM fleet. Optimise routing based on live traffic, reduce fuel consumption, and improve engineer safety through driver behaviour monitoring.
+              </p>
+            </div>
+
+            <div className="group bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:border-[#00b5e2] hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-[#f0f9ff] rounded-2xl flex items-center justify-center text-[#00b5e2] mb-6 group-hover:bg-[#00b5e2] group-hover:text-white transition-colors">
+                <Award size={28} />
+              </div>
+              <h3 className="text-xl font-bold text-[#002b49] mb-4">Skills Matrix & Compliance</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                Automated tracking of engineer certifications. Ensure the right person is always assigned to the job with automated alerts for expiring qualifications and compliance gaps.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      {/* Final Call to Action Footer */}
+      <footer className="bg-[#002b49] text-white py-24 px-6 border-t-[12px] border-[#00b5e2]">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16">
+          <div className="space-y-6 text-center md:text-left">
+            <h2 className="text-4xl font-black tracking-tighter uppercase leading-none">Ready for Deployment</h2>
+            <p className="text-blue-200 opacity-60 max-w-md font-light">This guide serves as the architectural foundation for the Barden FM & BigChange system migration.</p>
+          </div>
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="bg-white text-[#002b49] px-12 py-5 rounded-full font-black uppercase tracking-[0.2em] hover:bg-[#00b5e2] hover:text-white transition-all shadow-2xl active:scale-95 text-xs"
+          >
+            Return to Cover
+          </button>
+        </div>
+        <div className="max-w-6xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] opacity-40 uppercase tracking-[0.4em] font-medium">
+          <span>Barden FM Deployment Phase 1.0</span>
+          <span>© 2024 Strategic Integration</span>
+          <img 
+            src="https://cdn.prod.website-files.com/652cf498161daabd6b40ba1b/67ab22b71528288604bc325e_BigChange-Horz_RGB_EnergyBlue.svg" 
+            alt="BigChange Partner" 
+            className="h-4 brightness-0 invert"
+          />
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
