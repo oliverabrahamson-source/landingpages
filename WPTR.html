@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPTR Ltd: Accelerating Response & Growth with BigChange</title>
+    <meta name="description" content="A strategic proposal for WPTR Ltd to replace paper-heavy workflows and OneDrive folders with a scalable, integrated platform.">
+    <meta name="author" content="Oliver Abrahamson, BigChange">
+    
+    <!-- SEO & Social Sharing -->
+    <meta property="og:title" content="WPTR Ltd & BigChange: The Enterprise Solution">
+    <meta property="og:description" content="An interactive proposal showing how BigChange solves manual compliance, AFP consolidation, and QuickBooks integration bottlenecks.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://placehold.co/800x400/0A2240/FFFFFF?text=WPTR+Ltd">
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        :root {
+            /* Brand Colors per BigChange Guidelines */
+            --bc-energy-blue: #0072CE;
+            --bc-navy: #0A2240;
+            --bc-green: #28E289;
+            --bc-orange: #FF6B00;
+            --bc-light-grey: #F4F4F4;
+            --bc-charcoal: #282922;
+            --bc-white: #FFFFFF;
+            --bc-red: #E02B20;
+            
+            /* Spacing & Sizing Tokens */
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-4: 1rem;
+            --spacing-6: 1.5rem;
+            --spacing-8: 2rem;
+            --spacing-12: 3rem;
+            --spacing-16: 4rem;
+            
+            /* Other Design Tokens */
+            --border-radius: 0.75rem;
+            --box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --transition-speed: 0.3s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bc-white);
+            color: var(--bc-charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* General Layout & Typography */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-6); }
+        section { padding: var(--spacing-16) 0; }
+        h1, h2, h3, h4 { color: var(--bc-navy); line-height: 1.2; margin-bottom: var(--spacing-4); }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        a { color: var(--bc-energy-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .section-title { text-align: center; margin-bottom: var(--spacing-12); }
+        .section-title .icon {
+            color: var(--bc-energy-blue);
+            width: 48px;
+            height: 48px;
+            margin: 0 auto var(--spacing-4);
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--bc-navy);
+            color: var(--bc-white);
+            padding-top: var(--spacing-16);
+            padding-bottom: var(--spacing-16);
+            text-align: center;
+        }
+        #hero h1, #hero h2, #hero p { color: var(--bc-white); }
+        #hero h1 { font-size: 3rem; }
+        #hero .subhead { font-size: 1.25rem; max-width: 800px; margin: var(--spacing-4) auto var(--spacing-8); opacity: 0.9; }
+        .cta-buttons { display: flex; justify-content: center; gap: var(--spacing-4); flex-wrap: wrap; }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all var(--transition-speed);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary { background-color: var(--bc-energy-blue); color: var(--bc-white); }
+        .btn-primary:hover { background-color: #005bb5; }
+        .btn-secondary { background-color: transparent; color: var(--bc-white); border-color: var(--bc-white); }
+        .btn-secondary:hover { background-color: var(--bc-white); color: var(--bc-navy); }
+
+        /* State Cards */
+        .infographic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-12); align-items: start; }
+        .state-card { background-color: var(--bc-light-grey); padding: var(--spacing-8); border-radius: var(--border-radius); }
+        .state-card h3 { display: flex; align-items: center; gap: var(--spacing-4); }
+        .state-card ul { list-style: none; margin-top: var(--spacing-6); }
+        .state-card li { padding-left: 2rem; position: relative; margin-bottom: var(--spacing-4); }
+        .state-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .state-card.current li::before { background-color: var(--bc-orange); }
+        .state-card.future li::before { background-color: var(--bc-green); }
+
+        /* Meetings Grid */
+        .meetings-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-8); max-width: 800px; margin: 0 auto; }
+        .meeting-card { background-color: var(--bc-white); border: 1px solid #e5e7eb; border-radius: var(--border-radius); padding: var(--spacing-6); position: relative; overflow: hidden; }
+        .meeting-number { background-color: var(--bc-light-grey); color: var(--bc-navy); font-weight: 700; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: var(--spacing-4); }
+        .meeting-card h3 { font-size: 1.25rem; margin-bottom: var(--spacing-4); }
+        .meeting-card ul { margin-left: var(--spacing-4); margin-bottom: var(--spacing-6); }
+        .meeting-card li { margin-bottom: var(--spacing-2); font-size: 0.95rem; }
+
+        /* Business Case */
+        .meddic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6); }
+        .meddic-card { background-color: var(--bc-light-grey); padding: var(--spacing-6); border-radius: var(--border-radius); }
+        .meddic-card h4 { color: var(--bc-energy-blue); font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: var(--spacing-2); }
+        .meddic-card h4 .icon { width: 20px; height: 20px; }
+
+        /* Case Study */
+        .case-study-wrapper { display: grid; grid-template-columns: 1fr 1fr; background-color: var(--bc-light-grey); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); }
+        .cs-image { background-color: var(--bc-navy); }
+        .cs-image img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px; }
+        .cs-content { padding: var(--spacing-8); display: flex; flex-direction: column; justify-content: center; align-items: start; }
+
+        /* ROI Calculator */
+        #roi { background-color: var(--bc-light-grey); }
+        .calculator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: var(--spacing-8);
+            background-color: var(--bc-white);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .calculator-input { margin-bottom: var(--spacing-6); }
+        .calculator-input label { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: var(--spacing-2); }
+        .calculator-input label span:last-child { color: var(--bc-energy-blue); }
+        input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; background: #e0e0e0; border-radius: 5px; outline: none; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; background: var(--bc-energy-blue); cursor: pointer; border-radius: 50%; }
+        .roi-results { text-align: center; }
+        .total-savings { font-size: 3.5rem; font-weight: 800; color: var(--bc-green); line-height: 1; }
+        #assumptions-container { margin-top: var(--spacing-8); background-color: #f9fafb; border: 1px solid #e0e0e0; padding: var(--spacing-6); border-radius: var(--border-radius); }
+        #assumptions-list { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4); }
+        #assumptions-list p { font-size: 0.85rem; }
+
+        /* Donut Chart */
+        .donut-chart-container { position: relative; width: 250px; height: 250px; margin: var(--spacing-6) auto; }
+        .donut-chart { transform: rotate(-90deg); border-radius: 50%; }
+        .donut-segment { fill: none; stroke-width: 20; transition: stroke-dashoffset 0.5s ease-in-out; }
+        .donut-legend { list-style: none; display: flex; justify-content: center; gap: var(--spacing-6); flex-wrap: wrap; margin-top: var(--spacing-4); }
+        .donut-legend li { display: flex; align-items: center; gap: var(--spacing-2); font-size: 0.9rem; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+        /* Next Steps */
+        #next-steps { background-color: var(--bc-navy); color: var(--bc-white); text-align: center; }
+        .next-steps-card { background-color: var(--bc-white); color: var(--bc-charcoal); border-radius: var(--border-radius); padding: var(--spacing-8); max-width: 800px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border-top: 6px solid var(--bc-energy-blue); }
+        
+        /* Footer */
+        footer { background-color: var(--bc-navy); color: var(--bc-light-grey); padding: var(--spacing-8) 0; font-size: 0.9rem; }
+
+        @media (max-width: 1024px) {
+            .infographic-grid, .calculator-wrapper, .case-study-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div style="padding: 10px; background-color: white; border-radius: 8px;">
+                        <img src="https://placehold.co/400x120/FFFFFF/0A2240?text=WPTR+Ltd&font=Montserrat" alt="WPTR Ltd Logo" style="height: 60px; display: block;">
+                    </div>
+                    <span style="font-size: 2.5rem; font-weight: 300; color: var(--bc-energy-blue);">+</span>
+                    <img src="https://i.postimg.cc/ydbgqXFm/Big-Change-White.png" alt="BigChange Logo" style="height: 54px;">
+                </div>
+                <h1>WPTR Ltd: Streamlining Prison Maintenance & Catering Services</h1>
+                <p class="subhead">A strategic proposal for William to replace paper job sheets and OneDrive chaos with a unified, digital platform.</p>
+                <div class="cta-buttons">
+                    <a href="https://copilot.clari.com/guest/sharedCall/6ad0fab01897f963ed3b5450" target="_blank" class="btn btn-primary" style="background-color: var(--bc-red);">Watch Recording Back</a>
+                    <a href="#meetings-recap" class="btn btn-primary" style="background-color: var(--bc-orange);">Review Discovery</a>
+                    <a href="#cost-proposal" class="btn btn-primary" style="background-color: var(--bc-green); border-color: var(--bc-green); color: var(--bc-navy);">View Proposal</a>
+                    <a href="#business-case" class="btn btn-secondary">The Business Case</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discovery Section -->
+        <section id="meetings-recap" style="background-color: var(--bc-light-grey);">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                    </svg>
+                    <h2>Discovery & Goals</h2>
+                    <p>A summary of our discussion regarding operational bottlenecks and the vision for WPTR Ltd.</p>
+                </div>
+                <div class="meetings-grid">
+                    <div class="meeting-card">
+                        <span class="meeting-number">Meeting Recap: Discovery Session</span>
+                        <h3>Escaping OneDrive Chaos & Manual AFPs</h3>
+                        <p><strong>Attendees:</strong> William Farrell (WPTR Ltd) and Oliver Abrahamson (BigChange).</p>
+                        <p style="margin-top: 1rem;">WPTR Ltd is currently managing extensive catering and laundry maintenance within the prison sector (95% of workload, primarily sub-contracting for Amey). Key challenges discussed:</p>
+                        <ul>
+                            <li><strong>Application for Payment (AFP) Nightmare:</strong> Consolidating 100-200 paper job sheets per month to match against QuickBooks invoices is highly manual and time-consuming.</li>
+                            <li><strong>Scattered Documentation:</strong> Relying on millions of disjointed OneDrive folders and excel spreadsheets to store scanned job sheets and site assets.</li>
+                            <li><strong>Disconnected Quoting:</strong> Reactive visits that require follow-on parts (e.g., a faulty gas valve) suffer delays because paper notes must be manually typed into QuickBooks quotes in the office.</li>
+                            <li><strong>Lack of Transparency:</strong> Managing 200-400 open jobs simultaneously across reactive, remedial, and planned installation categories is increasingly difficult without a live dashboard.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current vs Future -->
+        <section id="current-future">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a2.25 2.25 0 01-1.473-1.473L12 18.75l1.938-.648a2.25 2.25 0 011.473-1.473L16.25 15l.648 1.938a2.25 2.25 0 011.473 1.473L20.25 18.75l-1.938.648a2.25 2.25 0 01-1.473 1.473z" /></svg>
+                    <h2>Current State vs. Future State</h2>
+                    <p>Transitioning from manual workflows to real-time enterprise visibility.</p>
+                </div>
+                <div class="infographic-grid">
+                    <div class="state-card current">
+                        <h3>Current State (Manual & Disjointed)</h3>
+                        <ul>
+                            <li><strong>Paper Job Sheets:</strong> Engineers fill out paper forms outside prisons, returning them to the office where parts/hours are manually added and photocopied.</li>
+                            <li><strong>AFP Bottleneck:</strong> Manually reviewing and matching hundreds of job sheets against QuickBooks to generate the Application for Payment for Amey.</li>
+                            <li><strong>Siloed Asset Data:</strong> Site asset details (model numbers, serials) are buried in external spreadsheets.</li>
+                        </ul>
+                    </div>
+                    <div class="state-card future">
+                        <h3>Future State (BigChange)</h3>
+                        <ul>
+                            <li><strong>Digital Workflows:</strong> Engineers input job details via an easy-to-use app, instantly creating branded digital job cards ready for the client.</li>
+                            <li><strong>One-Click AFP Consolidation:</strong> Select completed jobs in the CRM and generate a consolidated invoice/AFP instantly.</li>
+                            <li><strong>Seamless Follow-On Quoting:</strong> An incomplete job (e.g., needing a part) instantly flags the office to generate a QuickBooks-style quote linked directly to the original visit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Case -->
+        <section id="business-case">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    <h2>The Business Case for WPTR Ltd</h2>
+                    <p>Why switching to BigChange drives immediate operational value for your growing team.</p>
+                </div>
+                <div class="meddic-grid">
+                    <div class="meddic-card">
+                        <h4>Operational Efficiency</h4>
+                        <ul>
+                            <li><strong>Categorised Dashboards:</strong> Easily filter your 200-400 open jobs into distinct buckets: Reactive, Remedial, and Installations.</li>
+                            <li><strong>Site-Specific Assets:</strong> Assign catering and laundry assets directly to sites (e.g., Belmarsh) so engineers have instant access to serials and histories.</li>
+                        </ul>
+                    </div>
+                    <div class="meddic-card">
+                        <h4>Compliance & Risk</h4>
+                        <ul>
+                            <li><strong>Custom Worksheets:</strong> Enforce mandatory drop-downs and text entries (e.g., "Why is a gas valve needed?") ensuring complete write-ups before job closure.</li>
+                            <li><strong>Planned Maintenance:</strong> Automate scheduling for CP42 gas certs and annual services to recur automatically and alert the office.</li>
+                        </ul>
+                    </div>
+                    <div class="meddic-card">
+                        <h4>Financial Integrity</h4>
+                        <ul>
+                            <li><strong>AFP Automation:</strong> Radically reduce the time spent generating AFPs for Amey by linking job references directly to consolidated invoices.</li>
+                            <li><strong>Standardised Parts Library:</strong> Pre-load common parts (e.g., Rational door seals) so the office can quote with one click.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section id="case-study">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                    </svg>
+                    <h2>Proven Success in Catering Equipment Service</h2>
+                    <p>See how companies managing complex commercial catering maintenance eradicate paperwork delays.</p>
+                </div>
+                
+                <div class="case-study-wrapper">
+                    <div class="cs-image">
+                        <!-- Updated Case Study Image for NWCE -->
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d42a81bf9ae997bf33fb26_NWCE.webp" alt="NWCE Case Study">
+                    </div>
+                    <div class="cs-content">
+                        <h3 style="margin-bottom: 1rem; color: var(--bc-navy);">NWCE Food Service Equipment Trebles Workforce</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--bc-charcoal);">Like WPTR Ltd, NWCE was hindered by slow, clunky systems. Before BigChange, an engineer would be left hanging around on-site waiting for specific paperwork to be emailed just to condemn a fryer and generate a quote for a replacement. By implementing BigChange, NWCE turned this into a "one-button process"—empowering engineers, fully automating stock control, reducing travel time by 3.5 hours per engineer per week, and successfully scaling their workforce.</p>
+                        <a href="https://www.bigchange.com/success-stories/bigchange-job-management-system-helps-nwce-treble-workforce" target="_blank" class="btn btn-primary" style="background-color: var(--bc-energy-blue);">Read NWCE Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section id="roi">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <h2>Savings Calculator</h2>
+                    <p>Forecast the value of switching based on your team (approx. 4 engineers, 2 office staff).</p>
+                </div>
+                <div class="calculator-wrapper">
+                    <div class="calculator-inputs">
+                        <h3>Your Business Details</h3>
+                        <div class="calculator-input">
+                            <label for="engineers"><span>Field Engineers</span><span id="engineers-value">4</span></label>
+                            <input type="range" id="engineers" min="1" max="20" value="4">
+                        </div>
+                        <div class="calculator-input">
+                            <label for="jobsPerDay"><span>Jobs per Day</span><span id="jobsPerDay-value">4</span></label>
+                            <input type="range" id="jobsPerDay" min="1" max="10" value="4">
+                        </div>
+                        <div class="calculator-input">
+                            <label for="officeStaff"><span>Office Staff</span><span id="officeStaff-value">2</span></label>
+                            <input type="range" id="officeStaff" min="1" max="10" value="2">
+                        </div>
+                        <div class="calculator-input">
+                            <label for="officeSalary"><span>Office Staff Avg. Salary (£)</span><span id="officeSalary-value">£25,000</span></label>
+                            <input type="range" id="officeSalary" min="20000" max="60000" value="25000" step="500">
+                        </div>
+                        
+                        <div id="assumptions-container">
+                            <h3>Key Assumptions</h3>
+                            <div id="assumptions-list">
+                                <p>Field Productivity Gain: 15%</p>
+                                <p>Office Admin Reduction: 20%</p>
+                                <p>Fuel Savings: 12%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="roi-results">
+                        <h3>Estimated Annual Savings</h3>
+                        <p class="total-savings" id="total-savings">£0</p>
+                        <p>Total Annual Business Benefit</p>
+                        
+                        <div id="payback-container" style="background-color: #E8F5E9; padding: 1rem; border-radius: 8px; border: 1px solid #A5D6A7; margin: 1.5rem auto; display: inline-block; min-width: 200px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                            <span style="display: block; font-size: 0.9rem; color: #1B5E20; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">System Payback Period</span>
+                            <span id="payback-time" style="font-size: 1.75rem; font-weight: 800; color: #2E7D32; display: block; margin-top: 0.25rem;">Calculating...</span>
+                        </div>
+
+                        <div class="donut-chart-container">
+                            <svg id="savingsChart" class="donut-chart" width="100%" height="100%" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="transparent" stroke="#e0e0e0" stroke-width="15"></circle>
+                                <circle id="donut-engineer" class="donut-segment" cx="50" cy="50" r="40" stroke-dasharray="0 251.2" stroke="var(--bc-energy-blue)"></circle>
+                                <circle id="donut-office" class="donut-segment" cx="50" cy="50" r="40" stroke-dasharray="0 251.2" stroke="var(--bc-green)"></circle>
+                                <circle id="donut-fuel" class="donut-segment" cx="50" cy="50" r="40" stroke-dasharray="0 251.2" stroke="var(--bc-orange)"></circle>
+                            </svg>
+                        </div>
+                        <ul class="donut-legend">
+                            <li><span class="legend-dot" style="background-color: var(--bc-energy-blue);"></span>Field</li>
+                            <li><span class="legend-dot" style="background-color: var(--bc-green);"></span>Office (AFP Processing Time)</li>
+                            <li><span class="legend-dot" style="background-color: var(--bc-orange);"></span>Fuel</li>
+                        </ul>
+                        
+                        <div style="text-align: left; margin-top: 2rem;">
+                            <h3>Calculation Breakdown</h3>
+                            <details open style="margin-bottom: 10px; border: 1px solid #ddd; padding: 10px; border-radius: 8px;">
+                                <summary style="cursor:pointer; font-weight:bold;">Field Productivity: <span id="engineer-savings-total">£0</span></summary>
+                                <p id="engineer-calc-details" style="font-size: 0.9rem; padding-top: 10px;"></p>
+                            </details>
+                            <details open style="margin-bottom: 10px; border: 1px solid #ddd; padding: 10px; border-radius: 8px;">
+                                <summary style="cursor:pointer; font-weight:bold;">Office Admin: <span id="office-savings-total">£0</span></summary>
+                                <p id="office-calc-details" style="font-size: 0.9rem; padding-top: 10px;"></p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Proposal Section -->
+        <section id="cost-proposal" style="background-color: var(--bc-white);">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h2>Commercial Proposal</h2>
+                    <p>A transparent monthly investment to consolidate WPTR Ltd's operations.</p>
+                </div>
+                
+                <div style="max-width: 600px; margin: 0 auto; background-color: var(--bc-light-grey); border-radius: var(--border-radius); padding: var(--spacing-8); box-shadow: var(--box-shadow);">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #ddd; margin-bottom: 1rem;">
+                            <span><strong>Setup & Training Fee</strong> <br><small style="color: #666;">Dedicated onboarding and support</small></span>
+                            <span style="font-weight: 600;">£28 / mo</span>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #ddd; margin-bottom: 1rem;">
+                            <span><strong>Back Office Users</strong> <br><small style="color: #666;">2 users @ £70 / mo</small></span>
+                            <span style="font-weight: 600;">£140 / mo</span>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #ddd; margin-bottom: 1rem;">
+                            <span><strong>Mobile Engineers</strong> <br><small style="color: #666;">4 users @ £70 / mo</small></span>
+                            <span style="font-weight: 600;">£280 / mo</span>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; align-items: center; font-size: 1.25rem; font-weight: 800; color: var(--bc-navy); padding-top: 1rem;">
+                            <span>Total Monthly Investment</span>
+                            <span style="color: var(--bc-energy-blue); font-size: 1.5rem;">£448</span>
+                        </li>
+                    </ul>
+                    <div style="margin-top: 1.5rem; background-color: #E8F5E9; color: #1B5E20; padding: 1rem; border-radius: 8px; text-align: center; font-size: 0.9rem; border: 1px solid #A5D6A7;">
+                        <strong>October Promotion:</strong> Agreements reached by month-end include <strong>3 Months Free of Charge</strong> before billing commences.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section id="next-steps">
+            <div class="container">
+                <div class="next-steps-card">
+                    <h3>Next Steps for WPTR Ltd</h3>
+                    <p>Thank you for taking the time to review the platform, William.</p>
+                    <p>As agreed, please review this recording and proposal with the directors. We are confident we can drastically cut down the manual admin linked to your Amey AFPs.</p>
+                    <div style="background: var(--bc-light-grey); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                        <p style="font-weight: 700; color: var(--bc-navy); margin-bottom: 5px;">Scheduled Catch-up:</p>
+                        <p style="font-size: 1.25rem;">Tuesday, 20th @ 4:00 PM</p>
+                    </div>
+                    <p><strong>Note:</strong> To support your decision, we are currently running an October promotion offering <strong>3 Months Free of Charge</strong> if an agreement is reached by the end of the month.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container" style="text-align: center;">
+                <h3 style="color: var(--bc-light-grey);">Ready to grow WPTR Ltd?</h3>
+                <p>Let's eliminate paper trails and consolidate your invoicing.</p>
+                <p style="opacity: 0.7; margin-top: 2rem;">&copy; 2026 BigChange. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = ['engineers', 'jobsPerDay', 'officeStaff', 'officeSalary'];
+            const elements = {};
+            inputs.forEach(id => {
+                elements[id] = document.getElementById(id);
+                elements[`${id}Value`] = document.getElementById(`${id}-value`);
+            });
+
+            const displays = {
+                total: document.getElementById('total-savings'),
+                eng: document.getElementById('engineer-savings-total'),
+                off: document.getElementById('office-savings-total'),
+                fuel: document.getElementById('fuel-savings-total'),
+                engD: document.getElementById('engineer-calc-details'),
+                offD: document.getElementById('office-calc-details'),
+                payback: document.getElementById('payback-time')
+            };
+
+            const donuts = {
+                eng: document.getElementById('donut-engineer'),
+                off: document.getElementById('donut-office'),
+                fuel: document.getElementById('donut-fuel')
+            };
+
+            function update() {
+                const nEng = parseInt(elements.engineers.value);
+                const nJobs = parseInt(elements.jobsPerDay.value);
+                const nOff = parseInt(elements.officeStaff.value);
+                const salOff = parseInt(elements.officeSalary.value);
+
+                elements.engineersValue.textContent = nEng;
+                elements.jobsPerDayValue.textContent = nJobs;
+                elements.officeStaffValue.textContent = nOff;
+                elements.officeSalaryValue.textContent = `£${salOff.toLocaleString()}`;
+
+                // Assumptions
+                const engRate = 35; 
+                const prodGain = 0.15;
+                const days = 252;
+                const fuelCost = 2500; // Adjusted for smaller team size
+                const fuelSave = 0.12;
+                const offEff = 0.20;
+
+                const sEng = (8 * prodGain) * engRate * days * nEng;
+                const sOff = (salOff * offEff) * nOff;
+                const sFuel = (fuelCost * fuelSave) * nEng;
+                const total = sEng + sOff + sFuel;
+
+                displays.total.textContent = `£${Math.round(total).toLocaleString()}`;
+                
+                const annualCost = 5376; // £448 * 12 months
+                if (total > 0) {
+                    const paybackMonths = (annualCost / total) * 12;
+                    if (paybackMonths < 1) {
+                        displays.payback.textContent = "< 1 month!";
+                    } else {
+                        displays.payback.textContent = `${paybackMonths.toFixed(1)} months`;
+                    }
+                } else {
+                    displays.payback.textContent = "N/A";
+                }
+
+                displays.eng.textContent = `£${Math.round(sEng).toLocaleString()}`;
+                displays.off.textContent = `£${Math.round(sOff).toLocaleString()}`;
+                
+                displays.engD.textContent = `${nEng} engineers x 15% gain (~1.2hrs/day) @ £${engRate}/hr x ${days} days.`;
+                displays.offD.textContent = `${nOff} staff x 20% efficiency @ avg £${salOff.toLocaleString()} salary.`;
+
+                const circ = 251.2;
+                const pEng = sEng / total;
+                const pOff = sOff / total;
+                const pFuel = sFuel / total;
+
+                const dEng = pEng * circ;
+                const dOff = pOff * circ;
+                const dFuel = pFuel * circ;
+
+                donuts.eng.style.strokeDasharray = `${dEng} ${circ}`;
+                donuts.off.style.strokeDasharray = `${dOff} ${circ}`;
+                donuts.off.style.strokeDashoffset = -dEng;
+                donuts.fuel.style.strokeDasharray = `${dFuel} ${circ}`;
+                donuts.fuel.style.strokeDashoffset = -(dEng + dOff);
+            }
+
+            inputs.forEach(id => elements[id].addEventListener('input', update));
+            update(); // Initialize calculation
+        });
+    </script>
+</body>
+</html>
