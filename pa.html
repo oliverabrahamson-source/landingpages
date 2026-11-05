@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purified Air: Accelerating Service & Compliance with BigChange</title>
+    <meta name="description" content="A strategic proposal for Purified Air to consolidate fragmented systems into a single, scalable job management platform.">
+    <meta name="author" content="Oliver Abrahamson, BigChange">
+    
+    <!-- SEO & Social Sharing -->
+    <meta property="og:title" content="Purified Air & BigChange: The Enterprise Solution">
+    <meta property="og:description" content="An interactive proposal showing how BigChange solves compliance bottlenecks, tracks engineers, and supports rapid growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fcsi.org.uk/wp-content/uploads/2024/07/purified-air-logo.jpg">
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        :root {
+            /* Brand Colors per BigChange Guidelines */
+            --bc-energy-blue: #0072CE;
+            --bc-navy: #0A2240;
+            --bc-green: #28E289;
+            --bc-orange: #FF6B00;
+            --bc-light-grey: #F4F4F4;
+            --bc-charcoal: #282922;
+            --bc-white: #FFFFFF;
+            --bc-red: #E02B20;
+            
+            /* Spacing & Sizing Tokens */
+            --spacing-1: 0.25rem;
+            --spacing-2: 0.5rem;
+            --spacing-4: 1rem;
+            --spacing-6: 1.5rem;
+            --spacing-8: 2rem;
+            --spacing-12: 3rem;
+            --spacing-16: 4rem;
+            
+            /* Other Design Tokens */
+            --border-radius: 0.75rem;
+            --box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            --transition-speed: 0.3s;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bc-white);
+            color: var(--bc-charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* General Layout & Typography */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-6); }
+        section { padding: var(--spacing-16) 0; }
+        h1, h2, h3, h4 { color: var(--bc-navy); line-height: 1.2; margin-bottom: var(--spacing-4); }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        a { color: var(--bc-energy-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .section-title { text-align: center; margin-bottom: var(--spacing-12); }
+        .section-title .icon {
+            color: var(--bc-energy-blue);
+            width: 48px;
+            height: 48px;
+            margin: 0 auto var(--spacing-4);
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--bc-navy);
+            color: var(--bc-white);
+            padding-top: var(--spacing-16);
+            padding-bottom: var(--spacing-16);
+            text-align: center;
+        }
+        #hero h1, #hero h2, #hero p { color: var(--bc-white); }
+        #hero h1 { font-size: 3rem; }
+        #hero .subhead { font-size: 1.25rem; max-width: 800px; margin: var(--spacing-4) auto var(--spacing-8); opacity: 0.9; }
+        .cta-buttons { display: flex; justify-content: center; gap: var(--spacing-4); flex-wrap: wrap; }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            text-decoration: none;
+            transition: all var(--transition-speed);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary { background-color: var(--bc-energy-blue); color: var(--bc-white); }
+        .btn-primary:hover { background-color: #005bb5; }
+
+        /* State Cards */
+        .infographic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-12); align-items: start; }
+        .state-card { background-color: var(--bc-light-grey); padding: var(--spacing-8); border-radius: var(--border-radius); }
+        .state-card h3 { display: flex; align-items: center; gap: var(--spacing-4); }
+        .state-card ul { list-style: none; margin-top: var(--spacing-6); }
+        .state-card li { padding-left: 2rem; position: relative; margin-bottom: var(--spacing-4); }
+        .state-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .state-card.current li::before { background-color: var(--bc-orange); }
+        .state-card.future li::before { background-color: var(--bc-green); }
+
+        /* Meetings Grid */
+        .meetings-grid { display: grid; grid-template-columns: 1fr; gap: var(--spacing-8); max-width: 800px; margin: 0 auto; }
+        .meeting-card { background-color: var(--bc-white); border: 1px solid #e5e7eb; border-radius: var(--border-radius); padding: var(--spacing-6); position: relative; overflow: hidden; }
+        .meeting-number { background-color: var(--bc-light-grey); color: var(--bc-navy); font-weight: 700; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: var(--spacing-4); }
+        .meeting-card h3 { font-size: 1.25rem; margin-bottom: var(--spacing-4); }
+        .meeting-card ul { margin-left: var(--spacing-4); margin-bottom: var(--spacing-6); }
+        .meeting-card li { margin-bottom: var(--spacing-2); font-size: 0.95rem; }
+
+        /* Business Case */
+        .meddic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6); }
+        .meddic-card { background-color: var(--bc-light-grey); padding: var(--spacing-6); border-radius: var(--border-radius); }
+        .meddic-card h4 { color: var(--bc-energy-blue); font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: var(--spacing-2); }
+        .meddic-card h4 .icon { width: 20px; height: 20px; }
+
+        /* Case Study */
+        .case-study-wrapper { display: grid; grid-template-columns: 1fr 1fr; background-color: var(--bc-light-grey); border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--box-shadow); }
+        .cs-image { background-color: var(--bc-navy); }
+        .cs-image img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px; }
+        .cs-content { padding: var(--spacing-8); display: flex; flex-direction: column; justify-content: center; align-items: start; }
+
+        /* ROI Calculator */
+        #roi { background-color: var(--bc-light-grey); }
+        .calculator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: var(--spacing-8);
+            background-color: var(--bc-white);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        /* Footer */
+        footer { background-color: var(--bc-navy); color: var(--bc-light-grey); padding: var(--spacing-8) 0; font-size: 0.9rem; }
+
+        @media (max-width: 1024px) {
+            .infographic-grid, .calculator-wrapper, .case-study-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                    <div style="padding: 10px; background-color: white; border-radius: 8px;">
+                        <img src="https://fcsi.org.uk/wp-content/uploads/2024/07/purified-air-logo.jpg" alt="Purified Air Logo" style="height: 60px; display: block;">
+                    </div>
+                    <span style="font-size: 2.5rem; font-weight: 300; color: var(--bc-energy-blue);">+</span>
+                    <img src="https://i.postimg.cc/ydbgqXFm/Big-Change-White.png" alt="BigChange Logo" style="height: 54px;">
+                </div>
+                <h1>Purified Air: Empowering Compliance & Scalable Growth</h1>
+                <p class="subhead">A strategic proposal for Purified Air to transition from Protean to a scalable, integrated platform that supports accelerated growth post-PE acquisition.</p>
+                <div class="cta-buttons">
+                    <a href="#roi" class="btn btn-primary" style="background-color: var(--bc-energy-blue);">Return on investment calculator</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discovery Section -->
+        <section id="meetings-recap" style="background-color: var(--bc-light-grey);">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                    </svg>
+                    <h2>What we know so far about Purified Air</h2>
+                    <p>A summary of current operational bottlenecks and the vision for Purified Air.</p>
+                </div>
+                <div class="meetings-grid">
+                    <div class="meeting-card">
+                        <span class="meeting-number">Meeting Recap: Scoping Call</span>
+                        <h3>Replacing Protean & Integrating Systems</h3>
+                        <p style="margin-top: 1rem;">With the recent private equity buyout and the planned sunsetting of Protean, Purified Air needs a robust Field Service Management tool that can integrate seamlessly with HubSpot and an upgraded Sage 200 system. Key challenges discussed:</p>
+                        <ul>
+                            <li><strong>System Silos & Errors:</strong> Historical setup errors in Protean (like conflicting customer codes) and lack of updates have created inefficiencies. You need a "single source of truth."</li>
+                            <li><strong>Complex Equipment & Parts Management:</strong> Servicing multi-component systems (like ESPs with various filter types and UV lamps) at locations like Nando's requires precise part identification. Currently, poor photos (e.g., zoomed-in tape measures) or vague descriptions lead to return visits.</li>
+                            <li><strong>Consolidated Invoicing:</strong> Clients working through portals like Access Maintain require monthly consolidated billing matching their specific job references.</li>
+                            <li><strong>Data Accuracy for Equity Partners:</strong> The new board will demand greater accountability, such as exact serial numbers for replaced parts, which engineers frequently miss today.</li>
+                            <li><strong>Contract Management:</strong> Missing contract end dates causing revenue leakage and visibility issues across the business.</li>
+                            <li><strong>Inefficient Routing:</strong> Repeat visits and excessive travel time caused by poor planning and disconnected scheduling tools.</li>
+                            <li><strong>Administrative Bottlenecks:</strong> Manual time sheet reconciliation costing up to 1 day per week of office admin on this task alone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current vs Future -->
+        <section id="current-future">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 22.5l-.648-1.938a2.25 2.25 0 01-1.473-1.473L12 18.75l1.938-.648a2.25 2.25 0 011.473-1.473L16.25 15l.648 1.938a2.25 2.25 0 011.473 1.473L20.25 18.75l-1.938.648a2.25 2.25 0 01-1.473 1.473z" /></svg>
+                    <h2>Current State vs. Future State</h2>
+                    <p>Transitioning from a sunsetting product to a dynamic, rule-based operation.</p>
+                </div>
+                <div class="infographic-grid">
+                    <div class="state-card current">
+                        <h3>Current State (Protean & Spreadsheets)</h3>
+                        <ul>
+                            <li><strong>Ambiguous Field Data:</strong> Engineers submit unclear photos or text, requiring the office to interpret or guess what was actually done.</li>
+                            <li><strong>Manual Consolidation:</strong> Reviewing written engineer notes for legibility and manually collating photos to generate client invoices.</li>
+                            <li><strong>Rigid Scheduling:</strong> Schedulers relying on complex, color-coded Excel spreadsheets that lack real-time geographical or inventory awareness.</li>
+                        </ul>
+                    </div>
+                    <div class="state-card future">
+                        <h3>Future State (BigChange)</h3>
+                        <ul>
+                            <li><strong>Mandatory Structured Workflows:</strong> Engineers cannot complete a job without answering specific questions (e.g., logging exact serial numbers) and providing clear, dictated notes.</li>
+                            <li><strong>Automated Document Generation:</strong> Professional, branded photo sheets and service reports are generated instantly upon job completion.</li>
+                            <li><strong>Intelligent, Integrated Hub:</strong> BigChange acts as the operational core, efficiently receiving jobs from HubSpot and feeding financial data to Sage 200.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Case -->
+        <section id="business-case">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    <h2>The Business Case for Purified Air</h2>
+                    <p>Why switching to BigChange provides the robust data and efficiency demanded by your new board.</p>
+                </div>
+                <div class="meddic-grid">
+                    <div class="meddic-card">
+                        <h4>Data & Accountability</h4>
+                        <ul>
+                            <li><strong>Board-Ready Metrics:</strong> Provide the new financial officer with accurate, real-time data on engineer productivity, asset histories, and part replacements.</li>
+                            <li><strong>Enforced Compliance:</strong> Use digital workflows to guarantee engineers secure signatures and log essential data (like asbestos awareness) before leaving site.</li>
+                        </ul>
+                    </div>
+                    <div class="meddic-card">
+                        <h4>Operational Efficiency</h4>
+                        <ul>
+                            <li><strong>Streamlined Admin:</strong> Eliminate the need to decipher poorly written notes or sort through irrelevant photos. Voice-to-text dictation and guided forms ensure clean data entry.</li>
+                            <li><strong>Optimized Routing:</strong> Move away from complex spreadsheets to visual, intelligent scheduling tools that account for engineer location and skills.</li>
+                        </ul>
+                    </div>
+                    <div class="meddic-card">
+                        <h4>Scalable Architecture</h4>
+                        <ul>
+                            <li><strong>Open API Integration:</strong> Easily integrate BigChange with HubSpot (via partners like Big Presence) and Sage 200 to create a seamless flow of data.</li>
+                            <li><strong>Manage Complex Assets:</strong> Accurately track multi-part installations across thousands of client sites, ensuring the right filters are picked and replaced every time.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section id="case-study">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                    </svg>
+                    <h2>Proven Success in Commercial Food Services & HVAC</h2>
+                    <p>See how industry peers transformed their operations using BigChange to support massive growth.</p>
+                </div>
+                
+                <div class="case-study-wrapper">
+                    <div class="cs-image">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/67d42a81bf9ae997bf33fb26_NWCE.webp" alt="NWCE Food Service Equipment Case Study">
+                    </div>
+                    <div class="cs-content">
+                        <h3 style="margin-bottom: 1rem; color: var(--bc-navy);">NWCE Trebles Workforce & Saves 30 Miles Per Van Daily</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--bc-charcoal);">Operating heavily in the commercial catering and food service sector, NWCE faced similar challenges with rapid response and preventative maintenance. By implementing BigChange's automated scheduling and digital compliance workflows, they eradicated paper delays, slashed fuel costs, and scaled their workforce three-fold.</p>
+                        <a href="https://www.bigchange.com/success-stories/bigchange-job-management-system-helps-nwce-treble-workforce" target="_blank" class="btn btn-primary" style="background-color: var(--bc-energy-blue);">Read NWCE Case Study</a>
+                    </div>
+                </div>
+
+                <div class="case-study-wrapper" style="margin-top: 2rem;">
+                    <div class="cs-image">
+                        <img src="https://cdn.prod.website-files.com/652e90c1583f67a8de233f2d/66fffee8152dbe96a47cd7a7_66696b2ef524acb95c6e63f3_664380d66aed3d84d30f6e65_1200pix_bigchange_envirovent_96.jpeg" alt="EnviroVent Case Study">
+                    </div>
+                    <div class="cs-content">
+                        <h3 style="margin-bottom: 1rem; color: var(--bc-navy);">EnviroVent Integrates Seamlessly with Sage 200</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--bc-charcoal);">Like Purified Air, EnviroVent required a robust field service solution that could integrate effortlessly with their financial hub, Sage 200. By choosing BigChange, they connected their entire operation—from their CRM to complex scheduling—directly into Sage 200, ensuring a single source of truth and massive administrative efficiency.</p>
+                        <a href="https://www.bigchange.com/success-stories/envirovent-reduces-no-access-visits-with-bigchange" target="_blank" class="btn btn-primary" style="background-color: var(--bc-energy-blue);">Read EnviroVent Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section id="roi">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <h2>Savings Calculator</h2>
+                    <p>Forecast the value of switching based on your current field service team.</p>
+                </div>
+                <div style="text-align: center; padding: var(--spacing-8); background-color: var(--bc-white); border-radius: var(--border-radius); box-shadow: var(--box-shadow); max-width: 800px; margin: 0 auto;">
+                    <h3 style="margin-bottom: var(--spacing-4);">Interactive ROI Calculator</h3>
+                    <p style="margin-bottom: var(--spacing-6);">Open our interactive savings calculator to see your potential return on investment based on productivity, fuel, and administrative improvements.</p>
+                    <a href="https://arabismail-cpu.github.io/costsavingscalc/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--bc-energy-blue);">Calculate Your Savings Here</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cost Proposal Section -->
+        <section id="cost-proposal" style="background-color: var(--bc-white);">
+            <div class="container">
+                <div class="section-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h2>Indicative Commercial Proposal</h2>
+                    <p>A transparent monthly investment model for Purified Air.</p>
+                </div>
+                
+                <div style="max-width: 600px; margin: 0 auto; background-color: var(--bc-light-grey); border-radius: var(--border-radius); padding: var(--spacing-8); box-shadow: var(--box-shadow);">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #ddd; margin-bottom: 1rem;">
+                            <span><strong>Customer Service Elite Package</strong> <br><small style="color: #666;">Dedicated onboarding and support</small></span>
+                            <span style="font-weight: 600;">£200.00 / mo</span>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #ddd; margin-bottom: 1rem;">
+                            <span><strong>Back Office Web Users</strong> <br><small style="color: #666;">15 users @ £69.95 / mo</small></span>
+                            <span style="font-weight: 600;">£1,049.25 / mo</span>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #ddd; margin-bottom: 1rem;">
+                            <span><strong>Mobile Engineers (App + Hard-Wired Tracking)</strong> <br><small style="color: #666;">22 users @ £69.95 / mo</small></span>
+                            <span style="font-weight: 600;">£1,538.90 / mo</span>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; align-items: center; font-size: 1.25rem; font-weight: 800; color: var(--bc-navy); padding-top: 1rem;">
+                            <span>Total Estimated Monthly Investment</span>
+                            <span style="color: var(--bc-energy-blue); font-size: 1.5rem;">£2,788.15</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container" style="text-align: center;">
+                <h3 style="color: var(--bc-light-grey);">Ready to grow Purified Air?</h3>
+                <p>Let's eliminate operational bottlenecks and start scaling efficiently.</p>
+                <p style="opacity: 0.7; margin-top: 2rem;">&copy; 2026 BigChange. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>
